@@ -11,7 +11,7 @@
 5. Init Gallery
 6. Init Testimonials Slider
 7. Init Lightbox
-
+8. Scroll to top
 
 ******************************/
 
@@ -253,4 +253,24 @@ $(document).ready(function()
 			});
 		}
 	}
+});
+
+/** 8 */
+// Lắng nghe sự kiện scroll
+window.addEventListener('scroll', function() {
+    // Nếu cuộn xuống một khoảng cách nhất định (ví dụ: 300px), hiển thị nút cuộn lên đầu trang
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        document.getElementById('scrollToTopBtn').style.display = 'block';
+    } else {
+        document.getElementById('scrollToTopBtn').style.display = 'none';
+    }
+});
+
+// Xử lý sự kiện khi click vào nút cuộn lên đầu trang
+document.getElementById('scrollToTopBtn').addEventListener('click', function() {
+    // Cuộn lên đầu trang với thời gian di chuyển 500ms (0.5 giây)
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
