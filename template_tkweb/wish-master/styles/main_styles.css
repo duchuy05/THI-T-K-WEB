@@ -344,10 +344,48 @@ section
 /*********************************
 3.2 Header - Main Navigation
 *********************************/
+/* Hiển thị submenu khi hover vào mục chính hoặc submenu */
+.nav-item:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+/* Tạo khoảng cách giữa mục chính và submenu */
+.dropdown-menu {
+    margin-top: -10px;
+}
+
+/* Ẩn submenu ban đầu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+	background-color: rgba(255, 255, 255, 0.3); /* Màu nền với độ trong suốt */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho submenu */
+}
+
+/* Định dạng các mục trong submenu */
+.dropdown-menu li {
+	display: block;
+	float: left;
+	position: relative;
+	width: auto;
+}
+
+/* Hiển thị mục con khi hover vào mục cha */
+.dropdown-menu li:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: #fff; /* Màu nền khi hover */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+}
+
 
 .main_nav
 {
-	padding-left: 252px;
+	padding-left: 60px;
 	-webkit-transform: translateY(4px);
 	-moz-transform: translateY(4px);
 	-ms-transform: translateY(4px);
