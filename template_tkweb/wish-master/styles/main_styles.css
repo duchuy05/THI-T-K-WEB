@@ -345,42 +345,33 @@ section
 3.2 Header - Main Navigation
 *********************************/
 /* Hiển thị submenu khi hover vào mục chính hoặc submenu */
-.nav-item:hover .dropdown-menu,
-.dropdown-menu:hover {
-    display: block;
-}
-
-/* Tạo khoảng cách giữa mục chính và submenu */
-.dropdown-menu {
-    margin-top: -10px;
-}
-
-/* Ẩn submenu ban đầu */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    z-index: 1;
-	background-color: rgba(255, 255, 255, 0.3); /* Màu nền với độ trong suốt */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho submenu */
-}
-
-/* Định dạng các mục trong submenu */
-.dropdown-menu li {
-	display: block;
-	float: left;
+.dropdown {
 	position: relative;
-	width: auto;
-}
-
-/* Hiển thị mục con khi hover vào mục cha */
-.dropdown-menu li:hover > .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li:hover {
-    background-color: #fff; /* Màu nền khi hover */
-    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
-}
+	display: inline-block;
+  }
+  
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 100%;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	width: max-content;
+  }
+  
+  .dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 
 .main_nav
@@ -395,7 +386,7 @@ section
 .main_nav ul li
 {
 	display: inline-block;
-	margin-right: 50px;
+	margin-right: 30px;
 }
 .main_nav ul li:last-child
 {
