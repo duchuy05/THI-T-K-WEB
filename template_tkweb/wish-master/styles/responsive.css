@@ -29,7 +29,7 @@
 {
 	.search
 	{
-		width: 180px;
+		width: 350px;
 	}
 }
 
@@ -45,8 +45,8 @@
 	}
 	.shopping
 	{
-		padding-right: 100px;
-		margin-left: 100px;
+		padding-right: 20px;
+		margin-left: 50px;
 	}
 }
 
