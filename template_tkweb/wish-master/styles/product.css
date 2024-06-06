@@ -472,8 +472,8 @@ section
 .shopping
 {
 	display: inline-block;
-	/* margin-left: 100px;
-	padding-right: 100px; */
+	margin-left: 100px;
+	padding-right: 100px;
 	-webkit-transform: translateY(-2px);
 	-moz-transform: translateY(-2px);
 	-ms-transform: translateY(-2px);
@@ -744,7 +744,7 @@ section
 .product
 {
 	padding-top: 94px;
-	padding-bottom: 98px;
+	padding-bottom: 20px;
 	background: #FFFFFF;
 }
 
@@ -1459,10 +1459,9 @@ section
 }
 
   .grid-container {
-
 	display: grid;
-	grid-template-columns: repeat(4, 300px);
-	grid-template-rows: repeat(2, 381px);
+	grid-template-columns: repeat(4, 260px);
+	grid-template-rows: repeat(2, 380px);
 	grid-gap: 20px;
   }
 
@@ -1640,4 +1639,8 @@ a:hover .fa-cart-shopping {
 
 .pagination a:first-child, .pagination a:last-child {
     border-radius: 5px;
+}
+
+.menu_bar {
+	width: 700px;
 }
