@@ -1,0 +1,38 @@
+.main-content {
+    top:116px;
+}
+.VideoPlayer__player {
+    width: 100%; 
+    height: 100%; 
+    overflow: hidden; 
+    position: relative;
+    margin: 0%;
+}
+
+.modau {
+    text-align: center;
+    background-color: rgb(211, 191, 158);
+    padding: 50px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: 0; /* Remove top and bottom margin */
+    box-sizing: border-box;
+}
+
+.modau p {
+    font-size: 18px; /* Adjust font size */
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+}
+
+.modau p strong {
+    color: #000;
+}
+.cuahang {
+    grid-area: image;
+    display:block;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
