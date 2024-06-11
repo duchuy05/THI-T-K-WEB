@@ -9,8 +9,8 @@
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="styles/contact.css">
-<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 <link rel="stylesheet" type="text/css" href="styles/product.css">
+<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 <style>
 	.accordion_panel {
 		display: none;
@@ -19,92 +19,112 @@
 </head>
 <body>
 
-<div class="super_container">
+	<div class="super_container">
+		<button id="scrollToTopBtn" class="scroll-to-top-btn"><i class="fa-solid fa-circle-up"></i></button>
 	
-	<!-- Header -->
-
-	<header class="header">
-		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
-			<div class="logo"><a href="#">Wish</a></div>
-			<nav class="main_nav">
-				<ul>
-					<li><a href="../wish-master/trangchu/index.html">TRANG CHỦ</a></li>
-					<li><a href="categories.html">TRANG SỨC</a></li>
-					<li><a href="categories.html">GIỚI THIỆU</a></li>
-					<li><a href="categories.html">KHUYẾN MẠI</a></li>
-					<li><a href="categories.html">BLOG</a></li>
-					<li><a href="contact.html">LIÊN HỆ</a></li>
+		<!-- Header -->
+	
+		<header class="header">
+			<div class="header_inner d-flex flex-row align-items-center justify-content-start">
+				<div class="logo"><a href="#">Seraphine</a></div>
+				<nav class="main_nav" class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul>
+						<li><a href="#">trang chủ</a></li>
+						<li class="dropdown"><a href="trangsuc/trangsuc.html">trang sức</a>
+							<ul class="dropdown-content">
+								<li>
+									<a href="#">Nhẫn</a>
+									<a href="#">Bông tai</a>
+									<a href="#">Dây chuyền</a>
+									<a href="#">Lắc</a>
+									<a href="vong/vong.html">Vòng</a>
+									<a href="#">Charm</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="categories.html">giới thiệu</a>
+						<li><a href="khuyenmai.html">khuyến mãi</a></li>
+						<li class="dropdown"><a class="nav-link" href="#">blog</a>
+							<ul class="dropdown-content">
+								<li class="dropdown-content">
+									<a href="#">Tin tức</a>
+									<a href="#">Kiến thức chung</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="lienhe.html">liên hệ</a></li>
+					</ul>
+				</nav>
+				<div class="header_content ml-auto">
+					<div class="search header_search">
+						<form action="#">
+							<input type="search" class="search_input" required="required">
+							<button type="submit" id="search_button" class="search_button"><img src="images/magnifying-glass.svg" alt=""></button>
+						</form>
+					</div>
+					<div class="shopping">
+						<!-- Cart -->
+						<a href="giohang/giohang.html">
+							<div class="cart">
+								<img src="images/shopping-bag.svg" alt="">
+								<div class="cart_num_container">
+									<div class="cart_num_inner">
+										<div class="cart_num">1</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<!-- Star -->
+						<a href="#">
+							<div class="star">
+								<img src="images/star.svg" alt="">
+								<div class="star_num_container">
+									<div class="star_num_inner">
+										<div class="star_num">0</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<!-- Avatar -->
+						<a href="#">
+							<div class="avatar">
+								<img src="images/avatar.svg" alt="">
+							</div>
+						</a>
+					</div>
+				</div>
+	
+				<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
+			</div>
+		</header>
+	
+		<!-- Menu -->
+	
+		<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+			<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+			<div class="logo menu_mm"><a href="#">Seraphine</a></div>
+			<div class="search">
+				<form action="#">
+					<input type="search" class="search_input menu_mm" required="required">
+					<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="images/magnifying-glass.svg" alt=""></button>
+				</form>
+			</div>
+			<nav class="menu_nav">
+				<ul class="menu_mm">
+					<li class="menu_mm"><a href="#">trang chủ</a></li>
+					<li class="menu_mm"><a href="trangsuc/trangsuc.html">trang sức</a></li>
+					<li class="menu_mm"><a href="#">giới thiệu</a></li>
+					<li class="menu_mm"><a href="../khuyenmai.html">khuyến mãi</a></li>
+					<li class="menu_mm"><a href="#">blog</a></li>
+					<li class="menu_mm"><a href="../lienhe.html">liên hệ</a></li>
 				</ul>
 			</nav>
-			<div class="header_content ml-auto">
-				<div class="search header_search">
-					<form action="#">
-						<input type="search" class="search_input" required="required">
-						<button type="submit" id="search_button" class="search_button"><img src="images/magnifying-glass.svg" alt=""></button>
-					</form>
-				</div>
-				<div class="shopping">
-					<!-- Cart -->
-					<a href="#">
-						<div class="cart">
-							<img src="images/shopping-bag.svg" alt="">
-							<div class="cart_num_container">
-								<div class="cart_num_inner">
-									<div class="cart_num">1</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<!-- Star -->
-					<a href="#">
-						<div class="star">
-							<img src="images/star.svg" alt="">
-							<div class="star_num_container">
-								<div class="star_num_inner">
-									<div class="star_num">0</div>
-								</div>
-							</div>
-						</div>
-					</a>
-					<!-- Avatar -->
-					<a href="#">
-						<div class="avatar">
-							<img src="images/avatar.svg" alt="">
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
 		</div>
-	</header>
-
-	<!-- Menu -->
-
-	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
-		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="#">Wish</a></div>
-		<div class="search">
-			<form action="#">
-				<input type="search" class="search_input menu_mm" required="required">
-				<button type="submit" id="search_button" class="search_button menu_mm"><img class="menu_mm" src="images/magnifying-glass.svg" alt=""></button>
-			</form>
-		</div>
-		<nav class="menu_nav">
-			<ul class="menu_mm">
-				<li class="menu_mm"><a href="../wish-master/trangchu/index.html">home</a></li>
-				<li class="menu_mm"><a href="#">clothes</a></li>
-				<li class="menu_mm"><a href="#">accessories</a></li>
-				<li class="menu_mm"><a href="#">lingerie</a></li>
-				<li class="menu_mm"><a href="#">contact</a></li>
-			</ul>
-		</nav>
-	</div>
 
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/contact.jpg" data-speed="0.8"></div>
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images\8fcda55a07eda7b3fefc.jpg" data-speed="0.8"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col">
@@ -191,10 +211,7 @@
 						</div>
 						<div class="contact_info_social">
 							<ul>
-								<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 								<li><a href="https://www.instagram.com/seraphine_jew/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
 								<li><a href="https://www.facebook.com/people/Seraphine/61553772548568/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
@@ -244,13 +261,13 @@
 
 	<div class="newsletter">
 		<div class="newsletter_content">
-			<div class="newsletter_image" style="background-image:url(images/newsletter.jpg)"></div>
+			<div class="newsletter_image" style="background-image:url(images/91bca0ec30aa93f4cabb.jpg)"></div>
 			<div class="container">
 				<div class="row newsletter_row">
 					<div class="col">
 						<div class="section_title_container text-center">
-							<div class="section_subtitle">only the best</div>
-							<div class="section_title">subscribe for a 20% discount</div>
+							<div class="section_subtitle">hãy trở thành hội viên của chúng tôi ngay hôm nay</div>
+							<div class="section_title">đăng ký để nhận voucher giảm giá 20%</div>
 						</div>
 					</div>
 				</div>
@@ -259,10 +276,10 @@
 						<div class="newsletter_form_container">
 							<form action="#" id="letter_form">
 								<input type="email" class="newsletter_input" required="required" placeholder="E-mail here">
-								<button type="submit" class="newsletter_button">subscribe</button>
+								<button type="submit" class="newsletter_button">đăng ký</button>
 							</form>
 						</div>
-						<div class="newsletter_text">Integer ut imperdiet erat. Quisque ultricies lectus tellus, eu tristique magna pharetra nec. Fusce vel lorem libero. Integer ex mi, facilisis sed nisi ut, vestib ulum ultrices nulla. Aliquam egestas tempor leo.</div>
+						<div class="newsletter_text">Trở thành hội viên của Seraphine để nhận được thông báo về các chương trình khuyến mãi và có cơ hội tham gia gift away mỗi tháng, cùng với đó là vô vàn các ưu đãi khác </div>
 					</div>
 				</div>
 			</div>
@@ -275,28 +292,26 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="footer_logo"><a href="#">Wish</a></div>
+					<div class="footer_logo"><a href="#">Seraphine</a></div>
 					<nav class="footer_nav">
 						<ul>
-							<li><a href="../wish-master/trangchu/index.html">home</a></li>
-							<li><a href="categories.html">clothes</a></li>
-							<li><a href="categories.html">accessories</a></li>
-							<li><a href="categories.html">lingerie</a></li>
-							<li><a href="contact.html">contact</a></li>
+							<li><a href="../wish-master/trangchu/index.html">trang chủ</a></li>
+							<li><a href="categories.html">trang sức</a></li>
+							<li><a href="categories.html">giới thiệu</a></li>
+							<li><a href="categories.html">khuyến mãi</a></li>
+							<li><a href="contact.html">blog</a></li>
+							<li><a href="contact.html">liên hệ</a></li>
 						</ul>
 					</nav>
 					<div class="footer_social">
 						<ul>
-							<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 							<li><a href="https://www.instagram.com/seraphine_jew/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
 							<li><a href="https://www.facebook.com/people/Seraphine/61553772548568/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
 					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Seraphine
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 				</div>
 			</div>
 		</div>
@@ -342,7 +357,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         }
     });
 });
-
 </script>
 </body>
 </html>
