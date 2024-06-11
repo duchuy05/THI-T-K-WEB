@@ -335,19 +335,25 @@ section
 {
 	width: 100%;
 	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 /*********************************
 3.1 Header - Logo
 *********************************/
 
-.logo a
+.logo
 {
-	font-family: 'Lucida', serif;
-	font-size: 30px;
-	color: #2f2f2f;
+	text-align: left;
+	padding: 10px;
 }
-
+.logo_container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
 /*********************************
 3.2 Header - Main Navigation
 *********************************/
@@ -383,6 +389,7 @@ section
 
 .main_nav
 {
+	flex: 1;
 	padding-left: 60px;
 	-webkit-transform: translateY(4px);
 	-moz-transform: translateY(4px);
@@ -401,7 +408,9 @@ section
 }
 .main_nav ul li a
 {
-	font-size: 12px;
+	font-size: 14px;
+	font-family: 'Montserrat', serif;
+	font-weight: bold;
 	text-transform: uppercase;
 	color: #2f2f2f;
 	font-weight: 600;
@@ -423,6 +432,7 @@ section
 
 .search
 {
+	flex: 1;
 	display: inline-block;
 	width: 350px;
 	-webkit-transform: translateY(2px);
@@ -435,8 +445,8 @@ section
 {
 	width: 100%;
 	height: 43px;
-	background: #f9f5f5;
-	border: none;
+	background: #b3aaaa67;
+	border-radius:  10px;
 	outline: none;
 	padding-left: 20px;
 }
@@ -471,6 +481,7 @@ section
 
 .shopping
 {
+	flex: 1;
 	display: inline-block;
 	margin-left: 100px;
 	padding-right: 100px;
@@ -743,7 +754,7 @@ section
 
 .product
 {
-	padding-top: 94px;
+	padding-top: 120px;
 	padding-bottom: 20px;
 	background: #FFFFFF;
 }

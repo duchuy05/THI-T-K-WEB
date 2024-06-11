@@ -67,26 +67,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-<<<<<<< HEAD
-    background-image: url("images/b2.jpg");
-}*/
-/* CSS cho Menu */
-.header {
-    position: fixed; /* Giữ menu ở trên cùng khi cuộn */
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
-    background-color: #fff; /* Màu nền cho menu */
-}
-
-/* CSS cho Banner */
-.banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-=======
->>>>>>> 6537497bfd2dd9f3962255338d5be2563f973bdd
     padding: 100px 20px 20px 20px; /* Đảm bảo đủ khoảng cách giữa menu và banner */
     position: relative;
     z-index: 1; /* Đảm bảo banner không bị menu che khuất */
@@ -110,8 +90,6 @@
     text-decoration: none;
     border-radius: 5px;
 }
-<<<<<<< HEAD
-=======
 @supports (display:grid) {
     @media screen and (min-width: 700px) {
         .jewelry-grid {
@@ -121,4 +99,3 @@
         }
     }
 }
->>>>>>> 6537497bfd2dd9f3962255338d5be2563f973bdd

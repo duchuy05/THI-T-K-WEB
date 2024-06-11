@@ -80,6 +80,17 @@
     color: #fe4c50;
 }
 
+.product-box .product-name {
+    font-size: 1.07143em;
+    color: #42210b;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
 *, ::after, ::before {
     box-sizing: border-box;
 }
