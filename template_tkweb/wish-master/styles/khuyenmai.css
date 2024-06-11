@@ -1,0 +1,124 @@
+.main_nav li a.active {
+    color: #937c6f;
+}
+
+
+/*cho content*/
+@media screen and (min-width: 700px) {
+    .article-hero__date {
+        font-size: 20px;
+    }
+}
+.article-hero__date {
+    display: inline-block;
+    font-family: ProximaNovaSemibold, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    padding: 7px 11px;
+    height: 27px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+/* gioi thieu */
+.gioithieu {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.gioithieu p {
+    margin: 0;
+    text-align:justify;
+}
+
+.gioithieu p:first-of-type {
+    font-weight: normal;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.gioithieu p span.color {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.gioithieu .gioithieu p:nth-of-type(4) {
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.gioithieu p {
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    font-size: 20px;
+}
+/* CSS cho Banner */
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+<<<<<<< HEAD
+    background-image: url("images/b2.jpg");
+}*/
+/* CSS cho Menu */
+.header {
+    position: fixed; /* Giữ menu ở trên cùng khi cuộn */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Đảm bảo menu nằm trên các phần tử khác */
+    background-color: #fff; /* Màu nền cho menu */
+}
+
+/* CSS cho Banner */
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+=======
+>>>>>>> 6537497bfd2dd9f3962255338d5be2563f973bdd
+    padding: 100px 20px 20px 20px; /* Đảm bảo đủ khoảng cách giữa menu và banner */
+    position: relative;
+    z-index: 1; /* Đảm bảo banner không bị menu che khuất */
+}
+
+.banner .top {
+    margin-bottom: 20px;
+}
+
+.banner .bottom img {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn.btn-1 {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+<<<<<<< HEAD
+=======
+@supports (display:grid) {
+    @media screen and (min-width: 700px) {
+        .jewelry-grid {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+>>>>>>> 6537497bfd2dd9f3962255338d5be2563f973bdd
