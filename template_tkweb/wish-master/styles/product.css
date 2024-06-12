@@ -1392,7 +1392,11 @@ section
 /*********************************
 10. Footer
 *********************************/
-
+.product-title {
+    font-family: 'Roboto', serif;
+	color: black;
+	font-size: 15px;
+}
 .footer
 {
 	padding-top: 80px;

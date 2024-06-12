@@ -1464,11 +1464,20 @@ section
 /*********************************
 12. Footer
 *********************************/
-
+.product-title {
+    font-family: 'Roboto', serif;
+	color: black;
+	font-size: 15px;
+}
 .footer
 {
 	padding-top: 80px;
+	padding-bottom: 1px;
+	background: #e6e3e3;
 }
+.footer.relative {
+	position: relative;
+  }
 .footer_logo a
 {
 	font-family: 'Lucida', serif;
@@ -1477,6 +1486,7 @@ section
 }
 .footer_nav
 {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 	margin-top: 14px;
 }
 .footer_nav ul li
