@@ -261,7 +261,7 @@ section
 	font-family: 'Lucida', serif;
 	font-size: 60px;
 	text-transform: uppercase;
-	color: #2f2f2f;
+	color: #ffffff;
 	margin-top: -4px;
 }
 .button
@@ -1264,10 +1264,10 @@ section
 }
 .gallery_title ul li a
 {
-	font-family: 'Lucida', serif;
-	font-size: 36px;
-	font-weight: 700;
-	color: #FFFFFF;
+	font-family: 'Railway', serif;
+	font-size: 70px;
+	font-weight: 1000;
+	color: #ffffff;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -1280,9 +1280,10 @@ section
 }
 .gallery_text
 {
-	font-size: 14px;
+	font-size: 18px;
 	color: #FFFFFF;
 	margin-top: 5px;
+	font-family: 'Lucida',sans-serif;
 }
 .gallery_button
 {
@@ -1310,7 +1311,7 @@ section
 }
 .test_text
 {
-	font-family: 'Lucida', serif;
+	font-family: 'Railway', serif;
 	font-size: 24px;
 	color: #8a8a8a;
 	font-style: italic;
@@ -1381,7 +1382,7 @@ section
 .newsletter .section_subtitle,
 .newsletter .section_title
 {
-	color: #FFFFFF;
+	color: #cf0707;
 }
 .newsletter_container
 {
@@ -1395,6 +1396,7 @@ section
 	padding-left: 25px;
 	border: none;
 	outline: none;
+	margin-top: -50px;
 }
 .newsletter_input::-webkit-input-placeholder
 {
@@ -1434,7 +1436,7 @@ section
 .newsletter_button
 {
 	position: absolute;
-	top: 0;
+	top: 0px;
 	right: 0;
 	width: 142px;
 	height: 46px;
@@ -1492,7 +1494,7 @@ section
 {
 	padding-top: 50px;
 	padding-bottom: 1px;
-	background: #b1abab71;
+	background: #79767656;
 
 }
 .footer.relative {
@@ -1530,14 +1532,19 @@ section
     justify-content: space-between;
    
 }
-
 .links-wrap .col-md-3 {
     flex: 0 0 auto;
-    width: 25%;
+	padding-left: 30px;
 }
-
+.links-wrap .col-md-2 {
+    flex: 0 0 auto;
+	padding-left: 40px;
+}.links-wrap .col-md-4 {
+    flex: 0 0 auto;
+	padding-left: 50px;
+}
 .links-wrap .list-unstyled {
-    padding-left: 0;
+    padding-left: 0px;
     list-style: none;
 	color: black;
 }

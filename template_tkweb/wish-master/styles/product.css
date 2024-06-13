@@ -257,9 +257,10 @@ section
 }
 .section_subtitle
 {
-	font-size: 14px;
-	font-weight: 600;
-	color: #937c6f;
+	font-family: 'Railway', serif;
+	font-size: 20px;
+	font-weight: 300;
+	color: #000000;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 }
@@ -268,8 +269,8 @@ section
 	font-family: 'Lucida', serif;
 	font-size: 60px;
 	text-transform: uppercase;
-	color: #2f2f2f;
-	margin-top: -4px;
+	color: #000000;
+	margin-top: 12px;
 }
 .button
 {
@@ -756,7 +757,7 @@ section
 {
 	padding-top: 120px;
 	padding-bottom: 20px;
-	background: #FFFFFF;
+	background: #000000;
 }
 
 /*********************************
@@ -1305,7 +1306,7 @@ section
 .newsletter .section_subtitle,
 .newsletter .section_title
 {
-	color: #FFFFFF;
+	color: #000000;
 }
 .newsletter_container
 {
@@ -1319,6 +1320,7 @@ section
 	padding-left: 25px;
 	border: none;
 	outline: none;
+	margin-bottom: 30px;
 }
 .newsletter_input::-webkit-input-placeholder
 {
@@ -1358,11 +1360,11 @@ section
 .newsletter_button
 {
 	position: absolute;
-	top: 0;
+	top: -12px;
 	right: 0;
 	width: 142px;
 	height: 46px;
-	background: #937c6f;
+	background: #5c5a5a;
 	color: #FFFFFF;
 	font-size: 12px;
 	letter-spacing: 0.2em;
@@ -1378,15 +1380,15 @@ section
 }
 .newsletter_button:hover
 {
-	background: #e0e3e4;
-	color: #232323;
+	background: #60636463;
+	color: #000000;
 }
 .newsletter_text
 {
 	font-size: 14px;
 	font-style: italic;
-	color: #FFFFFF;
-	margin-top: 19px;
+	color: #ffffff;
+	margin-top: 5px;
 }
 
 /*********************************
