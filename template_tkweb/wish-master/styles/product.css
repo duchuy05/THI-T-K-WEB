@@ -257,10 +257,9 @@ section
 }
 .section_subtitle
 {
-	font-family: 'Railway', serif;
-	font-size: 20px;
-	font-weight: 300;
-	color: #000000;
+	font-size: 14px;
+	font-weight: 600;
+	color: #937c6f;
 	text-transform: uppercase;
 	letter-spacing: 0.2em;
 }
@@ -269,8 +268,8 @@ section
 	font-family: 'Lucida', serif;
 	font-size: 60px;
 	text-transform: uppercase;
-	color: #000000;
-	margin-top: 12px;
+	color: #2f2f2f;
+	margin-top: -4px;
 }
 .button
 {
@@ -757,6 +756,7 @@ section
 {
 	padding-top: 120px;
 	padding-bottom: 20px;
+	background: #FFFFFF;
 }
 
 /*********************************
@@ -1305,7 +1305,7 @@ section
 .newsletter .section_subtitle,
 .newsletter .section_title
 {
-	color: #000000;
+	color: #FFFFFF;
 }
 .newsletter_container
 {
@@ -1319,7 +1319,6 @@ section
 	padding-left: 25px;
 	border: none;
 	outline: none;
-	margin-bottom: 30px;
 }
 .newsletter_input::-webkit-input-placeholder
 {
@@ -1359,11 +1358,11 @@ section
 .newsletter_button
 {
 	position: absolute;
-	top: -12px;
+	top: 0;
 	right: 0;
 	width: 142px;
 	height: 46px;
-	background: #5c5a5a;
+	background: #937c6f;
 	color: #FFFFFF;
 	font-size: 12px;
 	letter-spacing: 0.2em;
@@ -1379,15 +1378,15 @@ section
 }
 .newsletter_button:hover
 {
-	background: #60636463;
-	color: #000000;
+	background: #e0e3e4;
+	color: #232323;
 }
 .newsletter_text
 {
 	font-size: 14px;
 	font-style: italic;
-	color: #ffffff;
-	margin-top: 5px;
+	color: #FFFFFF;
+	margin-top: 19px;
 }
 
 /*********************************
@@ -1752,7 +1751,6 @@ a:hover .fa-cart-shopping {
 
 .fa, .fas {
     font-weight: 900;
-	color: red;
 }
 
 .fa-check:before {
