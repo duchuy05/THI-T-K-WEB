@@ -1750,10 +1750,10 @@ a:hover .fa-cart-shopping {
     margin: 0 3px 0 5px;
 }
 
-.fa, .fas {
+/* .fa, .fas {
     font-weight: 900;
 	color: red;
-}
+} */
 
 .fa-check:before {
     content: "\f00c";
