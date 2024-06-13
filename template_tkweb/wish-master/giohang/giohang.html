@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Wish</title>
+<title>Giỏ hàng</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Wish shop project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
 <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css">
@@ -14,8 +16,20 @@
 <link href="../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/product.css">
+=======
+<link rel="stylesheet" type="text/css" href="/template_tkweb/wish-master/styles/bootstrap4/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/template_tkweb/wish-master/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/template_tkweb/wish-master/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="/template_tkweb/wish-master/plugins/OwlCarousel2-2.2.1/animate.css">
+<link href="/template_tkweb/wish-master/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link href="/template_tkweb/wish-master/plugins/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+<link href="/template_tkweb/wish-master/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/template_tkweb/wish-master/styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="/template_tkweb/wish-master/styles/product.css">
+>>>>>>> a527e5899cced3806a6f0cd3f07814d28bd24200
 <link rel="stylesheet" type="text/css" href="giohang.css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
 
@@ -26,7 +40,7 @@
 
 	<header class="header">
 		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
-			<div class="logo"><a href="../index.html">Wish</a></div>
+			<div class="logo"><a href="../index.html"><img src="../images/logo.png" alt=""></a></div>
 			<nav class="main_nav" class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul class="menu_bar">
 					<li><a href="../index.html">trang chủ</a></li>
@@ -37,7 +51,7 @@
 								<a href="#">Bông tai</a>
 								<a href="#">Dây chuyền</a>
 								<a href="#">Lắc</a>
-								<a href="#">Vòng</a>
+								<a href="../vong/vong.html">Vòng</a>
 								<a href="#">Charm</a>
 							</li>
 						</ul>
@@ -69,7 +83,7 @@
 							<img src="../images/shopping-bag.svg" alt="">
 							<div class="cart_num_container">
 								<div class="cart_num_inner">
-									<div class="cart_num">1</div>
+									<div class="cart_num">2</div>
 								</div>
 							</div>
 						</div>
@@ -102,7 +116,7 @@
 
 	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
 		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="#">Wish</a></div>
+		<div class="logo menu_mm"><a href="#">Seraphine</a></div>
 		<div class="search">
 			<form action="#">
 				<input type="search" class="search_input menu_mm" required="required">
@@ -143,12 +157,12 @@
 
 <!-- Cart -->
 <div class="product">
-    <div class="container mt-5">
-        <div class="row">
-            <div class="cart-container">
+    <div class="container">
+        <div class="row-cart">
+            <div class="cart-container _3IM2GBccOtwRW10h68u9qJ">
                 <h1>Giỏ Hàng Của Bạn</h1>
-                <div class="col-lg-9">
-                    <ul class="cartItemList">
+                <div class="col-lg-12">
+                    <ul class="cartIemList">
                         <li class="cartItemListNo">
                             <article class="cartItem">
                                 <div class="cartImageModule">
@@ -232,41 +246,70 @@
                 </div>
                 
             </div>
-            <div class="col-lg-3">
-                <div class="cart-total">
-                    <p>Tổng cộng: <span class="grand-total">250000</span>đ</p>
-                    <button class="checkout-btn">Thanh toán</button>
-                </div>
-            </div>
+            <div class="cart-right">
+				<div class="cart-details">
+					<div class="cart-total">
+						<p>Tổng đơn hàng |<span class="total-quantity">2</span> sản phẩm</p>
+						<p>Tổng cộng: <span class="grand-total">700000</span>đ</p>
+					</div>
+					<div class="cart-total">
+						<span><p class="total-quantity">
+							Nhập mã giảm giá:</p></span>
+						
+					</div>
+					<div class="cart-total">
+
+							<p><input type="text" placeholder="Mã giảm giá" class="styled-input"></p>
+						
+					</div>
+					<div class="cart-total">
+						<p><span class="">Phương thức thanh toán </span></p>
+						<div class="icon-payment">
+							<a href=""><img src="../images/momo-2.svg" alt=""></a>
+							<a href=""><img src="../images/0oxhzjmxbksr1686814746087.png" alt=""></a>
+							<a href=""><img src="../images/mastercard-icon-512x329-xpgofnyv.png" alt=""></a>
+						</div>
+						
+					</div>
+					<div class="cart-total">
+						
+					</div>
+					<div class="cart-total">
+						<button class="checkout-btn">Thanh toán</button>
+					</div>
+					<div class="cart-total">
+						<a><button class="continue-shopping-btn">Tiếp tục mua sắm</button></a>
+					</div>
+				</div>
+			</div>
                 
         </div>
     </div>
-
 </div>
 	
 	<!-- Newsletter -->
 
 	<div class="newsletter">
 		<div class="newsletter_content">
-			<div class="newsletter_image" style="background-image:url(../images/newsletter.jpg)"></div>
+			<div class="newsletter_image" style="background-image:url(../images/91bca0ec30aa93f4cabb.jpg)"></div>
 			<div class="container">
-				<div class="row">
+				<div class="row newsletter_row">
 					<div class="col">
 						<div class="section_title_container text-center">
-							<div class="section_subtitle">only the best</div>
-							<div class="section_title">subscribe for a 20% discount</div>
+							<div class="section_subtitle">hãy trở thành hội viên của chúng tôi ngay hôm nay</div>
+							<div class="section_title">đăng ký để nhận voucher giảm giá 20%</div>
 						</div>
 					</div>
 				</div>
 				<div class="row newsletter_container">
 					<div class="col-lg-10 offset-lg-1">
 						<div class="newsletter_form_container">
-							<form action="#">
+							<form action="#" id="letter_form">
 								<input type="email" class="newsletter_input" required="required" placeholder="E-mail here">
-								<button type="submit" class="newsletter_button">subscribe</button>
+								<button type="submit" class="newsletter_button">đăng ký</button>
 							</form>
 						</div>
-						<div class="newsletter_text">Integer ut imperdiet erat. Quisque ultricies lectus tellus, eu tristique magna pharetra nec. Fusce vel lorem libero. Integer ex mi, facilisis sed nisi ut, vestib ulum ultrices nulla. Aliquam egestas tempor leo.</div>
+						<div class="newsletter_text">Trở thành hội viên của Seraphine để nhận được thông báo về các chương trình khuyến mãi và có cơ hội tham gia gift away mỗi tháng, cùng với đó là vô vàn các ưu đãi khác </div>
 					</div>
 				</div>
 			</div>
@@ -279,28 +322,26 @@
 		<div class="container">
 			<div class="row">
 				<div class="col text-center">
-					<div class="footer_logo"><a href="#">Wish</a></div>
+					<div class="footer_logo"><a href="#">Seraphine</a></div>
 					<nav class="footer_nav">
 						<ul>
-							<li><a href="index.html">home</a></li>
-							<li><a href="categories.html">clothes</a></li>
-							<li><a href="categories.html">accessories</a></li>
-							<li><a href="categories.html">lingerie</a></li>
-							<li><a href="contact.html">contact</a></li>
+							<li><a href="../wish-master/trangchu/index.html">trang chủ</a></li>
+							<li><a href="categories.html">trang sức</a></li>
+							<li><a href="categories.html">giới thiệu</a></li>
+							<li><a href="categories.html">khuyến mãi</a></li>
+							<li><a href="contact.html">blog</a></li>
+							<li><a href="contact.html">liên hệ</a></li>
 						</ul>
 					</nav>
 					<div class="footer_social">
 						<ul>
-							<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.instagram.com/seraphine_jew/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.facebook.com/people/Seraphine/61553772548568/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
 					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Seraphine
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
 				</div>
 			</div>
 		</div>
