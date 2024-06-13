@@ -1358,7 +1358,7 @@ section
 .newsletter_button
 {
 	position: absolute;
-	top: 0;
+	top: -13px;
 	right: 0;
 	width: 142px;
 	height: 46px;
