@@ -1433,14 +1433,14 @@ section
 	font-style: italic;
 	color: #b3b3b3 !important;
 }
-.newsletter_button
+.newsletter_btn
 {
 	position: absolute;
-	top: 0px;
+	top: -13px;
 	right: 0;
 	width: 142px;
 	height: 46px;
-	background: #937c6f;
+	background: #383432b2;
 	color: #FFFFFF;
 	font-size: 12px;
 	letter-spacing: 0.2em;
