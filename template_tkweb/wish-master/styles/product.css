@@ -607,7 +607,7 @@ section
 }
 .home_title
 {
-	font-family: 'Lucida', serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 36px;
 	color: #FFFFFF;
 	line-height: 0.75;
@@ -626,7 +626,7 @@ section
 }
 .breadcrumbs ul li a
 {
-	font-family: 'Lucida', serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 	color: #FFFFFF;
 	-webkit-transition: all 200ms ease;
