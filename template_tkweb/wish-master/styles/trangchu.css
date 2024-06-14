@@ -1474,10 +1474,10 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.newsletter_button:hover
+.newsletter_btn:hover
 {
-	background: #e0e3e4;
-	color: #232323;
+	background: #4a4c4d70;
+	color: #000000cb;
 }
 .newsletter_text
 {
