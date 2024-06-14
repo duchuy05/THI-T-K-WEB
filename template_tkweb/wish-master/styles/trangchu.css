@@ -473,7 +473,7 @@ section
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);*/
 	transform: translateY(-50%);
-	right: 15%; /* 5% of the search input width */
+	right: 10%; /* 5% of the search input width */
     width: 2vw; /* 2% of viewport width */
     height: 2vw; /* 2% of viewport width */
 	background: transparent;
