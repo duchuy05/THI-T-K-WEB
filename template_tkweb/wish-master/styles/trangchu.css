@@ -31,7 +31,7 @@
 1. Fonts
 ***********/
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700;800&display=swap');
 @font-face
 {
 	font-family: 'Lucida';
@@ -303,17 +303,17 @@ section
 3. Header
 *********************************/
 
-.header
+.head
 {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 120px;
+    height: 10vh; /* 20% of viewport height */
 	background: #FFFFFF;
 	z-index: 100;
-	padding-left: 60px;
-	padding-right: 64px;
+	padding-left: 5%; /* 5% of the width */
+    padding-right: 5%; /* 5% of the width */
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
@@ -322,9 +322,18 @@ section
 }
 .header.scrolled
 {
-	height: 80px;
+    height: 10vh; /* 10% of viewport height */
 }
-.header_inner
+.header_content {
+    flex-grow: 0.2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Đẩy các phần tử con sang bên phải */
+    padding-right: -10%; /* Đảm bảo không có khoảng trắng thừa bên phải */
+	margin-right: -3%;
+}
+
+.head_inner
 {
 	width: 100%;
 	height: 100%;
@@ -340,7 +349,7 @@ section
 .logo a
 {
 	font-family: 'Lucida', serif;
-	font-size: 30px;
+    font-size: 2.5vw; /* 2.5% of viewport width */
 	color: #2f2f2f;
 }
 
@@ -353,7 +362,7 @@ section
 	display: inline-block;
   }
   
-  .dropdown-content {
+  .dropdown_content {
 	display: none;
 	position: absolute;
 	background-color: #f1f1f1;
@@ -363,45 +372,51 @@ section
 	width: max-content;
   }
   
-  .dropdown-content a {
+  .dropdown_content a {
 	color: black;
-	padding: 12px 16px;
+    padding: 1rem; /* 1rem for padding */
 	text-decoration: none;
 	display: block;
   }
   
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown_content a:hover {background-color: #ddd;}
   
-  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropdown_content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 
-.main_nav
+.main-nav
 {
 	flex: 1;
-	padding-left: 60px;
-	-webkit-transform: translateY(4px);
+    padding-left: 5%; /* 5% of the width */
+	/*-webkit-transform: translateY(4px);
 	-moz-transform: translateY(4px);
 	-ms-transform: translateY(4px);
-	-o-transform: translateY(4px);
-	transform: translateY(4px);
+	-o-transform: translateY(4px);*/
+	transform: translateY(4%);
 }
-.main_nav ul li
+.main-nav ul {
+    justify-content: space-between;
+    padding: 3%; /* Đảm bảo không có padding không cần thiết */
+    margin: 0; /* Đảm bảo không có margin không cần thiết */
+}
+.main-nav ul li
 {
 	display: inline-block;
-	margin-right: 30px;
+    margin-right: 5%; /* 2% of the width */
 }
-.main_nav ul li:last-child
+.main-nav ul li:last-child
 {
 	margin-right: 0;
 }
-.main_nav ul li a
+.main-nav ul li a
 {
-	font-size: 12px;
+    font-size: 0.75vw; /* 0.8% of viewport width */
+	font-family: 'Montserrat',sans-serif;
 	text-transform: uppercase;
 	color: #2f2f2f;
-	font-weight: 600;
+	font-weight: 700;
 	letter-spacing: 0.2em;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -409,56 +424,57 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.main_nav ul li a:hover
+.main-nav ul li a:hover
 {
-	color: #937c6f;
+	color: #000000;
 }
 
 /*********************************
 3.3 Header - Search
 *********************************/
 
-.search
+.Search
 {
-	flex: 1;
+	flex: 3.5;
 	display: inline-block;
-	width: 400px;
-	-webkit-transform: translateY(2px);
+	width: 25%; /* 25% of the width */
+	/*-webkit-transform: translateY(2px);
 	-moz-transform: translateY(2px);
 	-ms-transform: translateY(2px);
-	-o-transform: translateY(2px);
-	transform: translateY(2px);
+	-o-transform: translateY(2px);*/
+	transform: translateY(4%);
 }
-.search_input
+.Search-input
 {
 	width: 100%;
-	height: 43px;
-	background: #ffffff;
+    height: 5vh; /* 5% of viewport height */
+	background: #6d66665d;
+	border-radius: 50px;
 	border: none;
 	outline: none;
-	padding-left: 20px;
+    padding-left: 5%; /* 5% of the input width */
 }
-.search_button
+.Search-button
 {
 	position: absolute;
 	top: 45%;
-	-webkit-transform: translateY(-50%);
+	/*-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
+	-o-transform: translateY(-50%);*/
 	transform: translateY(-50%);
-	right: 10px;
-	width: 19px;
-	height: 19px;
+	right: 5%; /* 5% of the search input width */
+    width: 2vw; /* 2% of viewport width */
+    height: 2vw; /* 2% of viewport width */
 	background: transparent;
 	border: none;
 	outline: none;
 }
-.search_button:focus
+.Search-button:focus
 {
 	outline: none !important;
 }
-.search_button img
+.Search-button img
 {
 	max-width: 100%;
 }
@@ -471,42 +487,45 @@ section
 {
 	flex: 1;
 	display: inline-block;
-	margin-left: 111px;
-	padding-right: 161px;
-	-webkit-transform: translateY(-2px);
+	margin-left: 10%; /* 10% of the width */
+    padding-right: 10%; /* 10% of the width */
+	/*-webkit-transform: translateY(-2px);
 	-moz-transform: translateY(-2px);
 	-ms-transform: translateY(-2px);
-	-o-transform: translateY(-2px);
-	transform: translateY(-2px);
+	-o-transform: translateY(-2px);*/
+	transform: translateY(-2%);
 }
 .shopping a
 {
 	display: inline-block;
-	margin-right: 10px;
+    margin-right: 2%; /* 2% of the width */
 }
 .shopping a:last-child
 {
 	margin-right: 0;
 }
-.cart_num_container,
-.star_num_container
+.cart-num_container,
+.star-num_container
 {
 	position: absolute;
-	top: 13px;
-	left: -5px;
-	width: 15px;
-	height: 15px;
-	background: #937c6f;
-	border-radius: 50%;
+    top: 50%; /* Đặt phần tử theo chiều cao trên cùng 50% */
+    left: -15%; /* Đặt phần tử theo chiều ngang bên trái -20px */
+    width: 0.8vw; /* Đặt kích thước rộng */
+    height: 0.8vw; /* Đặt kích thước cao */
+    background: #000000a2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.cart_num_inner,
-.star_num_inner
+.cart-num_inner,
+.star-num_inner
 {
 	width: 100%;
 	height: 100%;
 }
-.cart_num,
-.star_num
+.cart-num,
+.star-num
 {
 	position: absolute;
 	top: 50%;
@@ -516,24 +535,25 @@ section
 	-ms-transform: translate(-50%, -50%);
 	-o-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
-	font-size: 9px;
+	font-size: 70%;
 	font-weight: 600;
 	color: #FFFFFF;
+	
 }
 .star img
 {
-	width: 20px;
-	height: 20px;
+	width: 2vw; /* 2% of viewport width */
+    height: 2vw; /* 2% of viewport width */
 }
 .avatar img
 {
-	width: 20px;
-	height: 20px;
+	width: 2vw; /* 2% of viewport width */
+    height: 2vw; /* 2% of viewport width */
 }
 
 /*********************************
 3.5 Header - Burger
-*********************************/
+*********************************
 
 .burger_container
 {
@@ -564,7 +584,7 @@ section
 .burger_container:hover div
 {
 	background: #937c6f;
-}
+}*/
 
 /*********************************
 4. Home
@@ -1283,7 +1303,7 @@ section
 	font-size: 18px;
 	color: #FFFFFF;
 	margin-top: 5px;
-	font-family: 'Lucida',sans-serif;
+	font-family: 'Times New Roman', Times, serif;
 }
 .gallery_button
 {
@@ -1440,7 +1460,7 @@ section
 	right: 0;
 	width: 142px;
 	height: 46px;
-	background: #383432b2;
+	background: #38343296;
 	color: #FFFFFF;
 	font-size: 12px;
 	letter-spacing: 0.2em;
