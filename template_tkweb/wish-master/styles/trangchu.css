@@ -1512,21 +1512,23 @@ section
 }
 .footer
 {
-	padding-top: 50px;
-	padding-bottom: 1px;
-	background: #79767656;
-
+		padding-top: 5%; /* Padding dựa trên chiều cao của footer */
+		padding-bottom: 1%; /* Padding dựa trên chiều cao của footer */
+		background: #79767656; /* Màu nền của footer */
+		font-size: 1.2rem; /* Kích thước font cơ sở */
+		color: #232323; /* Màu chữ */
+		text-align: center; /* Căn chỉnh văn bản vào giữa */
 }
 .footer.relative {
 	position: relative;
   }
 
-.footer_logo 
+/*.footer_logo 
 {
 	font-family: 'Lucida', serif;
-	font-size: 50px;
+	font-size: 5vw	;
 	color: #232323;
-	padding-bottom: 30px;
+	padding-bottom: 3vw;
 }
 .footer_nav
 {
@@ -1541,44 +1543,47 @@ section
 }
 
 .footer_menu > li {
-    margin-right: 30px;
+    margin-right: 3vw;
 }
 .footer_menu .product-category {
     display: block;
     margin-right: 30px;
-}
+}*/
 .links-wrap {
-    display: block;
+    display: flex;
     justify-content: space-between;
-   
 }
 .links-wrap .col-md-3 {
     flex: 0 0 auto;
-	padding-left: 30px;
+	padding-left: 2vw;
 }
 .links-wrap .col-md-2 {
     flex: 0 0 auto;
-	padding-left: 40px;
+	padding-left: 2.5vw;
 }.links-wrap .col-md-4 {
     flex: 0 0 auto;
-	padding-left: 50px;
+	padding-left: 4vw;
+	padding-right: 1vw;
 }
 .links-wrap .list-unstyled {
-    padding-left: 0px;
+    padding-left: 0;
     list-style: none;
 	color: black;
+	font-size: 80%;
 }
 
 .links-wrap .list-unstyled li {
-    margin-bottom: 10px;
+	margin-bottom: 0.5rem; /* Khoảng cách giữa các mục trong danh sách */
+    font-size: 0.9rem; /* Kích thước font danh sách */
 	color: black;
 	font-family: 'Montserrat', serif;
 
 }
 .links-wrap .list-unstyled p {
     font-family: 'Montserrat', serif;
-    font-size: 15px;
-    color: black;
+	font-size: 0.9rem; /* Kích thước font đoạn văn */
+	color: black;
+	margin-bottom: -1%;
 }
 
 .product-list {
@@ -1595,12 +1600,13 @@ section
 p.mb-4 {
 	color: black;
 	font-family: 'Montserrat' , sans-serif;
+	font-size: 75%;
 }
 .product-list a {
     color: #555;
     text-decoration: none;
 	display: block;
-    font-size: 14px;
+    font-size: 1.4vw;
     transition: color 0.3s;
 }
 
@@ -1636,7 +1642,17 @@ p.mb-4 {
 {
 	color: #937c6f;
 }
-.footer_social a
+.footer-social {
+    margin-top: 2rem; /* Khoảng cách trên cùng của mạng xã hội */
+}
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Canh giữa các biểu tượng mạng xã hội */
+}
+.footer-social a
 {
 	margin-top: 51px;
 }
@@ -1652,18 +1668,18 @@ p.mb-4 {
 .fab.fa-twitter{
 	color:black;
 }
-.footer_social ul li
+.footer-social ul li
 {
 	display: inline-block;
-	margin-right: 36px;
+	margin-right: 2vw;
 }
-.footer_social ul li:last-child
+.footer-social ul li:last-child
 {
 	margin-right: 0;
 }
-.footer_social ul li a i
+.footer-social ul li a i
 {
-	font-size: 24px;
+	font-size: 2rem; /* Kích thước biểu tượng */
 	color: #937c6f;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1671,34 +1687,31 @@ p.mb-4 {
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.footer_social ul li a i:hover
+.footer-social ul li a i:hover
 {
-	color: #e0e3e4;
+	color: #4c565a6b;
 }
 .copyright
 {
-	margin-top: 56px;
-	padding-bottom: 13px;
-	font-family: 'Lucida', serif;
-	font-size: 12px;
-	font-weight: bold;
+	margin-top: 2rem; /* Khoảng cách trên cùng của bản quyền */
+    padding-bottom: 0.5rem; /* Khoảng cách dưới của bản quyền */
+    font-size: 0.8rem; /* Kích thước font của bản quyền */
+    font-weight: bold; /* Độ đậm của bản quyền */
 	font-style: italic;
-	color: #232323;
 }
 
 /** Scroll to top button*/
 
 .scroll-to-top-btn {
-    display: none;
+	display: none; /* Ẩn nút cuộn lên đầu trang mặc định */
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: #fff;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 1000;
-	background-color: #8f8d8d;
+    bottom: 2rem; /* Khoảng cách dưới của nút */
+    right: 2rem; /* Khoảng cách bên phải của nút */
+    color: #fff; /* Màu chữ */
+    background-color: #8f8d8d; /* Màu nền */
+    border: none; /* Không có viền */
+    border-radius: 20px; /* Bo tròn góc */
+    padding: 0.5rem 1rem; /* Kích thước padding của nút */
+    cursor: pointer; /* Con trỏ chỉ vào */
+    z-index: 1000; /* Độ sâu z-index */
 }
-
