@@ -309,7 +309,7 @@ section
     top: 0;
     left: 0;
     width: 100%;
-    height: 8vh; /* 10% of viewport height */
+    height: auto; /* 10% of viewport height */
     background: #FFFFFF;
     z-index: 100;
     padding-left: 5%; /* 5% of the width */
@@ -402,6 +402,7 @@ section
 	list-style: none;
     margin: 0;
     padding: 0;
+	padding-left: 5%;
 }
 .main-nav ul li
 {
@@ -461,7 +462,7 @@ section
 	border-radius: 50px;
 	border: none;
 	outline: none;
-    padding-left: 0; /* 5% of the input width */
+    padding-left: 5%; /* 5% of the input width */
 }
 .Search-button
 {
@@ -493,13 +494,13 @@ section
 3.4 Header - Shopping
 *********************************/
 .Search.header_search {
-    margin-right: 2rem; /* Adjust the margin as needed */
+    margin-right: 1rem; /* Adjust the margin as needed */
 }
 .Shopping
 {
 	flex: 1;
 	display: inline-block;
-    padding-left: 0%; /* 10% of the width */
+    padding-left: 2%; /* 10% of the width */
 	/*-webkit-transform: translateY(-2px);
 	-moz-transform: translateY(-2px);
 	-ms-transform: translateY(-2px);
@@ -638,7 +639,6 @@ section
 {
 	width: 100%;
 	height: 100%;
-	/*max-width: 1760px;*/
 	position: relative;
 	margin: auto;
 }
