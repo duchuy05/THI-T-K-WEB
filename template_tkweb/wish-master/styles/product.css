@@ -1311,6 +1311,9 @@ section
 {
 	margin-top: 75px;
 }
+.newsletter_wrapper {
+    margin-bottom: 50px;
+}
 .newsletter_input
 {
 	width: 100%;
@@ -1361,7 +1364,7 @@ section
 	top: -13px;
 	right: 0;
 	width: 142px;
-	height: 46px;
+	height: 47px;
 	background: #937c6f;
 	color: #FFFFFF;
 	font-size: 12px;
