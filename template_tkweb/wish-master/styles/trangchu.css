@@ -305,7 +305,7 @@ section
 
 .head
 {
-	position: absolute;
+	position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -345,7 +345,7 @@ section
 3.1 Header - Logo
 *********************************/
 .logo img {
-    width: 150px; /* Điều chỉnh chiều rộng của logo */
+    max-width: 8vw; /* Đảm bảo logo tự động điều chỉnh kích thước */
     height: auto; /* Đảm bảo chiều cao tự động điều chỉnh */
 }
 .logo a
@@ -392,11 +392,11 @@ section
 {
 	flex: 1;
     padding-left: 7%; /* 5% of the width */
-	/*-webkit-transform: translateY(4px);
-	-moz-transform: translateY(4px);
-	-ms-transform: translateY(4px);
-	-o-transform: translateY(4px);*/
-	transform: translateY(4%);
+	-webkit-transform: translateY(4%);
+	-moz-transform: translateY(4%);
+	-ms-transform: translateY(4%);
+	-o-transform: translateY(4%);
+	transform: translateY(0);
 }
 .main-nav ul {
 	list-style: none;
@@ -710,7 +710,7 @@ section
 	right: 60px;
 	width: 45px;
 	height: 45px;
-	background: #937c6f;
+	background: #3b3a395b;
 	z-index: 10;
 	border-radius: 50%;
 	cursor: pointer;
@@ -722,7 +722,7 @@ section
 }
 .home_slider_next:hover
 {
-	background: #2f2f2f;
+	background: #2f2f2fb5;
 }
 .home_slider_dots_container
 {
@@ -736,8 +736,8 @@ section
 {
 	display: inline-block;
 	position: absolute;
-	top: -54px;
-	margin-left: -300px;
+	top: -4vw;
+	margin-left: -20vw;
 }
 .home_slider_dots ul
 {
@@ -752,7 +752,6 @@ section
 	font-family: 'Lucida', serif;
 	font-weight: bold;
 	font-size: 18px;
-	color: #000000;
 	margin-right: 7px;
 	margin-left: 2px;
 	cursor: pointer;
@@ -1549,7 +1548,6 @@ section
 	padding-top: 5%; /* Padding dựa trên chiều cao của footer */
 	padding-bottom: 1%; /* Padding dựa trên chiều cao của footer */
 	background: #79767656; /* Màu nền của footer */
-	font-size: 1.2rem; /* Kích thước font cơ sở */
 	color: #232323; /* Màu chữ */
 	text-align: center; /* Căn chỉnh văn bản vào giữa */
 	padding-left: 5vw;}
@@ -1608,14 +1606,14 @@ section
 
 .links-wrap .list-unstyled li {
 	margin-bottom: 0.5rem; /* Khoảng cách giữa các mục trong danh sách */
-    font-size: 0.8rem; /* Kích thước font danh sách */
+    font-size: 0.8vw; /* Kích thước font danh sách */
 	color: black;
 	font-family: 'Montserrat', serif;
 
 }
 .links-wrap .list-unstyled p {
     font-family: 'Montserrat', serif;
-	font-size: 0.8rem; /* Kích thước font đoạn văn */
+	font-size: 0.8vw; /* Kích thước font đoạn văn */
 	color: black;
 	margin-bottom: -1%;
 }
@@ -1634,7 +1632,7 @@ section
 p.mb-4 {
 	color: black;
 	font-family: 'Montserrat' , sans-serif;
-	font-size: 0.8rem;
+	font-size: 0.8vw;
 }
 .product-list a {
     color: #555;
@@ -1649,6 +1647,7 @@ p.mb-4 {
 }
 .col.text-center {
 	width: 100%;
+	height: auto;
 }
 .footer_nav ul li
 {
@@ -1713,7 +1712,7 @@ p.mb-4 {
 }
 .footer-social ul li a i
 {
-	font-size: 2rem; /* Kích thước biểu tượng */
+	font-size: 1.5rem; /* Kích thước biểu tượng */
 	color: #937c6f;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
