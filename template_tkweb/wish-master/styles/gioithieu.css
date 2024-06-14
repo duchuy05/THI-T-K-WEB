@@ -1,5 +1,6 @@
 .main-content {
-    top:116px;
+  padding-top: 65px;
+  
 }
 .VideoPlayer__player {
     width: 100%; 
