@@ -305,20 +305,16 @@ section
 
 .head
 {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-    height: 10vh; /* 20% of viewport height */
-	background: #FFFFFF;
-	z-index: 100;
-	padding-left: 5%; /* 5% of the width */
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8vh; /* 10% of viewport height */
+    background: #FFFFFF;
+    z-index: 100;
+    padding-left: 5%; /* 5% of the width */
     padding-right: 5%; /* 5% of the width */
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+    transition: all 200ms ease;
 }
 .header.scrolled
 {
@@ -332,7 +328,10 @@ section
     padding-right: -10%; /* Đảm bảo không có khoảng trắng thừa bên phải */
 	margin-right: -3%;
 }
-
+.row.align-items-center
+{
+	width: 100%;
+}
 .head_inner
 {
 	width: 100%;
@@ -345,11 +344,14 @@ section
 /*********************************
 3.1 Header - Logo
 *********************************/
-
+.logo img {
+    width: 150px; /* Điều chỉnh chiều rộng của logo */
+    height: auto; /* Đảm bảo chiều cao tự động điều chỉnh */
+}
 .logo a
 {
 	font-family: 'Lucida', serif;
-    font-size: 2.5vw; /* 2.5% of viewport width */
+    font-size: 1.5vw; /* 2.5% of viewport width */
 	color: #2f2f2f;
 }
 
@@ -360,8 +362,8 @@ section
 .dropdown {
 	position: relative;
 	display: inline-block;
-  }
-  
+}
+
   .dropdown_content {
 	display: none;
 	position: absolute;
@@ -389,7 +391,7 @@ section
 .main-nav
 {
 	flex: 1;
-    padding-left: 5%; /* 5% of the width */
+    padding-left: 7%; /* 5% of the width */
 	/*-webkit-transform: translateY(4px);
 	-moz-transform: translateY(4px);
 	-ms-transform: translateY(4px);
@@ -397,9 +399,9 @@ section
 	transform: translateY(4%);
 }
 .main-nav ul {
-    justify-content: space-between;
-    padding: 3%; /* Đảm bảo không có padding không cần thiết */
-    margin: 0; /* Đảm bảo không có margin không cần thiết */
+	list-style: none;
+    margin: 0;
+    padding: 0;
 }
 .main-nav ul li
 {
@@ -412,7 +414,7 @@ section
 }
 .main-nav ul li a
 {
-    font-size: 0.75vw; /* 0.8% of viewport width */
+    font-size: 0.7vw; /* 0.8% of viewport width */
 	font-family: 'Montserrat',sans-serif;
 	text-transform: uppercase;
 	color: #2f2f2f;
@@ -423,6 +425,12 @@ section
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
+   /* text-decoration: none;
+    color: #2f2f2f;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: all 0.3s ease;*/
 }
 .main-nav ul li a:hover
 {
@@ -446,13 +454,14 @@ section
 }
 .Search-input
 {
-	width: 100%;
+	flex: 1;
+	width: 13vw;
     height: 5vh; /* 5% of viewport height */
 	background: #6d66665d;
 	border-radius: 50px;
 	border: none;
 	outline: none;
-    padding-left: 5%; /* 5% of the input width */
+    padding-left: 0; /* 5% of the input width */
 }
 .Search-button
 {
@@ -463,7 +472,7 @@ section
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);*/
 	transform: translateY(-50%);
-	right: 5%; /* 5% of the search input width */
+	right: 15%; /* 5% of the search input width */
     width: 2vw; /* 2% of viewport width */
     height: 2vw; /* 2% of viewport width */
 	background: transparent;
@@ -479,32 +488,47 @@ section
 	max-width: 100%;
 }
 
+
 /*********************************
 3.4 Header - Shopping
 *********************************/
-
-.shopping
+.Search.header_search {
+    margin-right: 2rem; /* Adjust the margin as needed */
+}
+.Shopping
 {
 	flex: 1;
 	display: inline-block;
-	margin-left: 10%; /* 10% of the width */
-    padding-right: 10%; /* 10% of the width */
+    padding-left: 0%; /* 10% of the width */
 	/*-webkit-transform: translateY(-2px);
 	-moz-transform: translateY(-2px);
 	-ms-transform: translateY(-2px);
 	-o-transform: translateY(-2px);*/
 	transform: translateY(-2%);
 }
-.shopping a
+.Shopping a
 {
 	display: inline-block;
     margin-right: 2%; /* 2% of the width */
 }
-.shopping a:last-child
+.Shopping a:last-child
 {
 	margin-right: 0;
 }
-.cart-num_container,
+.cart-num_container
+{
+	position: absolute;
+    top: 50%; /* Đặt phần tử theo chiều cao trên cùng 50% */
+    left: -15%; /* Đặt phần tử theo chiều ngang bên trái -20px */
+    width: 0.8vw; /* Đặt kích thước rộng */
+    height: 0.8vw; /* Đặt kích thước cao */
+    background: #000000a2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	margin-left: -100%;
+}
 .star-num_container
 {
 	position: absolute;
@@ -517,6 +541,7 @@ section
     display: flex;
     align-items: center;
     justify-content: center;
+	margin-left: -10%;
 }
 .cart-num_inner,
 .star-num_inner
@@ -540,22 +565,31 @@ section
 	color: #FFFFFF;
 	
 }
-.star img
+.Cart img
 {
-	width: 2vw; /* 2% of viewport width */
+	width: 1vw; /* 2% of viewport width */
     height: 2vw; /* 2% of viewport width */
+	margin-left: -100%;
 }
-.avatar img
+.Star img
 {
-	width: 2vw; /* 2% of viewport width */
+	width: 1vw; /* 2% of viewport width */
     height: 2vw; /* 2% of viewport width */
+	margin-left: -10%;
+}
+.Avatar img
+{
+	width: 1vw; /* 2% of viewport width */
+    height: 2vw; /* 2% of viewport width */
+	margin-left: 50%;
+
 }
 
 /*********************************
 3.5 Header - Burger
-*********************************
+*********************************/
 
-.burger_container
+.burger-container
 {
 	position: absolute;
 	top: calc(50% + 4px);
@@ -564,12 +598,11 @@ section
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
-	right: 0;
 	width: 22px;
 	height: 16px;
 	cursor: pointer;
 }
-.burger_container div
+.burger-container div
 {
 	width: 100%;
 	height: 2px;
@@ -581,10 +614,10 @@ section
 	transition: all 200ms ease;
 	pointer-events: none;
 }
-.burger_container:hover div
+.burger-container:hover div
 {
 	background: #937c6f;
-}*/
+}
 
 /*********************************
 4. Home
@@ -1614,7 +1647,7 @@ p.mb-4 {
     color: #000;
 }
 .col.text-center {
-	width: 1560px;
+	width: 100%;
 }
 .footer_nav ul li
 {
