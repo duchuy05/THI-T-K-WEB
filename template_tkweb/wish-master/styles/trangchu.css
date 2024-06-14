@@ -742,7 +742,9 @@ section
 .home_slider_dots ul
 {
 	display: inline-block;
+	margin-left: 10vw;
 }
+
 .home_slider_dots ul li
 {
 	display: inline-block;
@@ -762,16 +764,14 @@ section
 .home_slider_custom_dot div
 {
 	display: inline-block;
-	width: 0px;
-	height: 1px;
+	width: 15px;
+	height: auto;
 	background: #000000;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
 	-ms-transition: all 200ms ease;
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
-	margin-left: 4px;
-	margin-right: -4px;
 }
 .home_slider_custom_dot.active div
 {
@@ -781,6 +781,7 @@ section
 {
 	display: none !important;
 }
+
 
 /*********************************
 5. Menu
@@ -1545,13 +1546,13 @@ section
 }
 .footer
 {
-		padding-top: 5%; /* Padding dựa trên chiều cao của footer */
-		padding-bottom: 1%; /* Padding dựa trên chiều cao của footer */
-		background: #79767656; /* Màu nền của footer */
-		font-size: 1.2rem; /* Kích thước font cơ sở */
-		color: #232323; /* Màu chữ */
-		text-align: center; /* Căn chỉnh văn bản vào giữa */
-}
+	padding-top: 5%; /* Padding dựa trên chiều cao của footer */
+	padding-bottom: 1%; /* Padding dựa trên chiều cao của footer */
+	background: #79767656; /* Màu nền của footer */
+	font-size: 1.2rem; /* Kích thước font cơ sở */
+	color: #232323; /* Màu chữ */
+	text-align: center; /* Căn chỉnh văn bản vào giữa */
+	padding-left: 5vw;}
 .footer.relative {
 	position: relative;
   }
@@ -1602,19 +1603,19 @@ section
     padding-left: 0;
     list-style: none;
 	color: black;
-	font-size: 80%;
+	font-size: 0.8rem;
 }
 
 .links-wrap .list-unstyled li {
 	margin-bottom: 0.5rem; /* Khoảng cách giữa các mục trong danh sách */
-    font-size: 0.9rem; /* Kích thước font danh sách */
+    font-size: 0.8rem; /* Kích thước font danh sách */
 	color: black;
 	font-family: 'Montserrat', serif;
 
 }
 .links-wrap .list-unstyled p {
     font-family: 'Montserrat', serif;
-	font-size: 0.9rem; /* Kích thước font đoạn văn */
+	font-size: 0.8rem; /* Kích thước font đoạn văn */
 	color: black;
 	margin-bottom: -1%;
 }
@@ -1633,7 +1634,7 @@ section
 p.mb-4 {
 	color: black;
 	font-family: 'Montserrat' , sans-serif;
-	font-size: 75%;
+	font-size: 0.8rem;
 }
 .product-list a {
     color: #555;
