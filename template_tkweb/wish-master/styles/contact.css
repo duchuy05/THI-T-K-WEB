@@ -734,7 +734,7 @@ section
 {
 	width: 100%;
 	background: #f9f5f5;
-	padding-top: 99px;
+	padding-top: 9px;
 	padding-bottom: 97px;
 }
 .review_form_container
@@ -1230,4 +1230,7 @@ section
 	font-family: 'Lucida', serif;
 	font-size: 12px;
 	color: #232323;
+}
+.accordion_panel {
+	display: none;
 }
