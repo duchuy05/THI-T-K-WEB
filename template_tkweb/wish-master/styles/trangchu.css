@@ -334,6 +334,7 @@ section
 .row.align-items-center
 {
 	width: 100%;
+	height: auto;
 }
 .head_inner
 {
@@ -1038,9 +1039,15 @@ section
     border-radius: 20px;
     transition: height 0.3s ease;
 }*/
+.Product:hover .home-product-item__favourite {
+    transform: scale(1.3); /* Khi hover vào, phần tử yêu thích sẽ phóng to 20% */
+}
+.Product:hover .Product_info {
+    transform: scale(1.02); /* Khi hover vào, phần tử content sẽ phóng to 10% */
+}
 .Product_prices {
 	font-family:'Courier New', Courier, monospace;
-	font-size: 17px;
+	font-size: 16px;
 	font-weight: bold;
 }
 .Product_prices:hover a {
@@ -1725,6 +1732,7 @@ section
 	width: 100%;
 	height: 46px;
 	background: #FFFFFF;
+	font-family:'Railway',sans-serif;
 	padding-left: 25px;
 	border: none;
 	outline: none;
@@ -1767,6 +1775,7 @@ section
 }
 .newsletter_btn
 {
+	font-family:'Railway',sans-serif;
 	position: absolute;
 	top: -13px;
 	right: 0;
@@ -1793,6 +1802,7 @@ section
 }
 .newsletter_text
 {
+	font-family: 'Railway',sans-serif;
 	font-size: 14px;
 	font-style: italic;
 	color: #FFFFFF;
@@ -2066,3 +2076,142 @@ p.mb-4 {
 	transition: transform 0.5s;
   }
   /* CRO-botton*/
+/*Đối tác*/
+
+.partners-section {
+	text-align: center;
+	padding-bottom: 200px;
+  }
+  
+  .partners-section h2 {
+	font-family: 'Montserrat',sans-serif;
+	font-size: 3rem;
+	font-weight: 600;
+	color: #3b3737d5;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+  }
+  
+  .partner-images {
+	
+	display: flex;
+ 	justify-content: center;
+  	flex-wrap: wrap;
+  }
+  
+  .partner-images a {
+    display: block;
+    position: absolute; /* Đặt vị trí tuyệt đối để chuyển đổi ảnh */
+    top: 50%;
+ 
+    opacity: 0; /* Ẩn ảnh ban đầu */
+    transition: opacity 0.3s ease; /* Hiệu ứng chuyển đổi */
+    animation: slide 20s infinite; /* Chạy animation với thời gian 20 giây và lặp vô hạn */
+}
+  
+.partner-images a:nth-child(1) {
+    animation-delay: 0s; /* Không có độ trễ cho ảnh đầu tiên */
+}
+
+.partner-images a:nth-child(2) {
+    animation-delay: 3s; /* Độ trễ 3 giây cho ảnh thứ hai */
+}
+
+.partner-images a:nth-child(3) {
+    animation-delay: 6s; /* Độ trễ 6 giây cho ảnh thứ ba */
+}
+
+.partner-images a:nth-child(4) {
+    animation-delay: 9s; /* Độ trễ 9 giây cho ảnh thứ tư */
+}
+
+.partner-images a:nth-child(5) {
+    animation-delay: 12s; /* Độ trễ 12 giây cho ảnh thứ năm */
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0; /* Ẩn ảnh ở đầu */
+    }
+    8% {
+        opacity: 1; /* Hiển thị ảnh */
+    }
+    25% {
+        opacity: 1; /* Hiển thị ảnh */
+    }
+    28% {
+        opacity: 0; /* Ẩn ảnh */
+    }
+    100% {
+        opacity: 0; /* Ẩn ảnh cuối */
+    }
+}
+
+  /*Đối tác*/
+  
+  /*Giới thiệu chung*/
+  .section_about_2 {
+	padding-top: 80px;
+	left:0;
+  }
+  .section_about_2 h2 {
+	padding-top: 10px;
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center; 
+	font-size: 19.5px;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 1.3lh;
+  }
+
+.contain {
+    width: 100%;
+    max-width: 1600px; /* Đặt giới hạn kích thước tối đa */
+    margin: 0 auto; /* Căn giữa */
+    padding: 0 15px; /* Tạo khoảng cách lề */
+}
+.contain video {
+	top: 0%;
+	max-width: 500px;
+	max-height: 500px;
+
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.main-nav {
+	  display: none;
+	}
+  
+	.burger_container {
+	  display: flex;
+	}
+  }
+  
+  @media (max-width: 576px) {
+	.head_inner {
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+  
+	.logo img {
+	  max-height: 40px; /* Adjusted logo size for smaller screens */
+	}
+  
+	.header_content {
+	  width: 100%;
+	  justify-content: space-between;
+	  margin-top: 10px;
+	}
+  
+	.Shopping a img {
+	  max-width: 24px; /* Adjusted shopping icons size for smaller screens */
+	}
+  
+	.Search-input {
+	  width: 100%; /* Ensure search input takes full width */
+	}
+  
+	.Search-button img {
+	  max-width: 20px; /* Adjusted search button icon size for smaller screens */
+	}
+  }
