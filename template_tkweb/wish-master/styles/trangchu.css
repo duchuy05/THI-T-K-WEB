@@ -2157,7 +2157,7 @@ p.mb-4 {
   .section_about_2 h2 {
 	padding-top: 10px;
 	font-family: 'Courier New', Courier, monospace;
-	text-align: justify; 
+	text-align: center; 
 	font-size: 19.5px;
 	font-weight: bold;
 	font-style: italic;
@@ -2176,3 +2176,42 @@ p.mb-4 {
 	max-height: 500px;
 
 }
+/* Responsive Styles */
+@media (max-width: 768px) {
+	.main-nav {
+	  display: none;
+	}
+  
+	.burger_container {
+	  display: flex;
+	}
+  }
+  
+  @media (max-width: 576px) {
+	.head_inner {
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
+  
+	.logo img {
+	  max-height: 40px; /* Adjusted logo size for smaller screens */
+	}
+  
+	.header_content {
+	  width: 100%;
+	  justify-content: space-between;
+	  margin-top: 10px;
+	}
+  
+	.Shopping a img {
+	  max-width: 24px; /* Adjusted shopping icons size for smaller screens */
+	}
+  
+	.Search-input {
+	  width: 100%; /* Ensure search input takes full width */
+	}
+  
+	.Search-button img {
+	  max-width: 20px; /* Adjusted search button icon size for smaller screens */
+	}
+  }
