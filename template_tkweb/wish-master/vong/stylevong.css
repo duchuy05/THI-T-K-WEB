@@ -112,20 +112,6 @@
     font-size: 12px !important;
 }
 
-a, a:hover, a:visited, a:active, a:link {
-    text-decoration: none;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;
-}
-
 .card-title {
     color: black;
 }

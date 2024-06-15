@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BST NHẪN CẦU HÔN “CƯỚI ANH ĐI" - THÌ RA LÃNG MẠN KHÔNG HỀ ĐẮT</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.jpg">
+    <link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">z
+    <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="../styles/blog.css">
+    <link rel="stylesheet" type="text/css" href="../styles/blog_responsive.css">
+</head>
+
+<body>
+    <!--Header 1-->
+	<header>
+		<div class="super_container">
+            <button id="scrollToTopBtn" class="scroll-to-top-btn"><i class="fa-solid fa-circle-up"></i></button>
+        
+            <div class="super_container">
+                <button id="scrollToTopBtn" class="scroll-to-top-btn"><i class="fa-solid fa-circle-up"></i></button>
+            
+                <!-- Header -->
+            
+                <header class="header">
+                    <div class="header_inner d-flex flex-row align-items-center justify-content-start">
+                        <div class="logo"><img src="../images/logo.png" alt="Logo Thương Hiệu"></div>
+                        <!-- Kết thúc phần chèn logo -->
+                        <nav class="main_nav" class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul>
+                                <li><a href="#">trang chủ</a></li>
+                                <li class="dropdown"><a href="trangsuc/trangsuc.html">trang sức</a>
+                                    <ul class="dropdown-content">
+                                        <li>
+                                            <a href="#">Nhẫn</a>
+                                            <a href="#">Bông tai</a>
+                                            <a href="#">Dây chuyền</a>
+                                            <a href="#">Lắc</a>
+                                            <a href="vong/vong.html">Vòng</a>
+                                            <a href="#">Charm</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="gioithieu.html">giới thiệu</a></li>
+                                <li><a href="khuyenmai.html">khuyến mãi</a></li>
+                                <li class="dropdown"><a class="nav-link" href="blogall_1.html">blog</a>
+                                    <ul class="dropdown-content">
+                                        <li class="dropdown-content">
+                                            <a href="tintuc.html">Tin tức</a>
+                                            <a href="tuvan.html">Góc tư vấn</a>
+                                            <a href="kienthuc.html">Kiến thức chung</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="lienhe.html">liên hệ</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header_content ml-auto">
+                            <div class="search header_search">
+                                <form action="#">
+                                    <input type="search" class="search_input" required="required">
+                                    <button type="submit" id="search_button" class="search_button"><img src="../images/magnifying-glass.svg" alt=""></button>
+                                </form>
+                            </div>
+                            <div class="shopping">
+                                <!-- Cart -->
+                                <a href="giohang/giohang.html">
+                                    <div class="cart">
+                                        <img src="../images/shopping-bag.svg" alt="">
+                                        <div class="cart_num_container">
+                                            <div class="cart_num_inner">
+                                                <div class="cart_num">2</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- Star -->
+                                <a href="#">
+                                    <div class="star">
+                                        <img src="../images/star.svg" alt="">
+                                        <div class="star_num_container">
+                                            <div class="star_num_inner">
+                                                <div class="star_num">0</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <!-- Avatar -->
+                                <a href="#">
+                                    <div class="avatar">
+                                        <img src="../images/avatar.svg" alt="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    <div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
+                </div>
+            </header>
+        
+            <!-- Menu -->
+            <div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+                <div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+                <div class="logo menu_mm"><a href="#">Seraphine</a></div>
+                <div class="search">
+                    <form action="#">
+                        <input type="search" class="search_input menu_mm" required="required">
+                        <button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="../images/magnifying-glass.svg" alt=""></button>
+                    </form>
+                </div>
+                <nav class="menu_nav">
+                    <ul class="menu_mm">
+                        <li class="menu_mm"><a href="#">trang chủ</a></li>
+                        <li class="menu_mm"><a href="trangsuc/trangsuc.html">trang sức</a></li>
+                        <li class="menu_mm"><a href="#">giới thiệu</a></li>
+                        <li class="menu_mm"><a href="../khuyenmai.html">khuyến mãi</a></li>
+                        <li class="menu_mm"><a href="#">blog</a></li>
+                        <li class="menu_mm"><a href="../lienhe.html">liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    <!-- Home -->
+
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" style="background-image:url(../images/91bca0ec30aa93f4cabb.jpg)" data-speed="0.8"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="home_container">
+						<div class="home_content">
+							<div class="home_title">BLOG</div>
+							<div class="breadcrumbs">
+								<ul>
+									<li>Kính mắt Ikkuna</li>
+                                    <li>Tháng mười hai 22, 2023</li>
+                                    <li>8 Comments</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-7">
+                    <div class="blog__details__text">
+                        <h2>BST NHẪN CẦU HÔN “CƯỚI ANH ĐI" - THÌ RA LÃNG MẠN KHÔNG HỀ ĐẮT</h2>
+                        <p>Mùa cưới đầu năm 2024, Seraphine ra mắt  BST nhẫn cầu hôn "CƯỚI ANH ĐI". Với Huy Thanh, ai cũng có thể cầu hôn, dù bạn là ai, bạn làm gì, bạn ở đâu, bạn đều có quyền yêu và được yêu một cách trọn vẹn nhất! "Thì ra lãng mạn không hề đắt" 
+                            - BST "Cưới anh đi" ra đời với mức ngân sách dễ tiếp cận chỉ từ 3 triệu, bạn đã có thể sở hữu chiếc nhẫn cầu hôn cho riêng mình. </p>
+                        <img src="../images/imgblog1.png" alt="">  
+                        <p>BST mang đến sự đa dạng lựa chọn về ngân sách cũng như loại đá quý từ Cubic Zirconia, Moissanite, đến Kim cương Lab-grown - giúp bạn dễ dàng sở hữu chiếc nhẫn cầu hôn phù hợp với mình! Cùng nhìn ngắm toàn bộ thiết kế tại đây:</p> 
+                        <div class="ring-info">
+                            <h3>Dòng nhẫn đính đá CZ (khoảng giá từ 3 triệu - 5 triệu)</h2>
+                            
+                            <h4>LOVE NOTE - Nơi lưu giữ dấu ấn tình yêu</h3>
+                            <p>Thiết kế nhẫn nổi bật với ổ đá cao kiêu hãnh, ngời sáng với sắc vàng hồng và vàng trắng đan xen, thu hút mọi ánh nhìn từ lần đầu trông thấy. Điểm nhấn đặc biệt của Love Note là những viên đá tấm nhỏ nhắn được đính tỉ mỉ xung quanh ổ đá tạo hiệu ứng lấp lánh ở mọi góc độ khác nhau. Đai nhẫn cách điệu thêm nút thắt giúp cho bàn tay của bạn nữ trở nên thanh thoát và nữ tính hơn.</p>
+                            <p>Giá tham khảo: 4.094.000 VNĐ</p>
+                            
+                            <h4>Nhẫn cầu hôn Love Note NDINO 282 - Đính đá CZ</h3>
+                            <img src="https://example.com/image1.jpg" alt="Nhẫn cầu hôn Love Note">
+                            
+                            <h4>CHERISH - Sự trân trọng dành cho em</h3>
+                            <p>Kiêu kỳ như một nữ hoàng, thiết kế của nhẫn lộng lẫy ở các góc độ. Nhìn từ trên xuống sẽ thấy những viên đá được sắp xếp cầu kỳ tạo nên bông hoa 3D đang e ấp khoe sắc nhẹ nhàng. Và khi nhìn ở góc ngang, một vẻ đẹp khác được tìm thấy là hình ảnh vai áo choàng nữ hoàng. Sự kết hợp đặc biệt chứa đựng nhiều tầng ý nghĩa của nhẫn cầu hôn Cherish sẽ mang lại cho người đeo cảm giác được trân trọng, yêu thương và nâng niu “Em là nữ hoàng của anh”.</p>
+                            <p>Giá tham khảo: 3.796.000 VNĐ</p>
+                            
+                            <h4>Nhẫn cầu hôn Cherish NDINO 284 - Đính đá CZ</h3>
+                            <img src="https://example.com/image2.jpg" alt="Nhẫn cầu hôn Cherish">
+                            
+                            <h4>MAGIC LOVE - Sự kỳ diệu của tình yêu</h3>
+                            <p>Lấy ý tưởng hình ảnh hoa mẫu đơn, loài hoa biểu tượng cho tình yêu thuỷ chung, son sắt, tình cảm cả hai đều hướng về nhau, nhẫn cầu hôn Magic Love được tạo ra với ý nghĩa tuyệt vời đó. Thiết kế hoa 3D sống động nổi bật ngay chính giữa nhẫn với các cánh hoa bung nở đính đá tấm chìm, tạo hiệu ứng ổ đá to và cực kỳ lấp lánh. Đây sẽ là lựa chọn tinh tế dành tặng cho cô ấy - “Em là hoa, sự gặp gỡ của chúng ta chính là phép màu diệu kỳ của tình yêu”.</p>
+                            <p>Giá tham khảo: 4.308.000 VNĐ</p>
+                            
+                            <h4>Nhẫn cầu hôn Magic Love NDINO 285 - Đính đá CZ</h3>
+                            <img src="https://example.com/image3.jpg" alt="Nhẫn cầu hôn Magic Love">
+                            
+                            <h4>SUNSHINE - Ánh sáng mặt trời</h3>
+                            <p>Nhẫn cầu hôn Sunshine mang vẻ đẹp như một vị nữ thần mặt trời, lan tỏa và chiếu sáng với ổ đá dáng Halo. Đai nhẫn được cách điệu như cầu nối tình yêu với những viên đá tấm nhỏ xinh lấp lánh. Sự thuần khiết, ví von tình yêu tựa như ánh sáng trong trẻo đó là cách mà chàng trai gửi gắm tình cảm vào chiếc nhẫn trong ngày cầu hôn nàng.</p>
+                            <p>Giá tham khảo: 4.020.000 VNĐ</p>
+                            
+                            <h4>Nhẫn cầu hôn Sunshine NDINO 293 - Đính đá CZ</h3>
+                            <img src="https://example.com/image4.jpg" alt="Nhẫn cầu hôn Sunshine">
+                            
+                            <h4>ADORA YOU - Chỉ muốn nói yêu em</h3>
+                            <p>Nhẫn cầu hôn Adora You thay cho câu nói “Anh yêu em”, xinh xắn với thiết kế hình nơ chính giữa nhẫn, ổ đá to nổi bật như hình bông hoa tạo vẻ nữ tính trên bàn tay của bạn gái khi đeo. Chiếc nơ đầy tinh tế và đặc biệt này với ngụ ý rằng cô ấy như một món quà mà thượng đế đã ban tặng cho bạn.</p>
+                            <p>Giá tham khảo: 3.893.000 VNĐ</p>
+                            
+                            <h4>Nhẫn cầu hôn Adore Love NDINO 294 - Đính đá CZ</h3>
+                            <img src="https://example.com/image5.jpg" alt="Nhẫn cầu hôn Adore Love">
+                            
+                            <h3>Dòng nhẫn đính đá Moissanite (khoảng giá từ 5 triệu - 7 triệu)</h2>
+                            
+                            <h4>TOGETHER - Bên nhau</h3>
+                            <p>Giống như tên gọi của nhẫn, nhẫn cầu hôn Together sang trọng và độc đáo với thiết kế đai nhẫn được ghép bởi 2 mảnh vàng hồng và vàng trắng mượt mà hoà quyện vào nhau như 2 tâm hồn cùng hướng về đích đến hạnh phúc. Tối giản nhưng không đơn giản, mọi vẻ đẹp tinh tế nằm ở viên đá Moissanite 5 li đặt chuẩn xác ngay chính giữa nhẫn.</p>
+                            <p>Giá tham khảo: 6.000.000 VNĐ</p>
+                        </div>
+                        <div class="blog__details__content">
+                            <div class="col-lg-6">
+                                <div class="blog__details__widget">
+                                    <ul>
+                                        <li><span>Categories:</span> Kiến thức chung</li>
+                                        <li><span>Tags:</span> All, Kính áp tròng</li>
+                                    </ul>
+                                    <div class="blog__details__social">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <div class="blog__sidebar">
+                        <div class="blog__sidebar__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><span class="icon_search"></span></button>
+                            </form>
+                        </div>
+                        <div class="blog__sidebar__item">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><a href="blogall1.html" class="current-page">All</a></li>
+                                <li><a href="tintuc.html">Tin tức về Seraphine</a></li>
+                                <li><a href="tuvan.html">Góc tư vấn</a></li>
+                                <li><a href="kienthuc.html">Kiến thức chung</a></li>
+                            </ul>
+                        </div>
+						<div class="VideoPlayer__player" bis_skin_checked="1" style="max-width: 100%; height: 50%;">
+							<video src="../images/gioithieu5.mp4" preload="auto" muted loop playsinline webkit-playsinline x5-playsinline autoplay="" loop="" playsinline="" webkit-playsinline="" x5-playsinline="" style="width: 100%; height: 100%;"></video>
+						</div>
+                        <div class="blog__sidebar__recent">
+							<h4>News</h4>
+							<div class="blog__sidebar__recent__item">
+								<a href="blogall_1.html" class="blog__sidebar__recent__item__link">
+									<div class="blog__sidebar__recent__item__pic">
+										<img src="../images/imgblog_1.png" alt="" style="max-width: 100%; height: auto;">
+									</div>
+									<div class="blog__sidebar__recent__item__text">
+										<h6>BST NHẪN CẦU HÔN “CƯỚI ANH ĐI" - THÌ RA LÃNG MẠN KHÔNG HỀ ĐẮT</h6>
+									</div>
+								</a>
+							</div>
+							<div class="blog__sidebar__recent__item">
+								<a href="blogall_1.html" class="blog__sidebar__recent__item__link">
+									<div class="blog__sidebar__recent__item__pic">
+										<img src="../images/imgblog2.png" alt="" style="max-width: 100%; height: auto;">
+									</div>
+									<div class="blog__sidebar__recent__item__text">
+										<h6>BE MY VALENTINE: Ý TƯỞNG QUÀ TẶNG CHO MÙA VALENTINE YÊU THƯƠNG</h6>
+									</div>
+								</a>
+							</div>
+							<div class="blog__sidebar__recent__item">
+								<a href="blogall_1.html" class="blog__sidebar__recent__item__link">
+									<div class="blog__sidebar__recent__item__pic">
+										<img src="../images/imgblog3.png" alt="" style="max-width: 100%; height: auto;">
+									</div>
+									<div class="blog__sidebar__recent__item__text">
+										<h6>SERAPHINE JEWELRY ĐỒNG LOẠT KHAI TRƯƠNG 2 SHOWROOM TẠI HUẾ VÀ ĐÀ NẴNG</h6>
+									</div>
+								</a>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Details Section End -->
+
+    <!-- Related Blog Section Begin -->
+    <section class="related-blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title related-blog-title">
+                        <h2>Bài viết có thể bạn thích</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="img/kinh ko do.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i>On Oct 20,2023</li>
+                             
+                            </ul>
+                            <h5><a href="#">Đeo Kính Không Độ Có Hại Mắt Không?</a></h5>
+                            <p>Kính mắt 0 độ đang ngày càng phổ biến và trở thành trào lưu thời trang của các bạn trẻ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="img/kinh ram trang.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i>On Oct 4,2023</li>
+                            
+                            </ul>
+                            <h5><a href="#">Điều Bạn Chưa Biết Về Kính Râm Có Độ Cận</a></h5>
+                            <p>Kính râm có độ cận được ra đời nhằm đáp ứng đa dạng hơn nhu cầu của người dùng</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="img/thuocnhomat.jpg" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i>On Sep 23,2023</li>
+                            
+                            </ul>
+                            <h5><a href="#">Top 8 loại thuốc nhỏ mắt tốt cho mắt cận bạn cần biết</a></h5>
+                            <p>Kính là một trong những phụ kiện quen thuộc trong đời sống của mỗi người nhưng chưa chắc mọi người đều biết về chất liệu gọng kính.  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Start Footer Section -->
+	<footer class="footer-section">
+		<div class="container relative">
+
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="subscription-form">
+						<h3 class="d-flex align-items-center"><span class="me-1"><img
+									src="../Trangchinh/images/envelope-outline.svg" alt="Image"
+									class="img-fluid"></span><span>Hãy gửi phản hồi cho chúng tôi nếu bạn gặp vấn đề
+								gì.</span></h3>
+
+						<form action="#" class="row g-3">
+							<div class="col-auto">
+								<input type="text" class="form-control" placeholder="Enter your name">
+							</div>
+							<div class="col-auto">
+								<input type="email" class="form-control" placeholder="Enter your email">
+							</div>
+							<div class="col-auto">
+								<button class="btn btn-primary">
+									<span class="fa fa-paper-plane"></span>
+								</button>
+							</div>
+						</form>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="row g-5 mb-5">
+				<div class="col-lg-4">
+					<div class="mb-4 footer-logo-wrap"><a href="index.html" class="footer-logo">IKKUNA</a></div>
+					<p class="mb-4">Chúng tôi xin cam đoan rằng sản phẩm của IKKUNA là một lựa chọn đúng đắn cho quý
+						khách hàng. Sự đảm bảo chất lượng sản phẩm và chính sách bảo hành tốt là những yếu tố quan trọng
+						mà chúng tôi hướng đến. Đồng thời, chúng tôi cũng tự hào là cửa hàng cung cấp sản phẩm với giá
+						tốt nhất trên thị trường.
+					</p>
+
+					<ul class="list-unstyled custom-social">
+						<li><a href="https://www.facebook.com/profile.php?id=61553810680047" target="_blank"><span
+									class="fa fa-brands fa-facebook-f"></span></a></li>
+						<li><a href="https://www.tiktok.com/@kinhmatikkuna" target="_blank"><span
+									class="fa fa-brands fa-tiktok"></span></a></li>
+						<li><a href="https://www.instagram.com/kinhmat_ikkuna/" target="_blank"><span
+									class="fa fa-brands fa-instagram"></span></a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-8">
+					<div class="row links-wrap">
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li>
+									<p style="color: black;"><b>Tất cả sản phẩm</b></p>
+								</li>
+								<li><a href="#">Gọng kính</a></li>
+								<li><a href="#">Kính áp tròng</a></li>
+								<li><a href="#">Kính râm</a></li>
+								<li><a href="#">Kính mắt trẻ em</a></li>
+								<li><a href="#">Mắt kính</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li>
+									<p style="color: black;"><b>Chính sách mua hàng</b></p>
+								</li>
+								<li><a href="#">Hình thức thanh toán</a></li>
+								<li><a href="#">Chính sách giao hàng</a></li>
+								<li><a href="#">Chính sách bảo hành</a></li>
+								<li><a href="#">Chính sách bảo mật</a></li>
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li>
+									<p style="color: black;"><b>Thông tin liên hệ</b></p>
+								</li>
+								<li><a href="#">Hotline: 0366764577</a></li>
+								<li><a href="#">Email: kinhmatIkkuna@gmail.com</a></li>
+								<li><a href="#">Cơ sở 1: số 1 Chùa Bộc, Quang Trung, Đống Đa, Hà Nội </a></li>
+
+							</ul>
+						</div>
+
+						<div class="col-6 col-sm-6 col-md-3">
+							<ul class="list-unstyled">
+								<li>
+									<p style="color: black;"><b>Về Ikkuna</b></p>
+								</li>
+								<li><a href="#">Giới thiệu</a></li>
+								<li><a href="#">Liên hệ</a></li>
+								<li><a href="#">Hệ thống cửa hàng</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+</body>
+
+</html>

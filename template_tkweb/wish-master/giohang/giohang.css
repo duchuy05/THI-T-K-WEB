@@ -30,6 +30,11 @@
     border-radius: 8px;
 }
 
+.cart-details p {
+    font-weight: 500;
+    color: #000;
+}
+
 ._3hqd0z5GqCRujcCeo5fIe1 {
     display: flex;
     justify-content: space-between;
@@ -48,6 +53,8 @@ h1 {
     margin-bottom: 20px;
     color: #333;
 }
+
+
 
 .col-lg-9 {
     width: 100%;
