@@ -2149,3 +2149,30 @@ p.mb-4 {
 
   /*Đối tác*/
   
+  /*Giới thiệu chung*/
+  .section_about_2 {
+	padding-top: 80px;
+	left:0;
+  }
+  .section_about_2 h2 {
+	padding-top: 10px;
+	font-family: 'Courier New', Courier, monospace;
+	text-align: justify; 
+	font-size: 19.5px;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 1.3lh;
+  }
+
+.contain {
+    width: 100%;
+    max-width: 1600px; /* Đặt giới hạn kích thước tối đa */
+    margin: 0 auto; /* Căn giữa */
+    padding: 0 15px; /* Tạo khoảng cách lề */
+}
+.contain video {
+	top: 0%;
+	max-width: 500px;
+	max-height: 500px;
+
+}
