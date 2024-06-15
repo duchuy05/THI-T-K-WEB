@@ -1206,7 +1206,7 @@ img {
   Blog Details
 -----------------------*/
 .blog-details {
-	padding-top: 100px;
+	padding-top: 70px;
     padding-bottom: 100px;
 	border-bottom: 1px solid #e1e1e1;
 }
@@ -1311,8 +1311,8 @@ img {
 
 .ring-info h3 {
 	color: #000000;
-	counter-reset: section 0;
 	counter-increment: section;
+	
 }
 .ring-info h3::before {
 	content: counter(section) ". ";
@@ -1330,6 +1330,29 @@ img {
 	margin-bottom: 10px;
 }
 
+.container-title {
+	padding: 50px 0;
+    border-bottom: 1px solid #ddd;
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.main-title {
+	font-size: 2em;
+	margin-bottom: 15px;
+}
+.meta-info {
+	color: #555;
+	font-size: 0.9em;
+}
+.social-share {
+	margin: 20px 0;
+}
+.social-share a {
+	margin: 0 5px;
+	text-decoration: none;
+}
 
 /* Wide Mobile = 480px */
 
