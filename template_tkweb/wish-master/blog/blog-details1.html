@@ -241,7 +241,7 @@
                         <h5>Nhẫn cầu hôn Wonder <a href = #>NDINO291LDIA - Đính Kim Cương Lab-Grown</a></h5>
                     </div>
                     <div class="blog__details__content">
-                        <div class="col-lg-6">
+                        <div class="col-lg-12">
                             <div class="social-share" style="display:flex;">
                                 <p>SHARE:</p>
                                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/permalink.php?story_fbid=878360556934282&id=61553772548568&substory_index=878360556934282" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
@@ -249,15 +249,39 @@
                                 <a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
                                 <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
                             </div>
-                            <h2>Comments</h2>
                             <div class="comment-form">
-                                <input type="text" id="author" placeholder="Your Name">
-                                <textarea id="message" rows="4" placeholder="Your Comment"></textarea>
-                                <button onclick="addComment()">Add Comment</button>
+                                <h3>NHẬN TƯ VẤN TỪ SERAPHINE:</h3>
+                                <form id="commentForm">
+                                    <div class="form-group">
+                                        <label for="name">Họ tên*</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email*</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="content">Nội dung*</label>
+                                        <textarea id="content" name="content" required></textarea>
+                                    </div>
+                                    <button type="submit">Gửi thông tin</button>
+                                </form>
                             </div>
-                            <div id="comments-list">
-                                <!-- Comments will be appended here -->
-                            </div>
+                            <script>
+                                document.getElementById('commentForm').addEventListener('submit', function(event) {
+                                event.preventDefault();
+                                const name = document.getElementById('name').value;
+                                const email = document.getElementById('email').value;
+                                const content = document.getElementById('content').value;
+                                
+                                if (name && email && content) {
+                                    alert('Bình luận của bạn đã được gửi thành công!');
+                                    // Here you can add code to actually submit the form data to the server
+                                } else {
+                                    alert('Vui lòng điền đầy đủ thông tin.');
+                                }
+                            });
+                            </script>
                         </div>
                     </div>
                 </div>
