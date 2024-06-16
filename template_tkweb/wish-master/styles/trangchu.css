@@ -312,11 +312,13 @@ section
     top: 0;
     left: 0;
     width: 100%;
-    height: auto; /* 10% of viewport height */
+    height: auto;
     background: #FFFFFF;
     z-index: 100;
-    padding-left: 5%; /* 5% of the width */
-    padding-right: 5%; /* 5% of the width */
+    padding-left: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    padding-right: 5%;
     transition: all 200ms ease;
 }
 .header.scrolled
@@ -348,14 +350,14 @@ section
 /*********************************
 3.1 Header - Logo
 *********************************/
-.logo img {
+.Logo img {
     max-width: 8vw; /* Đảm bảo logo tự động điều chỉnh kích thước */
     height: auto; /* Đảm bảo chiều cao tự động điều chỉnh */
 }
-.logo a
+/*.logo a
 {
 	font-family: 'Lucida', serif;
-    font-size: 1.5vw; /* 2.5% of viewport width */
+    font-size: 1.5vw; /* 2.5% of viewport width 
 	color: #2f2f2f;
 }
 
@@ -500,10 +502,9 @@ section
 .Search.header_search {
     margin-right: 1rem; /* Adjust the margin as needed */
 }
-.Shopping
+.shopping
 {
 	flex: 1;
-	display: inline-block;
     padding-left: 2%; /* 10% of the width */
 	/*-webkit-transform: translateY(-2px);
 	-moz-transform: translateY(-2px);
@@ -511,12 +512,12 @@ section
 	-o-transform: translateY(-2px);*/
 	transform: translateY(-2%);
 }
-.Shopping a
+.shopping a
 {
 	display: inline-block;
     margin-right: 2%; /* 2% of the width */
 }
-.Shopping a:last-child
+.shopping a:last-child
 {
 	margin-right: 0;
 }
@@ -548,14 +549,14 @@ section
     justify-content: center;
 	margin-left: -10%;
 }
-.cart-num_inner,
-.star-num_inner
+.cart_num_inner,
+.star_num_inner
 {
 	width: 100%;
 	height: 100%;
 }
-.cart-num,
-.star-num
+.cart_num,
+.star_num
 {
 	position: absolute;
 	top: 50%;
@@ -576,17 +577,17 @@ section
     height: 2vw; /* 2% of viewport width */
 	margin-left: -100%;
 }
-.Star img
+.star img
 {
 	width: 1vw; /* 2% of viewport width */
     height: 2vw; /* 2% of viewport width */
 	margin-left: -10%;
 }
-.Avatar img
+.avatar img
 {
 	width: 1vw; /* 2% of viewport width */
     height: 2vw; /* 2% of viewport width */
-	margin-left: 50%;
+	margin-left: 5%;
 
 }
 
@@ -859,7 +860,7 @@ section
 {
 	margin-bottom: 60px;
 }
-.logo.menu_mm
+.Logo.menu_mm
 {
 	align-items: end;
 
@@ -1773,11 +1774,11 @@ section
 	font-style: italic;
 	color: #b3b3b3 !important;
 }
-.newsletter_btn
+.newsletter_button
 {
 	font-family:'Railway',sans-serif;
 	position: absolute;
-	top: -13px;
+	top: -12px;
 	right: 0;
 	width: 142px;
 	height: 47px;
@@ -1795,17 +1796,18 @@ section
 	-o-transition: all 200ms ease;
 	transition: all 200ms ease;
 }
-.newsletter_btn:hover
+.newsletter_button:hover
 {
 	background: #4a4c4d70;
 	color: #000000cb;
 }
 .newsletter_text
 {
-	font-family: 'Railway',sans-serif;
+	font-family: 'Railway',serif;
 	font-size: 14px;
 	font-style: italic;
 	color: #FFFFFF;
+	text-align: center;
 	margin-top: 19px;
 }
 
@@ -1938,7 +1940,7 @@ p.mb-4 {
 	width: 100%;
 	height: auto;
 }
-.footer_nav ul li
+/*.footer_nav ul li
 {
 	display: block;
 	margin-right: 53px;
@@ -1963,11 +1965,11 @@ p.mb-4 {
 .footer_nav ul li a:hover
 {
 	color: #937c6f;
-}
+}*/
 .footer-social {
     margin-top: 2rem; /* Khoảng cách trên cùng của mạng xã hội */
 }
-.footer-social ul {
+.footer-social .list-inline-item {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -2081,6 +2083,7 @@ p.mb-4 {
 .partners-section {
 	text-align: center;
 	padding-bottom: 200px;
+	padding-top: 100px;
   }
   
   .partners-section h2 {
@@ -2157,61 +2160,70 @@ p.mb-4 {
   .section_about_2 h2 {
 	padding-top: 10px;
 	font-family: 'Courier New', Courier, monospace;
-	text-align: center; 
-	font-size: 19.5px;
-	font-weight: bold;
+	text-align: justify; 
+	font-size: 18px;
+	font-weight: 600;
 	font-style: italic;
 	line-height: 1.3lh;
+	letter-spacing: 0.01rem;
   }
 
 .contain {
     width: 100%;
-    max-width: 1600px; /* Đặt giới hạn kích thước tối đa */
+    max-width: 1500px; /* Đặt giới hạn kích thước tối đa */
     margin: 0 auto; /* Căn giữa */
     padding: 0 15px; /* Tạo khoảng cách lề */
 }
 .contain video {
-	top: 0%;
 	max-width: 500px;
-	max-height: 500px;
+	max-height: 400px;
 
 }
-/* Responsive Styles */
-@media (max-width: 768px) {
-	.main-nav {
-	  display: none;
-	}
-  
-	.burger_container {
-	  display: flex;
-	}
+/*pop up*/
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+	z-index: 2000;
   }
   
-  @media (max-width: 576px) {
-	.head_inner {
-	  flex-direction: column;
-	  align-items: flex-start;
-	}
+  .popup {
+	background: #ffffff71;
+	padding: 10px;
+	border-radius: 10px;
+	text-align: center;
+	position: relative;
+  }
   
-	.logo img {
-	  max-height: 40px; /* Adjusted logo size for smaller screens */
-	}
+  .close-btn {
+	position: absolute;
+	top: -20px;
+	/* Adjusted top value to bring it closer */
+	right: -10px;
+	/* Adjusted right value to bring it closer */
+	cursor: pointer;
+	color: #ffffff;
+	/* Set the color to white */
+	font-size: 40px;
+	/* Adjust the font size */
+	font-weight: bold;
+	/* Add bold style */
+  }
   
-	.header_content {
-	  width: 100%;
-	  justify-content: space-between;
-	  margin-top: 10px;
-	}
+  .countdown {
+	font-family: 'Montserrat',serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: rgb(67, 3, 74);
+  }
   
-	.Shopping a img {
-	  max-width: 24px; /* Adjusted shopping icons size for smaller screens */
-	}
-  
-	.Search-input {
-	  width: 100%; /* Ensure search input takes full width */
-	}
-  
-	.Search-button img {
-	  max-width: 20px; /* Adjusted search button icon size for smaller screens */
-	}
+  .popup video {
+	max-width:	400px;
+	max-height: 400px;
   }

@@ -1,0 +1,772 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. 1600px
+2. 1440px
+3. 1280px
+4. 1199px
+5. 1024px
+6. 991px
+7. 959px
+8. 880px
+9. 768px
+10. 767px
+11. 539px
+12. 479px
+13. 400px
+
+******************************/
+
+/************
+1. 1800px
+************/
+
+@media only screen and (max-width: 1800px)
+{
+	.search
+	{
+		width: 200px;
+	}
+}
+
+/************
+1. 1600px
+************/
+
+@media only screen and (max-width: 1600px)
+{
+	.main_nav
+	{
+		padding-left: 60px;
+	}
+	.shopping
+	{
+		padding-right: 20px;
+		margin-left: 5px;
+	}
+}
+
+/************
+2. 1440px
+************/
+
+@media only screen and (max-width: 1440px)
+{
+	.shopping
+	{
+		padding-right: 74px;
+		margin-left: 60px;
+	}
+}
+
+/************
+3. 1380px
+************/
+
+@media only screen and (max-width: 1380px)
+{
+	.main_nav
+	{
+		padding-left: 40px;
+	}
+	.main_nav ul li
+	{
+		margin-right: 34px;
+	}
+	.header_search
+	{
+		display: none;
+	}
+}
+
+/************
+3. 1280px
+************/
+
+@media only screen and (max-width: 1280px)
+{
+	
+}
+
+/************
+4. 1199px
+************/
+
+@media only screen and (max-width: 1199px)
+{
+	
+}
+
+/************
+4. 1100px
+************/
+
+@media only screen and (max-width: 1100px)
+{
+	
+}
+
+/************
+5. 1024px
+************/
+
+@media only screen and (max-width: 1024px)
+{
+	
+}
+
+/************
+6. 991px
+************/
+
+@media only screen and (max-width: 991px)
+{
+	.main_nav
+	{
+		display: none;
+	}
+	.shopping
+	{
+		padding-right: 91px;
+	}
+	.home_slider_title
+	{
+		font-size: 56px;
+		height: 76px;
+		line-height: 76px;
+	}
+	.section_title
+	{
+		font-size: 48px;
+	}
+	.promo_col:not(:last-child)
+	{
+		margin-bottom: 60px;
+	}
+	.product_col:not(:last-child)
+	{
+		margin-bottom: 50px;
+	}
+	.extra_promo
+	{
+		width: 100%;
+		height: 616px;
+		float: none;
+	}
+	.extra_promo_1
+	{
+		margin-right: 0px;
+		margin-bottom: 30px;
+	}
+	.footer_nav ul li
+	{
+		margin-right: 30px;
+	}
+}
+
+/************
+7. 959px
+************/
+
+@media only screen and (max-width: 959px)
+{
+	
+}
+
+/************
+8. 880px
+************/
+
+@media only screen and (max-width: 880px)
+{
+	
+}
+
+/************
+9. 768px
+************/
+
+@media only screen and (max-width: 768px)
+{
+	
+}
+
+/************
+10. 767px
+************/
+
+@media only screen and (max-width: 767px)
+{
+	
+}
+
+/************
+11. 575px
+************/
+
+@media only screen and (max-width: 575px)
+{
+
+        /* CSS Responsive cho phần header */
+    .head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: #FFFFFF;
+        z-index: 100;
+        padding-left: 5%;
+        padding-right: 5%;
+        transition: all 200ms ease;
+    }
+
+    .head_inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .Logo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .header_content {
+        flex-grow: 0.2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+    .main-nav ul li {
+        margin-right: 20px;
+    }
+
+    .main-nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    .main-nav ul li a {
+        font-size: 14px;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        color: #2f2f2f;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        transition: all 200ms ease;
+    }
+
+    .main-nav ul li a:hover {
+        color: #000000;
+    }
+
+    .header_search {
+        display: flex;
+        align-items: center;
+    }
+
+    .Search-input {
+        display: none;
+    }
+
+    .Search-button img {
+        display: none;
+    }
+
+    .SShopping {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .SShopping a {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .SShopping img {
+        width: 60px;
+        height: 100%;
+    }
+
+    .burger_container {
+        display: none;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .main-nav {
+            display: none;
+        }
+
+        .burger_container {
+            display: flex;
+        }
+
+        .head_inner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .header_content {
+            width: 100%;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .Search-input {
+            width: 100%;
+        }
+
+        .Search-button img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    @media (max-width: 576px) {
+        .SShopping {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .SShopping a {
+            margin: 10px 0;
+        }
+    
+        .SShopping img {
+            display: inline-block;
+            width: 25px; /* Giảm kích thước cho mobile */
+            height: 25px;
+        }
+    
+        .cart-num_inner, .star-num_inner {
+            padding: 3px;
+            font-size: 8px; /* Giảm kích thước số cho mobile */
+        }
+    }
+    
+
+    .partners-section h2 {
+        font-size: 20px;
+    }
+    
+    .head {
+        padding: 10px 5%; /* Padding top/bottom 10px, left/right 5% */
+      }
+    
+      .head.scrolled {
+        padding: 5px 5%; /* Padding top/bottom 5px, left/right 5% khi cuộn */
+      }
+    
+      .Logo img {
+        max-width: 20vw; /* Giữ nguyên kích thước logo */
+      }
+    
+      .main-nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+    
+      .main-nav.active ul {
+        display: flex;
+      }
+    
+      .main-nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px; /* Khoảng cách giữa các mục menu */
+      }
+    
+      .main-nav ul li a {
+        font-size: 14px; /* Kích thước phông chữ */
+        padding: 10px 0;
+      }
+	.home
+	{
+		height: 100vh;
+	}
+	.header
+	{
+		height: 70px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.logo a
+	{
+		font-size: 24px;
+	}
+	.Shopping
+	{
+		padding-right: 47px;
+		margin-left: 0;
+	}
+	.burger_container
+	{
+		top: calc(50% + 1px);
+	}
+    /*.home_slider_background {
+        max-width: 575px;
+        max-height: 500px;
+        margin-bottom: 0;
+    }
+    .section_about_2 .col-md-9 col-sm-7.ab-image-2 {
+        max-width: 100px;
+    }
+	.home_slider_dots_container,
+	.home_slider_next
+	{
+		display: none !important;
+	}
+	.home_slider_title
+	{
+		font-size: 28px;
+	}
+	.home_slider_subtitle
+	{
+		font-size: 14px;
+	}*/
+    /* CSS Responsive cho phần slider */
+    .home_slider_container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .owl-carousel .owl-item {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100vh; /* Chiều cao của slider bằng chiều cao của viewport */
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .home_slider_background {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .home_slider_content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #ffffff;
+    }
+    
+    .home_slider_title {
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+    .home_slider_dots,
+    .home_slider_next {
+       display: none;
+    }
+    
+    /*.home_slider_dots_container {
+        position: absolute;
+        bottom: 30px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .home_slider_dots {
+        display: inline-block;
+    }
+    
+    .home_slider_custom_dots {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .home_slider_custom_dot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        background: #fff;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0.5;
+    }
+    
+    .home_slider_custom_dot.active {
+        opacity: 1;
+    }*/
+    
+    @media (max-width: 768px) {
+        .home_slider_title {
+        font-size: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .home_slider_title {
+        font-size: 1.2rem;
+        }
+    
+        .home_slider_next {
+        right: 10px;
+        }
+    }
+
+    
+    
+    /* CSS Responsive cho phần giới thiệu chung */
+    .section_about_2 {
+        padding: 20px 0;
+    }
+    
+    .section_about_2 .contain {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .section_about_2 .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .section_about_2 .col-md-9,
+    .section_about_2 .col-md-3,
+    .section_about_2 .col-sm-7,
+    .section_about_2 .col-sm-5 {
+        padding: 10px;
+    }
+    
+    .section_about_2 .ab-image-2 img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .section_about_2_content h2 {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    @media (max-width: 768px) {
+         .section_about_2_content {
+        display: block;
+        }
+    
+        .section_about_2_content h2 {
+        font-size: 12px;
+        padding: 0 10px;
+        }
+    
+        .section_about_2 .col-md-9,
+        .section_about_2 .col-md-3,
+        .section_about_2 .col-sm-7,
+        .section_about_2 .col-sm-5 {
+        padding: 5px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .section_about_2_content {
+        display: block;
+        }
+    
+        .section_about_2_content h2 {
+        font-size: 12px;
+        padding: 0 10px;
+        }
+    
+        .section_about_2 .col-md-9,
+        .section_about_2 .col-md-3,
+        .section_about_2 .col-sm-7,
+        .section_about_2 .col-sm-5 {
+        padding: 5px;
+        }
+    }
+    
+	.menu
+	{
+		width: 100%;
+		right: -100%;
+		padding-right: 15px;
+		padding-left: 15px;
+		padding-top: 21px;
+	}
+	.menu .search
+	{
+		margin-bottom: 50px;
+	}
+	.menu .search_input
+	{
+		height: 36px;
+	}
+	.menu_close_container
+	{
+		right: 15px;
+	}
+	.Logo .menu_mm
+	{
+        font-size: 200vw;
+        align-items: end;
+		margin-bottom: 35px;
+		margin-right: auto;
+	}
+	.menu.active
+	{
+		right: 0;
+	}
+	.Section_subtitle
+	{
+		font-size: 12px;
+	}
+	.Section_title
+	{
+		font-size: 28px;
+	}
+	.extra
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.extra_promo_1
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.extra_promo_2
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.extra_1_content
+	{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.gallery
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.gallery_title ul li
+	{
+		display: block;
+		margin-right: 0px;
+	}
+	.gallery_title ul li a
+	{
+		font-size: 24px;
+	}
+	.test_text
+	{
+		font-size: 16px;
+	}
+	.newsletter
+	{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.newsletter_btn
+	{
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+	.newsletter_text
+	{
+		font-size: 13px;
+	}
+	.footer_logo a
+	{
+		font-size: 48px;
+	}
+	/*.footer_nav ul li
+	{
+		display: block;
+		margin-right: 0;
+		margin-bottom: 5px;
+	}
+	.footer_nav ul li:last-child
+	{
+		margin-bottom: 0;
+	}
+	.footer_social ul li
+	{
+		margin-right: 29px;
+        font-size: 10px;
+	}
+	.footer_social ul li a i
+	{
+		font-size: 20px;
+	}*/
+    .footer-social ul {
+        font-size: 16px;
+    }
+}
+
+/************
+11. 539px
+************/
+
+@media only screen and (max-width: 539px)
+{
+	
+}
+
+/************
+12. 480px
+************/
+
+@media only screen and (max-width: 480px)
+{
+	
+}
+
+/************
+13. 479px
+************/
+
+@media only screen and (max-width: 479px)
+{
+	
+}
+
+/************
+14. 400px
+************/
+
+@media only screen and (max-width: 400px)
+{
+	
+}
