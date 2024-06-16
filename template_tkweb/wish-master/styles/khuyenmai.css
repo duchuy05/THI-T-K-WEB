@@ -57,9 +57,10 @@
 }
 
 .gioithieu p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Times New Roman', sans-serif;
     text-align: left;
     font-size: 20px;
+    text-align: justify;
 }
 /* CSS cho Banner */
 .banner {
@@ -93,6 +94,7 @@
 @supports (display:grid) {
     @media screen and (min-width: 700px) {
         .jewelry-grid {
+            margin-top: 15px;
             display: grid;
             grid-gap: 10px;
             grid-template-columns: 1fr 1fr;
