@@ -595,21 +595,20 @@ section
 3.5 Header - Burger
 *********************************/
 
-.burger-container
-{
-	position: absolute;
-	top: calc(50% + 4px);
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-	right: 0;
-	width: 22px;
-	height: 16px;
-	cursor: pointer;
+.burger_container {
+    position: absolute;
+    top: calc(50% + 4px);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0;
+    width: 22px;
+    height: 16px;
+    cursor: pointer;
 }
-.burger-container div
+.burger_container div
 {
 	width: 100%;
 	height: 2px;
@@ -621,9 +620,9 @@ section
 	transition: all 200ms ease;
 	pointer-events: none;
 }
-.burger-container:hover div
+.burger_container:hover div
 {
-	background: #494848;
+	background: #937c6f;
 }
 
 /*********************************
@@ -2194,7 +2193,7 @@ p.mb-4 {
   }
   
   .popup {
-	background: #ffffff71;
+	background: #dbd5d5e8;
 	padding: 10px;
 	border-radius: 10px;
 	text-align: center;

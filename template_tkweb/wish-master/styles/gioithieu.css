@@ -49,6 +49,7 @@
   
   .about-us .right-content {
     margin-left: 30px;
+    text-align: justify;
   }
   
   .main-content .about-us .right-content h4 {
@@ -64,6 +65,7 @@
     font-weight: 500;
     display: block;
     margin-top: 25px;
+    text-align: justify;
   }
   
   .about-us .right-content .quote {
@@ -207,7 +209,7 @@
   }
   
   .our-team .team-item .down-content span {
-    font-size: 14px;
+    font-size: 17px;
     color: #a1a1a1;
     font-weight: 500;
     display: block;

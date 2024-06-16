@@ -136,7 +136,7 @@
 					
 					<!-- Home Slider Item -->
 					<div class="owl-item">
-						<div class="home_slider_background" style="background-image:url(images/Aesthetics\ of\ jewelry\,\ earrings.jpg)"></div>
+						<div class="home_slider_background" style="background-image:url(../images/bg.jpg)"></div>
 						<div class="home_slider_content">
 							<div class="home_slider_content_inner">
 								<!--<div class="home_slider_subtitle">Seraphine</div>-->
@@ -148,6 +148,186 @@
 			</div>
 		</div>
 
+		<div>
+			<div class="filters">
+			  <div class="filter-item">
+				<label for="sort">Sắp xếp:</label>
+				<select id="sort" onchange="sortProducts()">
+				  <option value="price-high-low">Tùy chọn</option>
+				  <option value="price-high-low">Giá cao đến thấp</option>
+				  <option value="price-low-high">Giá thấp đến cao</option>
+				  <option value="newest">Mới nhất</option>
+				  <option value="popularity">Quan tâm nhiều</option>
+				</select>
+			  </div>
+			</div>
+		</div>
+		<script>
+			// Pagination
+			document.addEventListener('DOMContentLoaded', function () {
+			  // Lấy danh sách các sản phẩm
+			  var productList = document.getElementById('product-list').children;
+	  
+			  // Lấy danh sách các link phân trang
+			  var pageLinks = document.getElementsByClassName('page-link');
+	  
+			  // Xử lý sự kiện khi nhấp vào một link phân trang
+			  for (var i = 0; i < pageLinks.length; i++) {
+				pageLinks[i].addEventListener('click', function (e) {
+				  e.preventDefault();
+	  
+				  // Lấy số trang từ nội dung của link
+				  var page = parseInt(this.textContent);
+	  
+				  // Ẩn tất cả các sản phẩm
+				  for (var j = 0; j < productList.length; j++) {
+					productList[j].style.display = 'none';
+				  }
+	  
+				  // Hiển thị các sản phẩm ở trang tương ứng
+				  var startIndex = (page - 1) * 8; // 8 là số sản phẩm hiển thị trên mỗi trang
+				  var endIndex = startIndex + 8;
+				  for (var k = startIndex; k < endIndex; k++) {
+					if (productList[k]) {
+					  productList[k].style.display = 'block';
+					}
+				  }
+				});
+			  }
+			});
+			// Filter sản phẩm
+			document.addEventListener("DOMContentLoaded", function () {
+			  var priceFilters = document.querySelectorAll(".price-filter input");
+			  var products = document.querySelectorAll(".product");
+	  
+			  for (var j = 0; j < priceFilters.length; j++) {
+				priceFilters[j].addEventListener("click", handlePriceFilterClick);
+			  }
+	  
+			  function handlePriceFilterClick(event) {
+				var selectedFilter = event.target;
+				var selectedPriceRange = selectedFilter.value;
+	  
+				// Xóa lớp ẩn/hiện tất cả các sản phẩm
+				for (var k = 0; k < products.length; k++) {
+				  var product = products[k];
+				  var productPrice = parseInt(product.getAttribute("data-price"));
+	  
+				  if (selectedPriceRange === "all" || isProductWithinPriceRange(productPrice, selectedPriceRange)) {
+					product.style.display = "block";
+				  } else {
+					product.style.display = "none";
+				  }
+				}
+			  }
+	  
+			  function isProductWithinPriceRange(price, range) {
+				var priceRange = range.split("-");
+				var minPrice = parseInt(priceRange[0]);
+				var maxPrice = parseInt(priceRange[1]);
+				return price >= minPrice && price <= maxPrice;
+			  }
+			});
+	  
+			const filterPriceCheckboxes = document.querySelectorAll('.filter-price');
+			const filterMaterialCheckboxes = document.querySelectorAll('.filter-material');
+			const filterShapeCheckboxes = document.querySelectorAll('.filter-shape');
+			const products = document.querySelectorAll('.product');
+	  
+			function filterProducts() {
+			  const selectedPrices = Array.from(filterPriceCheckboxes)
+				.filter(checkbox => checkbox.checked)
+				.map(checkbox => parseInt(checkbox.value));
+	  
+			  const selectedMaterials = Array.from(filterMaterialCheckboxes)
+				.filter(checkbox => checkbox.checked)
+				.map(checkbox => checkbox.value);
+	  
+			  const selectedShapes = Array.from(filterShapeCheckboxes)
+				.filter(checkbox => checkbox.checked)
+				.map(checkbox => checkbox.value);
+	  
+			  products.forEach(product => {
+				const price = parseInt(product.dataset.price);
+				const material = product.dataset.material;
+				const shape = product.dataset.shape;
+	  
+				const meetsPriceCriteria = selectedPrices.length === 0 || selectedPrices.includes(price);
+				const meetsMaterialCriteria = selectedMaterials.length === 0 || selectedMaterials.includes(material);
+				const meetsShapeCriteria = selectedShapes.length === 0 || selectedShapes.includes(shape);
+	  
+				if (meetsPriceCriteria && meetsMaterialCriteria && meetsShapeCriteria) {
+				  product.style.display = 'block';
+				} else {
+				  product.style.display = 'none';
+				}
+			  });
+			}
+	  
+			filterPriceCheckboxes.forEach(checkbox => {
+			  checkbox.addEventListener('change', filterProducts);
+			});
+	  
+			filterMaterialCheckboxes.forEach(checkbox => {
+			  checkbox.addEventListener('change', filterProducts);
+			});
+	  
+			filterShapeCheckboxes.forEach(checkbox => {
+			  checkbox.addEventListener('change', filterProducts);
+			});
+			// Sắp xếp sản phẩm
+			function sortProducts() {
+			  var sortCriteria = document.getElementById('sort').value;
+			  var productList = document.getElementById('product-list');
+			  var products = Array.from(productList.getElementsByClassName('product'));
+	  
+			  if (sortCriteria === 'price-high-low') {
+				products.sort(function (a, b) {
+				  var priceA = parseInt(a.getAttribute('data-price'));
+				  var priceB = parseInt(b.getAttribute('data-price'));
+				  return priceB - priceA;
+				});
+			  } else if (sortCriteria === 'price-low-high') {
+				products.sort(function (a, b) {
+				  var priceA = parseInt(a.getAttribute('data-price'));
+				  var priceB = parseInt(b.getAttribute('data-price'));
+				  return priceA - priceB;
+				});
+			  } else if (sortCriteria === 'newest') {
+				products.sort(function (a, b) {
+				  var dateA = new Date(a.getAttribute('data-date'));
+				  var dateB = new Date(b.getAttribute('data-date'));
+				  return dateB - dateA;
+				});
+			  } else if (sortCriteria === 'popularity') {
+				products.sort(function (a, b) {
+				  var viewsA = parseInt(a.getAttribute('data-views'));
+				  var viewsB = parseInt(b.getAttribute('data-views'));
+				  return viewsB - viewsA;
+				});
+			  }
+	  
+			  products.forEach(function (product) {
+				productList.appendChild(product);
+			  });
+			}
+			// Hiển thị sau khi lọc
+			var numberOfProducts = 8;
+	  
+			// Cập nhật chiều dài của filter-container
+			var filterContainer = document.querySelector('.filter-container');
+			filterContainer.style.height = numberOfProducts * 70 + 'px';
+	  
+			// Cập nhật vị trí sticky của filter-container
+			var productContainer = document.querySelector('.product-list-container');
+			var productContainerRect = productContainer.getBoundingClientRect();
+			filterContainer.style.top = productContainerRect.top + 'px';
+	  
+			// Cập nhật vị trí sticky của pagination-container
+			var paginationContainer = document.querySelector('.pagination');
+			paginationContainer.style.top = productContainerRect.bottom + 'px';
+		  </script>
+	
 <!-- Product -->
 <div class="product">
 	
@@ -186,14 +366,21 @@
 								<img src="images/compressed-donebi-2401-7-029-1.jpg"  alt="Vòng tay" class="img-responsive center-block">
 						</a>
 					</div>
+					
 					<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
-						<span>Yêu thích</span>
+						<span>Best seller</span>
 					</div>
-					<div class="home-product-item__sale-off">
+					<!--<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
 					</div>
+				</div>
+				<div class="product-info a-center">		
+					<div class="home-product-item__favourite">
+						<i class="fas fa-heart"></i>
+						<span>Yêu thích</span>
+					</div>-->
 				</div>
 				<div class="product-info a-center">		
 					<div class="product-action">
@@ -216,10 +403,7 @@
 								<img src="images/compressed-donebi-2401-7-038-1-1.jpg"  alt="Vòng tay" class="img-responsive center-block">
 						</a>
 					</div>
-					<div class="home-product-item__favourite">
-						<i class="fas fa-heart"></i>
-						<span>Yêu thích</span>
-					</div>
+					
 					<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
@@ -246,14 +430,21 @@
 								<img src="images/compressed-donebi-2401-7-043-1-1.jpg"  alt="Vòng tay" class="img-responsive center-block">
 						</a>
 					</div>
+					
 					<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
-						<span>Yêu thích</span>
+						<span>Best seller</span>
 					</div>
-					<div class="home-product-item__sale-off">
+					<!--<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
 					</div>
+				</div>
+				<div class="product-info a-center">		
+					<div class="home-product-item__favourite">
+						<i class="fas fa-heart"></i>
+						<span>Yêu thích</span>
+					</div>-->
 				</div>
 				<div class="product-info a-center">		
 					<div class="product-action">
@@ -276,10 +467,11 @@
 								<img src="images/compressed-donebi-2401-7-045-1-1.jpg"  alt="Vòng tay" class="img-responsive center-block">
 						</a>
 					</div>
-					<div class="home-product-item__favourite">
+					
+					<!--<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
 						<span>Yêu thích</span>
-					</div>
+					</div>-->
 					<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
@@ -306,10 +498,10 @@
 								<img src="images/compressed-donebi-2401-7-045-1.jpg"  alt="Vòng tay" class="img-responsive center-block">
 						</a>
 					</div>
-					<div class="home-product-item__favourite">
+					<!--<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
 						<span>Yêu thích</span>
-					</div>
+					</div>-->
 					<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
@@ -336,14 +528,20 @@
 								<img src="images/compressed-donebi-2401-7-046-1-1.jpg"  alt="Vòng tay" class="img-responsive center-block">
 						</a>
 					</div>
-					<div class="home-product-item__favourite">
+					<!--<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
 						<span>Yêu thích</span>
-					</div>
-					<div class="home-product-item__sale-off">
+					</div>-->
+					<!--<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
 					</div>
+				</div>
+				<div class="product-info a-center">		
+					<div class="home-product-item__favourite">
+						<i class="fas fa-heart"></i>
+						<span>Yêu thích</span>
+					</div>-->
 				</div>
 				<div class="product-info a-center">		
 					<div class="product-action">
@@ -368,22 +566,28 @@
 					</div>
 					<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
-						<span>Yêu thích</span>
+						<span>Best seller</span>
 					</div>
-					<div class="home-product-item__sale-off">
+					<!--<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
 					</div>
 				</div>
 				<div class="product-info a-center">		
-					<div class="product-action">
-						<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
-						<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
-					</div>
-					<p class="product-name"><a href="#" title="Vòng tay" class="line-clamp">Charm bạc họa tiết</a></p>
-					<div class="home-product-item__price">
-						<span class="home-product-item__price-old">1.200.000đ</span>
-						<span class="home-product-item__price-current">900.000đ</span>
+					<div class="home-product-item__favourite">
+						<i class="fas fa-heart"></i>
+						<span>Yêu thích</span>
+					</div>-->
+					<div class="product-info a-center">		
+						<div class="product-action">
+							<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+							<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+						</div>
+						<p class="product-name"><a href="#" title="Vòng tay" class="line-clamp">Charm bạc họa tiết</a></p>
+						<div class="home-product-item__price">
+							<span class="home-product-item__price-old">1.200.000đ</span>
+							<span class="home-product-item__price-current">900.000đ</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -396,14 +600,20 @@
 								<img src="images/compressed-donebi-2401-7-052-1-1.jpg"  alt="Vòng tay" class="img-responsive center-block">
 						</a>
 					</div>
-					<div class="home-product-item__favourite">
+					<!--<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
 						<span>Yêu thích</span>
-					</div>
-					<div class="home-product-item__sale-off">
+					</div>-->
+					<!--<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
 					</div>
+				</div>
+				<div class="product-info a-center">		
+					<div class="home-product-item__favourite">
+						<i class="fas fa-heart"></i>
+						<span>Yêu thích</span>
+					</div>-->
 				</div>
 				<div class="product-info a-center">		
 					<div class="product-action">
@@ -428,7 +638,7 @@
 					</div>
 					<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
-						<span>Yêu thích</span>
+						<span>Best seller</span>
 					</div>
 					<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
@@ -456,14 +666,20 @@
 								<img src="images/compressed-donebi-2401-7-058-1.jpg"  alt="Vòng tay" class="img-responsive center-block">
 						</a>
 					</div>
-					<div class="home-product-item__favourite">
+					<!--<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
 						<span>Yêu thích</span>
-					</div>
-					<div class="home-product-item__sale-off">
+					</div>-->
+					<!--<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
 					</div>
+				</div>
+				<div class="product-info a-center">		
+					<div class="home-product-item__favourite">
+						<i class="fas fa-heart"></i>
+						<span>Yêu thích</span>
+					</div>-->
 				</div>
 				<div class="product-info a-center">		
 					<div class="product-action">
@@ -488,7 +704,7 @@
 					</div>
 					<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
-						<span>Yêu thích</span>
+						<span>Best seller</span>
 					</div>
 					<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
@@ -516,14 +732,20 @@
 								<img src="images/download.jpg"  alt="Vòng tay" class="img-responsive center-block">
 						</a>
 					</div>
-					<div class="home-product-item__favourite">
+					<!--<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
 						<span>Yêu thích</span>
-					</div>
-					<div class="home-product-item__sale-off">
+					</div>-->
+					<!--<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
 					</div>
+				</div>
+				<div class="product-info a-center">		
+					<div class="home-product-item__favourite">
+						<i class="fas fa-heart"></i>
+						<span>Yêu thích</span>
+					</div>-->
 				</div>
 				<div class="product-info a-center">		
 					<div class="product-action">
@@ -545,9 +767,6 @@
 				<a href="#"  class="active">1</a>
 				<a href="#">2</a>
 				<a href="#">3</a>
-				<a href="#">4</a>
-				<a href="#">5</a>
-				<a href="#">6</a>
 				<a href="#">&raquo;</a>
 			</div>
 		</div>
@@ -556,10 +775,64 @@
 	
 </div>
 </div>
-	
+	<!-- Sản phẩm nổi bật -->
+    <div>
+		<h2 style="text-align: center; font-family: 'Montserrat',sans-serif; text-transform: uppercase; font-weight: bold; color:rgba(58, 36, 13, 0.737)">Sản phẩm nổi bật</h2>
+		<div class="product-container">
+		  <div class="product-item">
+			<img src="../images/vongtay.png" alt="Product 2" class="product-img">
+			<a href="../chitietsp/GK02.html">
+			  <h3>Mã sản phẩm: GK02</h3>
+			</a>
+			<p style="text-align: center;">Giá: 250,000 VND</p>
+		  </div>
+		  <div class="product-item">
+			<img src="ImagesGK/GK05.png" alt="Product 5" class="product-img">
+			<a href="../chitietsp/GK05.html">
+			  <h3>Mã sản phẩm: GK05</h3>
+			</a>
+			<p style="text-align: center;">Giá: 450,000 VND</p>
+		  </div>
+		  <div class="product-item">
+			<img src="ImagesGK/GK20.png" alt="Product 20" class="product-img">
+			<a href="../chitietsp/GK20.html">
+			  <h3>Mã sản phẩm: GK20</h3>
+			</a>
+			<p style="text-align: center ;">Giá: 350,000 VND</p>
+		  </div>
+		  <div class="product-item">
+			<img src="ImagesGK/GK09.png" alt="Product 9" class="product-img">
+			<a href="../chitietsp/GK09.html">
+			  <h3>Mã sản phẩm: GK09</h3>
+			</a>
+			<p style="text-align: center;">Giá: 300,000 VND</p>
+		  </div>
+		  <div class="product-item">
+			<img src="ImagesGK/GK07.png" alt="Product 5" class="product-img">
+			<a href="../chitietsp/GK07.html">
+			  <h3>Mã sản phẩm: GK07</h3>
+			</a>
+			<p style="text-align: center;">Giá: 450,000 VND</p>
+		  </div>
+		  <div class="product-item">
+			<img src="ImagesGK/GK11.png" alt="Product 5" class="product-img">
+			<a href="../chitietsp/GK11.html">
+			  <h3>Mã sản phẩm: GK11</h3>
+			</a>
+			<p style="text-align: center;">Giá: 300,000 VND</p>
+		  </div>
+		  <div class="product-item">
+			<img src="ImagesGK/GK19.png" alt="Product 5" class="product-img">
+			<a href="../chitietsp/GK19.html">
+			  <h3>Mã sản phẩm: GK19</h3>
+			</a>
+			<p style="text-align: center;">Giá: 300,000 VND</p>
+		  </div>
+		</div>
+	  </div>
 		<!-- Newsletter -->
 
-		<div class="newsletter_wrapper">
+		<!--<div class="newsletter_wrapper">
 			<div class="newsletter">
 				<div class="newsletter_content">
 					<div class="newsletter_image" style="background-image:url(../images/letter2.jpg)"></div>
@@ -586,7 +859,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div>-->
 		<!-- Footer -->
 	
 		<footer class="footer">
