@@ -17,7 +17,7 @@
 <link rel="stylesheet" type="text/css" href="../styles/product.css">
 <link rel="stylesheet" type="text/css" href="giohang.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+<link rel="icon" type="image/x-icon" href="../images/favicon.jpg">
 </head>
 <body>
 
@@ -26,14 +26,17 @@
 
 	<!-- Header -->
 
-	<header class="header">
-		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
-			<div class="logo"><a href="../index.html"><img src="../images/logo.png" alt=""></a></div>
-			<nav class="main_nav" class="collapse navbar-collapse" id="navbarNavDropdown">
-				<ul class="menu_bar">
-					<li><a href="index.html">trang chủ</a></li>
+	<header class="head">
+		<div class="head_inner d-flex flex-row align-items-center justify-content-start">
+			<div class = "col-1">
+			<div class="logo"><img src="../images/logo.png" alt="Logo Thương Hiệu"></div></div>
+			<!-- Kết thúc phần chèn logo -->
+			<div class = "col-7">
+			<nav class="main-nav" class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul>
+					<li><a href="../index.html">trang chủ</a></li>
 					<li class="dropdown"><a href="../trangsuc/trangsuc.html">trang sức</a>
-						<ul class="dropdown-content">
+						<ul class="dropdown_content">
 							<li>
 								<a href="#">Nhẫn</a>
 								<a href="#">Bông tai</a>
@@ -44,107 +47,90 @@
 							</li>
 						</ul>
 					</li>
-					<li><a href="categories.html">giới thiệu</a>
-					<li><a href="categories.html">khuyến mãi</a></li>
-					<li class="dropdown"><a class="nav-link" href="#">blog</a>
-						<ul class="dropdown-content">
-							<li class="dropdown-content">
+					<li><a href="../gioithieu.html">giới thiệu</a></li>
+					<li><a href="../khuyenmai.html">khuyến mãi</a></li>
+					<li class="dropdown"><a class="nav-link" href="../blog/blogall_1.html">blog</a>
+						<ul class="dropdown_content">
+							<li class="dropdown_content">
 								<a href="#">Tin tức</a>
+								<a href="#">Góc tư vấn</a>
 								<a href="#">Kiến thức chung</a>
 							</li>
 						</ul>
 					</li>
 					<li><a href="../lienhe.html">liên hệ</a></li>
 				</ul>
-			</nav>
+			</nav></div>
+			<div class = "col-3">
 			<div class="header_content ml-auto">
-				<div class="search header_search">
+				<div class="Search header_search">
 					<form action="#">
-						<input type="search" class="search_input" required="required">
-						<button type="submit" id="search_button" class="search_button"><img src="../images/magnifying-glass.svg" alt=""></button>
+						<input type="search" class="Search-input" required="required">
+						<button type="submit" id="Search-button" class="Search-button"><img src="../images/magnifying-glass.svg" alt=""></button>
 					</form>
 				</div>
-				<div class="shopping">
+				<div class="Shopping">
 					<!-- Cart -->
-					<a href="#">
-						<div class="cart">
+					<a href="../giohang/giohang.html">
+						<div class="Cart">
 							<img src="../images/shopping-bag.svg" alt="">
-							<div class="cart_num_container">
-								<div class="cart_num_inner">
-									<div class="cart_num">2</div>
+							<div class="cart-num_container">
+								<div class="cart-num_inner">
+									<div class="cart-num">2</div>
 								</div>
 							</div>
 						</div>
 					</a>
 					<!-- Star -->
 					<a href="#">
-						<div class="star">
+						<div class="Star">
 							<img src="../images/star.svg" alt="">
-							<div class="star_num_container">
-								<div class="star_num_inner">
-									<div class="star_num">0</div>
+							<div class="star-num_container">
+								<div class="star-num_inner">
+									<div class="star-num">0</div>
 								</div>
 							</div>
 						</div>
 					</a>
 					<!-- Avatar -->
 					<a href="#">
-						<div class="avatar">
+						<div class="Avatar">
 							<img src="../images/avatar.svg" alt="">
 						</div>
 					</a>
 				</div>
-			</div>
-
-			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
+			</div></div>
+			<div class = "col-1">
+			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div></div>
 		</div>
 	</header>
-
 	<!-- Menu -->
-
-	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+	<div class="menu d-flex flex-column justify-content-start text-right menu_mm trans_400">
 		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="#">Seraphine</a></div>
+		<div class="logo menu_mm  text-center"><img src="../images/logo.png" alt="Logo Thương Hiệu"></div>
+		
 		<div class="search">
 			<form action="#">
 				<input type="search" class="search_input menu_mm" required="required">
 				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="../images/magnifying-glass.svg" alt=""></button>
 			</form>
 		</div>
-		<nav class="menu_nav">
+		<nav class="menu-nav">
 			<ul class="menu_mm">
-				<li class="menu_mm"><a href="#">trang chủ</a></li>
-				<li class="dropdown"><a href="../trangsuc/trangsuc.html">trang sức</a>
-					<ul class="dropdown-content">
-						<li>
-							<a href="#">Nhẫn</a>
-							<a href="#">Bông tai</a>
-							<a href="#">Dây chuyền</a>
-							<a href="#">Lắc</a>
-							<a href="#">Vòng</a>
-							<a href="#">Charm</a>
-						</li>
-					</ul>
-				</li>
-				<li class="menu_mm"><a href="#">giới thiệu</a></li>
-				<li class="menu_mm"><a href="#">khuyến mãi</a></li>
-				<li class="dropdown"><a class="nav-link" href="#">blog</a>
-					<ul class="dropdown-content">
-						<li class="dropdown-content">
-							<a href="#">Tin tức</a>
-							<a href="#">Kiến thức chung</a>
-						</li>
-					</ul>
-				</li>
-				<li class="menu_mm"><a href="#">liên hệ</a></li>
+				<li class="menu_mm"><a href="../index.html">trang chủ</a></li>
+				<li class="menu_mm"><a href="../trangsuc/trangsuc.html">trang sức</a></li>
+				<li class="menu_mm"><a href="../gioithieu.html">giới thiệu</a></li>
+				<li class="menu_mm"><a href="../khuyenmai.html">khuyến mãi</a></li>
+				<li class="menu_mm"><a href="../blog/blogall_1.html">blog</a></li>
+				<li class="menu_mm"><a href="../lienhe.html">liên hệ</a></li>
 			</ul>
 		</nav>
-	</div>
+	</div> 
 
 
 
 <!-- Cart -->
-<div class="product">
+<div class="cart">
     <div class="container">
         <div class="row-cart">
             <div class="cart-container _3IM2GBccOtwRW10h68u9qJ">
@@ -155,7 +141,7 @@
                             <article class="cartItem">
                                 <div class="cartImageModule">
                                     <a href="../vong/chitietvong.html">
-                                        <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" alt="" class="imageModule">
+                                        <img src="../vong/images/compressed-donehd-2401-3-002-1-1-1.jpg" alt="" class="imageModule">
                                     </a>
                                 </div>
                                 <div class="cartItemDetail">
@@ -194,12 +180,12 @@
                             <article class="cartItem">
                                 <div class="cartImageModule">
                                     <a href="../vong/chitietvong.html">
-                                        <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" alt="" class="imageModule">
+                                        <img src="../trangsuc/images/compressed-donebi-2401-7-046-1-658abfb0-d7cb-4aa4-8068-1f6588325df2.jpg" alt="" class="imageModule">
                                     </a>
                                 </div>
                                 <div class="cartItemDetail">
                                     <a href="../vong/chitietvong.html" class="cartItemLink">
-                                        <h2>Vòng tay</h2>
+                                        <h2>Charm bạc họa tiết</h2>
                                     </a>
                                     <span class="unit-price">450000đ</span>
                                     <ul class="cartItemDetails-ul">
@@ -237,7 +223,7 @@
             <div class="cart-right">
 				<div class="cart-details">
 					<div class="cart-total">
-						<p>Tổng đơn hàng |<span class="total-quantity">2</span> sản phẩm</p>
+						<p>Tổng đơn hàng | <span class="total-quantity">2</span> sản phẩm</p>
 						<p>Tổng cộng: <span class="grand-total">700000</span>đ</p>
 					</div>
 					<div class="cart-total">
@@ -266,7 +252,7 @@
 						<button class="checkout-btn">Thanh toán</button>
 					</div>
 					<div class="cart-total">
-						<a><button class="continue-shopping-btn">Tiếp tục mua sắm</button></a>
+						<a href="../trangsuc/trangsuc.html"><button class="continue-shopping-btn">Tiếp tục mua sắm</button></a>
 					</div>
 				</div>
 			</div>
@@ -275,10 +261,12 @@
     </div>
 </div>
 	
+<!-- Newsletter -->
+
 <div class="newsletter_wrapper">
 	<div class="newsletter">
 		<div class="newsletter_content">
-			<div class="newsletter_image" style="background-image:url(images/letter2.jpg)"></div>
+			<div class="newsletter_image" style="background-image:url(../images/letter2.jpg)"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col">
@@ -366,9 +354,9 @@
 											<p style="color: black;"><b>Phương thức thanh toán</b></p>
 										</li>
 										<li class="icon-payment">
-											<a href="#"><img src="images/momo-2.svg" alt="Momo" class="payment-icon"></a>
-											<a href="#"><img src="images/0oxhzjmxbksr1686814746087.png" alt="ZaloPay" class="payment-icon"></a>
-											<a href="#"><img src="images/mastercard-icon-512x329-xpgofnyv.png" alt="MasterCard" class="payment-icon"></a>
+											<a href="#"><img src="../images/momo-2.svg" alt="Momo" class="payment-icon"></a>
+											<a href="#"><img src="../images/0oxhzjmxbksr1686814746087.png" alt="ZaloPay" class="payment-icon"></a>
+											<a href="#"><img src="../images/mastercard-icon-512x329-xpgofnyv.png" alt="MasterCard" class="payment-icon"></a>
 										</li>
 									</ul>
 								</div>
