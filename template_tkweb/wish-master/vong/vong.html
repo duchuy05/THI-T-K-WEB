@@ -14,7 +14,7 @@
 <link href="../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../styles/responsive.css">
 <link rel="stylesheet" type="text/css" href="../styles/product.css">
-
+<link rel="stylesheet" type="text/css" href="stylevong.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="../images/favicon.jpg">
 </head>
@@ -126,7 +126,26 @@
 				</nav>
 			</div> 
 	
-	
+			<div class="home_sp">
+		
+				<!-- Home Slider -->
+		
+				<div class="home_slider_container">
+					<div class="owl-carousel owl-theme home_slider">
+						
+						<!-- Home Slider Item -->
+						<div class="owl-item">
+							<div class="home_slider_background" style="background-image:url(images/Aesthetics\ of\ jewelry\,\ earrings.jpg)"></div>
+							<div class="home_slider_content">
+								<div class="home_slider_content_inner">
+									<!--<div class="home_slider_subtitle">Seraphine</div>-->
+									<div class="home_slider_title">VÒNG</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 	
 	<!-- Product -->
 	<div class="product">
@@ -140,11 +159,19 @@
 	
 			<h3>Giá</h3>
 			<div class="price-filter">
-			  <label><input type="radio" name="price" value="100-300">100,000 - 300,000</label><br>
-			  <label><input type="radio" name="price" value="300-500">300,000 - 500,000</label><br>
-			  <label><input type="radio" name="price" value="500-1000">500,000 - 1,000,000</label><br>
-			  <label><input type="radio" name="price" value="all">Tất cả</label><br>
+			  <label><input type="checkbox" name="price" value="100-300">100,000 - 300,000</label><br>
+			  <label><input type="checkbox" name="price" value="300-500">300,000 - 500,000</label><br>
+			  <label><input type="checkbox" name="price" value="500-1000">500,000 - 1,000,000</label><br>
+			  <label><input type="checkbox" name="price" value="all">Tất cả</label><br>
 			</div>
+			<h3>Sắp xếp theo</h3>
+			<div class="price-filter">
+			  <label><input type="radio" name="price" value="">A &rarr; Z</label><br>
+			  <label><input type="radio" name="price" value="">Z &rarr; A</label><br>
+			  <label><input type="radio" name="price" value="">Giá giảm dần</label><br>
+			  <label><input type="radio" name="price" value="">Giá tăng dần</label><br>
+			</div>
+			
 		</div>
 		
 		<div class="grid-container">

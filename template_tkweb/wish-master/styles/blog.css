@@ -319,6 +319,19 @@ section
 	height: 100%;
 }
 
+.scroll-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    color: #fff;
+    background-color: #8f8d8d;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 1000;
+}
 /*********************************
 3.1 Header - Logo
 *********************************/
@@ -765,6 +778,7 @@ img {
 .description p {
     font-size: 16px;
     line-height: 1.5;
+	text-align: justify;
 }
 
 /*********************************
@@ -1010,6 +1024,9 @@ img {
 /*********************************
 9. Newsletter
 *********************************/
+.newsletter_wrapper {
+    margin-bottom: 50px;
+}
 
 .newsletter
 {
@@ -1034,11 +1051,25 @@ img {
 	background-size: cover;
 	background-position: center center;
 }
-.newsletter .section_subtitle,
-.newsletter .section_title
-{
-	color: #FFFFFF;
+.Section_subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #805c5cd5;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
+
+.Section_title {
+    font-family: 'Railway', serif;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #291d1da9;
+    margin-top: -4px;
+    margin-bottom: -30px;
+}
+
 .newsletter_container
 {
 	margin-top: 75px;
@@ -1087,28 +1118,26 @@ img {
 	font-style: italic;
 	color: #b3b3b3 !important;
 }
-.newsletter_button
-{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 142px;
-	height: 46px;
-	background: #937c6f;
-	color: #FFFFFF;
-	font-size: 12px;
-	letter-spacing: 0.2em;
-	text-transform: uppercase;
-	border: none;
-	outline: none;
-	cursor: pointer;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+.newsletter_btn {
+    position: absolute;
+    right: 0;
+    width: 142px;
+    height: 46px;
+    background: #38343296;
+    color: #FFFFFF;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
 }
-.newsletter_button:hover
+.newsletter_btn:hover
 {
 	background: #e0e3e4;
 	color: #232323;
@@ -1205,8 +1234,13 @@ img {
 /*---------------------
   Blog Details
 -----------------------*/
+.container_blog{
+	max-width: 1250px;
+	margin: auto;
+}
+
 .blog-details {
-	padding-top: 70px;
+	padding-top: 50px;
     padding-bottom: 100px;
 	border-bottom: 1px solid #e1e1e1;
 }
@@ -1224,21 +1258,66 @@ img {
 }
 
 .blog__details__text img {
-	margin-bottom: 30px;
+	padding-bottom: 25px;
 	display: block;
     margin: auto;
+	max-width: 100%;
 }
 
 .blog__details__text p {
-	font-size: 18px;
 	line-height: 30px;
+	text-align: justify;
+	margin-bottom: 15px;
+	color:#000000;
+	font-size: 16px;
+}
+
+.blog__details__text h2 {
+	line-height: 30px;
+	text-align: justify;
+	margin-bottom: 15px;
+	font-weight: bold;
+    font-style: italic;
+	color:#000000;
+	font-size: 16px;
 }
 
 .blog__details__text h3 {
-	color: #333333;
-	font-weight: 700;
+	font-weight: bold;
 	line-height: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
+	color: #000000;
+	font-size: 20px;
+	counter-increment: section;
+}
+
+.blog__details__text h3::before {
+	content: counter(section) ". ";
+}
+
+.blog__details__text h4 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.blog__details__text h5 {
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.blog__details__text h5 a {
+	color: #6e6e6e;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.blog__details__text h5 a:hover {
+	color: #000000;
 }
 
 .blog__details__author__pic {
@@ -1309,29 +1388,10 @@ img {
 	margin-bottom: 25px;
 }
 
-.ring-info h3 {
-	color: #000000;
-	counter-increment: section;
-	
-}
-.ring-info h3::before {
-	content: counter(section) ". ";
-}
-.ring-info h4 {
-	color: #000000;
-	font-weight: bold;
-}
-.ring-info p {
-	margin-bottom: 10px;
-}
-.ring-info img {
-	max-width: 100%;
-	height: auto;
-	margin-bottom: 10px;
-}
 
 .container-title {
-	padding: 50px 0;
+	padding: 40px 0px 20px 0px;
+	text-align: center;
     border-bottom: 1px solid #ddd;
 	width: 80%;
 	margin: auto;
@@ -1339,20 +1399,102 @@ img {
 }
 
 .main-title {
-	font-size: 2em;
+	font-size: 3em;
 	margin-bottom: 15px;
+	font-family:'Courier New', Courier, monospace;
+	font-weight: bold;
 }
+
 .meta-info {
-	color: #555;
+	color: #7b7b7b;
 	font-size: 0.9em;
+	font: 17px;
+	font-weight: bold;
+	margin-bottom: 20px;
 }
-.social-share {
-	margin: 20px 0;
+
+.meta-info a {
+	color: #7b7b7b;
+	font: 17px;
+	font-weight: bold;
 }
+
+.meta-info a:hover {
+	color: #000000;
+}
+
+.social-share p {
+	margin: 0;
+	margin: 0px 10px 0px 10px;
+	color:#000;
+	font-size: 20px;
+	font-weight: bold;
+	font-family:'Courier New', Courier, monospace;
+}
+
 .social-share a {
 	margin: 0 5px;
+	font-size: 22px;
 	text-decoration: none;
+	color: #727272;
 }
+
+.social-share a:hover {
+	color: #000;
+}
+
+.comment-form {
+    max-width: 100%;
+    margin: auto;
+    padding: 10px;
+}
+
+.comment-form h3 {
+    color: #000000;
+	font-weight: bold;
+	font-size: 20px;
+	font-family:'Courier New', Courier, monospace;
+	margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.comment-form button{
+    display: block;
+    width: 40%;
+    padding: 10px;
+	margin:auto;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.comment-form button:hover {
+    background-color: #ff0000;
+}
+
 
 /* Wide Mobile = 480px */
 
