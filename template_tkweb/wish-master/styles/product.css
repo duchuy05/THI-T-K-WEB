@@ -1521,7 +1521,7 @@ section
 	right: 0;
 	width: 142px;
 	height: 47px;
-	background: #937c6f;
+	background: #7f7c7a;
 	color: #FFFFFF;
 	font-size: 12px;
 	letter-spacing: 0.2em;
@@ -1540,6 +1540,7 @@ section
 	background: #e0e3e4;
 	color: #232323;
 }
+
 .newsletter_text
 {
 	font-size: 14px;
