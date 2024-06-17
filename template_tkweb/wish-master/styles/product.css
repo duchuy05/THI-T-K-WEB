@@ -779,6 +779,39 @@ section
 5. Menu
 *********************************/
 
+.search_input.menu_mm {
+    width: 13vw;
+    height: 5vh;
+    padding: 10px;
+    border: 1px solid #cccccc6b;
+    border-radius: 20px;
+	background: #6d66665d;
+}
+
+.search_button.menu_mm {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+}
+
+.menu-nav ul li {
+    margin-bottom: 11px;
+}
+
+.menu .search_button {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 2vw;
+    height: 2vw;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
 .menu {
     position: fixed;
     top: 0;
