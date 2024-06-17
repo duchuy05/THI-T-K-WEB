@@ -114,9 +114,18 @@
 
 .card-title {
     color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 16px;
 }
-
+.card-text {
+    color: rgb(207, 18, 18);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
 .card {
+    width: 100%;
+    height: auto;
     justify-content: center;
     text-align: center;
 }
@@ -139,19 +148,18 @@
 
 .breadcrumb_vong li a {
     text-decoration: none;
-    color: #504f4f; /* Màu sắc của văn bản trong breadcrumb */
+    color: #000000; /* Màu sắc của văn bản trong breadcrumb */
 }
 
 .breadcrumb_vong li a:hover {
     text-decoration: none; /* Hiệu ứng hover khi di chuột vào breadcrumb */
-    color: #000000;
+    color: #ff0202;
 }
 /* Container and Row CSS */
 .container.edit-brc {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 100px;
 }
 
 .breadcrumb_vong {
@@ -178,5 +186,49 @@
     padding-right: 15px;
     padding-left: 15px;
 }
+a[itemprop="url"] span[itemprop="name"]  {
+    font-family: 'Montserrat', serif; /* Chọn font chữ thay thế Roboto nếu cần */
+    font-weight: 400; /* Độ đậm của font */
+    font-size: 16px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+}
+li[itemprop="itemListElement"] strong[itemprop="name"] {
+    font-family: 'Montserrat', serif; /* Chọn font chữ thay thế Roboto nếu cần */
+    font-weight: bold; /* Độ đậm của font */
+    font-size: 16px; /* Cỡ chữ */
+    color: #333; /* Màu chữ */
+}
+/* Đổi màu khi hover vào phần tử có itemprop="name" là "Trang chủ" */
+li[itemprop="itemListElement"] a[href="../index.html"]:hover span[itemprop="name"] {
+    color: rgba(60, 55, 55, 0.553); /* Màu chữ khi hover */
+    /* Các thuộc tính khác có thể thêm vào nếu cần */
+}
 
+/* Đổi màu khi hover vào phần tử có itemprop="name" là "Vòng" */
+li[itemprop="itemListElement"] a[href="vong.html"]:hover span[itemprop="name"] {
+    color: rgba(60, 55, 55, 0.553); /* Màu chữ khi hover */
+    /* Các thuộc tính khác có thể thêm vào nếu cần */
+}
 
+.product-info-container h2 {
+    font-family: 'Montserrat',sans-serif;
+    text-transform: uppercase;
+    font-size: 33px;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+}
+.add_to_cart_button:hover 
+{
+    background-color: rgb(146, 146, 146);
+}
+.text-center.mb-4
+{
+    font-family: 'Montserrat',sans-serif;
+    font-size: 33px;
+    letter-spacing: 0.1rem;
+}
+section.container.my-5 {
+    padding-top: 0px; /* Adjust padding for better spacing */
+    background-color: #f9f9f9; /* Optional: Add background color */
+    border-radius: 8px; /* Optional: Add border radius */
+}
