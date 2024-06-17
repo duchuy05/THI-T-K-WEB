@@ -961,7 +961,7 @@ section
 
 .Promo
 {
-	padding-top: 100px;
+	padding-top: 50px;
 }
 .Promo_container
 {
@@ -2236,7 +2236,8 @@ p.mb-4 {
     padding: 0 15px; /* Tạo khoảng cách lề */
 }
 .contain video {
-	max-width: 1100px;
+	margin-top: 10px;
+	max-width: 900px;
 	max-height: 600px;
 
 }
@@ -2246,7 +2247,7 @@ p.mb-4 {
 
 .section_about_2 .contain {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -2336,10 +2337,6 @@ p.mb-4 {
         padding: 5px;
     }
 }
-
-
-
-
 /*pop up*/
 .overlay {
 	display: none;
