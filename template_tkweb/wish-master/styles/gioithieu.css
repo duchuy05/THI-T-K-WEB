@@ -126,8 +126,8 @@
   
   .our-team {
     margin-top: 70px;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border-top: 3px dotted #eee;
   }
   
@@ -217,8 +217,8 @@
   }
   
   .our-services {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border-top: 3px dotted #eee;
     border-bottom: 3px dotted #eee;
   }
