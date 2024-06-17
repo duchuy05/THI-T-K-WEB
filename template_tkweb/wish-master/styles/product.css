@@ -127,7 +127,7 @@ p a:hover::after
 }
 ::selection
 {
-	
+
 }
 p::selection
 {
@@ -150,15 +150,6 @@ h1, h2, h3, h4, h5, h6
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
-}
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-	
 }
 .form-control
 {
@@ -253,10 +244,7 @@ section
 {
 	padding: 0px !important;
 }
-.section_title_container
-{
 
-}
 .section_subtitle
 {
 	font-size: 14px;
@@ -963,10 +951,6 @@ section
 6.1 Current Page
 *********************************/
 
-.current_page
-{
-	
-}
 .current_page ul li
 {
 	display: inline-block;
@@ -1009,10 +993,6 @@ section
 .product_row
 {
 	margin-top: 95px;
-}
-.product_image
-{
-	
 }
 .product_image_large
 {
