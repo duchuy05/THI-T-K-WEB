@@ -793,6 +793,11 @@ section
 
 .menu
 {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	text-align: right;
 	position: fixed;
 	top: 0;
 	right: -400px;
@@ -859,7 +864,7 @@ section
 {
 	margin-bottom: 60px;
 }
-.Logo.menu_mm
+.logo.menu_mm
 {
 	align-items: end;
 
@@ -892,7 +897,64 @@ section
 	width: 100%;
 	margin-bottom: 67px;
 }
+.menu .search_input {
+	width: 13vw;
+    height: 5vh; /* 5% of viewport height */
+	background: #6d66665d;
+	border-radius: 50px;
+	border: none;
+	outline: none;
+	align-items: start;
+	padding-left: 5%;
+}
 
+.menu .search_button
+{
+	position: absolute;
+	top: 45%;
+	/*-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);*/
+	transform: translateY(-50%);
+	right: 0; /* 5% of the search input width */
+    width: 2vw; /* 2% of viewport width */
+    height: 2vw; /* 2% of viewport width */
+	background: transparent;
+	border: none;
+	outline: none;
+}*/
+.menu .search {
+	margin-bottom: 0;
+}
+.Search-button:focus
+{
+	outline: none !important;
+}
+.Search-button img
+{
+	max-width: 100%;
+}
+.search.menu_mm {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.search_input.menu_mm {
+	width: 13vw;
+    height: 5vh; 
+    padding: 10px;
+    border: 1px solid #cccccc6b;
+    border-radius: 20px;
+}
+.search_button.menu_mm {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 2vw; /* 2% of viewport width */
+    height: 2vw; 
+}
 /*********************************
 6. Promo
 *********************************/
