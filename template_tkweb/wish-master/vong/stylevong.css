@@ -244,13 +244,13 @@ section.container.my-5 {
 
 .carousel-control-prev-icon::after {
     content: '\2039'; /* Thêm biểu tượng mũi tên trái */
-    font-size: 30px;
+    font-size: 40px;
     color: rgb(0, 0, 0); /* Đặt màu cho biểu tượng mũi tên */
 }
 
 
 .carousel-control-next-icon::after {
     content: '\203A'; /* Thêm biểu tượng mũi tên phải */
-    font-size: 30px;
+    font-size: 40px;
     color: rgb(0, 0, 0); /* Đặt màu cho biểu tượng mũi tên */
 }
