@@ -120,37 +120,49 @@
     justify-content: center;
     text-align: center;
 }
-.breadcrumb {
+.breadcrumb_vong ul {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
 }
 
-.breadcrumb li {
+.breadcrumb_vong li {
+    display: inline-block;
     margin-right: 5px;
+    font-size: 16px; /* Điều chỉnh font-size theo thiết kế của bạn */
 }
 
-.breadcrumb li a {
+.breadcrumb_vong li:last-child {
+    font-weight: bold; /* Định dạng cho phần tử cuối cùng trong breadcrumb */
+}
+
+.breadcrumb_vong li a {
     text-decoration: none;
-    color: #007bff;
+    color: #504f4f; /* Màu sắc của văn bản trong breadcrumb */
 }
 
-.breadcrumb li a:hover {
-    text-decoration: underline;
+.breadcrumb_vong li a:hover {
+    text-decoration: none; /* Hiệu ứng hover khi di chuột vào breadcrumb */
+    color: #000000;
 }
-
-.breadcrumb li span {
-    margin-right: 5px;
-}
-
 /* Container and Row CSS */
 .container.edit-brc {
     width: 100%;
-    padding: 15px;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 100px;
+}
+
+.breadcrumb_vong {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    border-radius: .25rem;
 }
 
 .row {
@@ -166,4 +178,5 @@
     padding-right: 15px;
     padding-left: 15px;
 }
+
 
