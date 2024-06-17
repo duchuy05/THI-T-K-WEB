@@ -1295,7 +1295,7 @@ img {
   Blog Details
 -----------------------*/
 .container_blog{
-	max-width: 1250px;
+	max-width: 1170px;
 	margin: auto;
 }
 
@@ -1471,8 +1471,7 @@ img {
 
 .meta-info {
 	color: #7b7b7b;
-	font-size: 0.9em;
-	font: 17px;
+	font-size: 1.1em;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
