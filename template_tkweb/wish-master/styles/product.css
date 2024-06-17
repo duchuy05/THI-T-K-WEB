@@ -125,14 +125,7 @@ p a:hover::after
 {
 	opacity: 0.2;
 }
-::selection
-{
-	
-}
-p::selection
-{
-	
-}
+
 h1{font-size: 48px; font-size: 2.5rem;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -150,15 +143,6 @@ h1, h2, h3, h4, h5, h6
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
-}
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-	
 }
 .form-control
 {
@@ -253,10 +237,7 @@ section
 {
 	padding: 0px !important;
 }
-.section_title_container
-{
 
-}
 .section_subtitle
 {
 	font-size: 14px;
@@ -779,11 +760,44 @@ section
 5. Menu
 *********************************/
 
+.search_input.menu_mm {
+    width: 13vw;
+    height: 5vh;
+    padding: 10px;
+    border: 1px solid #cccccc6b;
+    border-radius: 20px;
+	background: #6d66665d;
+}
+
+.search_button.menu_mm {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+}
+
+.menu-nav ul li {
+    margin-bottom: 11px;
+}
+
+.menu .search_button {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 2vw;
+    height: 2vw;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
 .menu {
     position: fixed;
     top: 0;
     right: -400px;
-    width: 400px;
+    width: 300px;
     height: 100vh;
     background: #FFFFFF;
     z-index: 101;
@@ -887,22 +901,49 @@ section
 /*********************************
 6. Product
 *********************************/
+.product-slider-container {
+	width: 100%;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.product_slider_content {
+	position: absolute;
+    top: 33%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.product_slider {
+	width: 100%;
+	height: 904px;
+    background: #FFFFFF;
+}
+
+.product_detail {
+	padding-bottom: 20px;
+	background: #FFFFFF;
+	margin-top: -50px;
+}
 
 .product
 {
 	padding-top: 10px;
 	padding-bottom: 20px;
 	background: #FFFFFF;
+	margin-top: -50px;
 }
 
 /*********************************
 6.1 Current Page
 *********************************/
 
-.current_page
-{
-	
-}
 .current_page ul li
 {
 	display: inline-block;
@@ -945,10 +986,6 @@ section
 .product_row
 {
 	margin-top: 95px;
-}
-.product_image
-{
-	
 }
 .product_image_large
 {
@@ -1866,6 +1903,21 @@ a:hover .fa-cart-shopping {
 .products-view-grid .product-box .product-info {
     padding: 0 15px 20px;
 }
+.product-info {
+    /* Đảm bảo không cho phần nội dung xuống dòng */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Đảm bảo nội dung không bị tràn ra ngoài phần chứa */
+}
+
+.product-name a {
+    /* Căn giữa và giữ cho tên sản phẩm trên cùng một dòng */
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2; /* Điều chỉnh khoảng cách giữa các dòng */
+    max-width: 100%; /* Đảm bảo nội dung không bị tràn ra ngoài phần chứa */
+}
 
 .product-box .product-name {
     font-size: 17px;
@@ -1993,7 +2045,7 @@ a:hover .fa-cart-shopping {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px;
+    bottom: -6px;
     border-width: 0 20px 6px;
     border-style: solid;
     color:  rgba(144, 133, 133, 0.759);
@@ -2086,3 +2138,64 @@ a:hover .fa-cart-shopping {
 		color: rgb(255, 254, 254);
 		font-size: 14px;
 	  }
+
+
+	  .filters {
+		display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    z-index: 1;
+    margin-right: 75px;
+    margin-top: 20px;
+    font-size: 15px;
+	  }
+
+	  .card-title {
+		color: black;
+		font-family: 'Courier New', Courier, monospace;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	.card-text {
+		color: rgb(207, 18, 18);
+		font-family: 'Courier New', Courier, monospace;
+		font-weight: bold;
+	}
+	.card-link {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	
+	.card-link:hover .card {
+		transform: scale(1.1); /* Example hover effect */
+		transition: transform 0.3s ease;
+	}
+	
+	.card {
+		text-align: center;
+		position: relative;
+		z-index: 1; /* Ensure card content stays on top */
+		transition: transform 0.3s ease;
+	}
+	
+	.card-body {
+		position: relative;
+		z-index: 2; /* Ensure card body content stays on top of image */
+	}
+
+	.carousel-control-prev-icon {
+		background-image: none;
+	}
+	
+	.carousel-control-next-icon {
+		background-image: none;
+	}
+
+	.text-center.mb-4 {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 33px;
+		letter-spacing: 0.1rem;
+	}
