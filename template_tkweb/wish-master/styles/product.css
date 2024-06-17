@@ -1898,6 +1898,21 @@ a:hover .fa-cart-shopping {
 .products-view-grid .product-box .product-info {
     padding: 0 15px 20px;
 }
+.product-info {
+    /* Đảm bảo không cho phần nội dung xuống dòng */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%; /* Đảm bảo nội dung không bị tràn ra ngoài phần chứa */
+}
+
+.product-name a {
+    /* Căn giữa và giữ cho tên sản phẩm trên cùng một dòng */
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.2; /* Điều chỉnh khoảng cách giữa các dòng */
+    max-width: 100%; /* Đảm bảo nội dung không bị tràn ra ngoài phần chứa */
+}
 
 .product-box .product-name {
     font-size: 17px;
