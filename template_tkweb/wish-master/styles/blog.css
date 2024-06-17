@@ -880,6 +880,7 @@ img {
     color: #ffffff;
     padding: 5px 10px;
     display: inline-block;
+	border: 1px solid #000000;
     margin-bottom: 10px;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -929,8 +930,8 @@ img {
 }
 
 .td-post-category:hover {
-    background-color: #ff0000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /*---------------------
