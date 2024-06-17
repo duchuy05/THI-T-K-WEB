@@ -120,3 +120,51 @@
     justify-content: center;
     text-align: center;
 }
+.breadcrumb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.breadcrumb li {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 14px; /* Điều chỉnh font-size theo thiết kế của bạn */
+}
+
+.breadcrumb li:last-child {
+    font-weight: bold; /* Định dạng cho phần tử cuối cùng trong breadcrumb */
+}
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: #333; /* Màu sắc của văn bản trong breadcrumb */
+}
+
+.breadcrumb li a:hover {
+    text-decoration: underline; /* Hiệu ứng hover khi di chuột vào breadcrumb */
+}
+/* Container and Row CSS */
+.container.edit-brc {
+    width: 100%;
+    padding-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-12 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
