@@ -232,3 +232,25 @@ section.container.my-5 {
     background-color: #f9f9f9; /* Optional: Add background color */
     border-radius: 8px; /* Optional: Add border radius */
 }
+/* Điều chỉnh kích thước hình ảnh */
+.small-image {
+    width: 50%; /* Bạn có thể thay đổi giá trị này theo ý muốn */
+    padding-left: 4vw;
+    height: auto; /* Giữ tỷ lệ hình ảnh */
+    max-width: 500px; /* Đặt kích thước tối đa nếu cần */
+}
+/* Đổi màu cho nút Previous */
+
+
+.carousel-control-prev-icon::after {
+    content: '\2039'; /* Thêm biểu tượng mũi tên trái */
+    font-size: 30px;
+    color: rgb(0, 0, 0); /* Đặt màu cho biểu tượng mũi tên */
+}
+
+
+.carousel-control-next-icon::after {
+    content: '\203A'; /* Thêm biểu tượng mũi tên phải */
+    font-size: 30px;
+    color: rgb(0, 0, 0); /* Đặt màu cho biểu tượng mũi tên */
+}
