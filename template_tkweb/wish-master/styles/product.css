@@ -125,14 +125,7 @@ p a:hover::after
 {
 	opacity: 0.2;
 }
-::selection
-{
 
-}
-p::selection
-{
-	
-}
 h1{font-size: 48px; font-size: 2.5rem;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -2156,3 +2149,53 @@ a:hover .fa-cart-shopping {
     margin-top: 20px;
     font-size: 15px;
 	  }
+
+	  .card-title {
+		color: black;
+		font-family: 'Courier New', Courier, monospace;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	.card-text {
+		color: rgb(207, 18, 18);
+		font-family: 'Courier New', Courier, monospace;
+		font-weight: bold;
+	}
+	.card-link {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	
+	.card-link:hover .card {
+		transform: scale(1.1); /* Example hover effect */
+		transition: transform 0.3s ease;
+	}
+	
+	.card {
+		text-align: center;
+		position: relative;
+		z-index: 1; /* Ensure card content stays on top */
+		transition: transform 0.3s ease;
+	}
+	
+	.card-body {
+		position: relative;
+		z-index: 2; /* Ensure card body content stays on top of image */
+	}
+
+	.carousel-control-prev-icon {
+		background-image: none;
+	}
+	
+	.carousel-control-next-icon {
+		background-image: none;
+	}
+
+	.text-center.mb-4 {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 33px;
+		letter-spacing: 0.1rem;
+	}

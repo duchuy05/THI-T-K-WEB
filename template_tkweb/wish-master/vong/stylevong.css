@@ -123,12 +123,40 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
-.card {
+.card-link {
+    position: relative;
+    display: block;
     width: 100%;
-    height: auto;
-    justify-content: center;
-    text-align: center;
+    height: 100%;
+    overflow: hidden;
 }
+
+.card-link:hover .card {
+    transform: scale(1.1); /* Example hover effect */
+    transition: transform 0.3s ease;
+}
+
+.card {
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure card content stays on top */
+    transition: transform 0.3s ease;
+}
+
+.card-body {
+    position: relative;
+    z-index: 2; /* Ensure card body content stays on top of image */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    padding: 10px;
+    border-radius: 50%;
+}
+
 .breadcrumb_vong ul {
     list-style: none;
     padding: 0;
@@ -228,9 +256,8 @@ li[itemprop="itemListElement"] a[href="vong.html"]:hover span[itemprop="name"] {
     letter-spacing: 0.1rem;
 }
 section.container.my-5 {
-    padding-top: 0px; /* Adjust padding for better spacing */
-    background-color: #f9f9f9; /* Optional: Add background color */
-    border-radius: 8px; /* Optional: Add border radius */
+    padding-top: 0px;
+    border-radius: 8px; 
 }
 /* Điều chỉnh kích thước hình ảnh */
 .small-image {
@@ -253,4 +280,20 @@ section.container.my-5 {
     content: '\203A'; /* Thêm biểu tượng mũi tên phải */
     font-size: 40px;
     color: rgb(0, 0, 0); /* Đặt màu cho biểu tượng mũi tên */
+}
+
+.row_related {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 80%;
+}
+
+.carousel-control-prev-icon {
+    background-image: none;
+}
+
+.carousel-control-next-icon {
+    background-image: none;
 }
