@@ -783,7 +783,7 @@ section
     position: fixed;
     top: 0;
     right: -400px;
-    width: 400px;
+    width: 300px;
     height: 100vh;
     background: #FFFFFF;
     z-index: 101;

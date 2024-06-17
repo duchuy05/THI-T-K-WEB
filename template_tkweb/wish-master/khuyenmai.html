@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Wish</title>
+<title>Khuyến mãi</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Wish shop project">
@@ -24,8 +24,9 @@
 <body>
 	<div class="super_container">
 		<button id="scrollToTopBtn" class="scroll-to-top-btn"><i class="fa-solid fa-circle-up"></i></button>
-			<!-- Header -->
+	<!-- Header -->
 
+	
 	<header class="head">
 		<div class="head_inner d-flex flex-row align-items-center justify-content-start">
 			<div class = "col-1">
@@ -34,7 +35,7 @@
 			<div class = "col-7">
 			<nav class="main-nav" class="collapse navbar-collapse" id="navbarNavDropdown">
 				<ul>
-					<li><a href="index.html">trang chủ</a></li>
+					<li><a href="../index.html">trang chủ</a></li>
 					<li class="dropdown"><a href="trangsuc/trangsuc.html">trang sức</a>
 						<ul class="dropdown_content">
 							<li>
@@ -52,9 +53,9 @@
 					<li class="dropdown"><a class="nav-link" href="blog/blogall_1.html">blog</a>
 						<ul class="dropdown_content">
 							<li class="dropdown_content">
-								<a href="#">Tin tức</a>
-								<a href="#">Góc tư vấn</a>
-								<a href="#">Kiến thức chung</a>
+								<a href="blog/tintuc.html">Tin tức</a>
+								<a href="blog/tuvan.html">Góc tư vấn</a>
+								<a href="blog/kienthuc.html">Kiến thức chung</a>
 							</li>
 						</ul>
 					</li>
@@ -105,34 +106,35 @@
 		</div>
 	</header>
 	<!-- Menu -->
-
-	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
-		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
-		<div class="logo menu_mm"><a href="#">Wish</a></div>
-		<div class="search">
-			<form action="#">
-				<input type="search" class="search_input menu_mm" required="required">
-				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="images/magnifying-glass.svg" alt=""></button>
-			</form>
-		</div>
-		<nav class="menu_nav">
-			<ul class="menu_mm">
-				<li class="menu_mm"><a href="../index.html">trang chủ</a></li>
-				<li class="menu_mm"><a href="trangsuc/trangsuc.html">trang sức</a></li>
-				<li class="menu_mm"><a href="#">giới thiệu</a></li>
-				<li class="menu_mm"><a href="../khuyenmai.html">khuyến mãi</a></li>
-				<li class="menu_mm"><a href="#">blog</a></li>
-				<li class="menu_mm"><a href="../lienhe.html">liên hệ</a></li>
-			</ul>
-		</nav>
+<!-- Menu -->
+<div class="menu d-flex flex-column justify-content-start align-items-center text-right menu_mm trans_400">
+	<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+	<div class="logo menu_mm text-center"><img src="images/logo.png" alt="Logo Thương Hiệu"></div>
+	<div class="search menu_mm">
+		<form action="#">
+			<input type="search" class="search_input menu_mm" required="required">
+			<button type="submit" id="search_button_menu" class="search_button menu_mm">
+				<img class="menu_mm" src="images/magnifying-glass.svg" alt="">
+			</button>
+		</form>
 	</div>
+	<nav class="menu-nav">
+		<ul class="menu_mm text-left">
+			<li class="menu_mm"><a href="index.html">trang chủ</a></li>
+			<li class="menu_mm"><a href="trangsuc/trangsuc.html">trang sức</a></li>
+			<li class="menu_mm"><a href="gioithieu.html">giới thiệu</a></li>
+			<li class="menu_mm"><a href="khuyenmai.html">khuyến mãi</a></li>
+			<li class="menu_mm"><a href="blog/blogall_1.html">blog</a></li>
+			<li class="menu_mm"><a href="lienhe.html">liên hệ</a></li>
+		</ul>
+	</nav>
+</div>
 	<!-- banner 1-->	
 	<section class="banner">
 		<div class="bottom">
 		  <img src="./images/b25.jpg" alt="">
 		</div>
 		<div class="content">
-			<span class="article-hero__date">07/2024</span>
 			<h1>New Collection 2024</h1>
 			<p>New Arrival <span class="color">Sale up to 70% </span> Limited Time Offer</p>
 			<div  class="gioithieu">
@@ -186,7 +188,6 @@
 		</div>
 	</div>
 </div>
-
 <!-- Footer -->
 
 <footer class="footer">

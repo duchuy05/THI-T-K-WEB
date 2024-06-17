@@ -98,7 +98,7 @@
   
   .about-us .right-content ul {
     border-top: 3px dotted #eee;
-    margin-top: 30px;
+    margin-top: -40px;
     padding-top: 30px;
   }
   
@@ -126,8 +126,8 @@
   
   .our-team {
     margin-top: 70px;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border-top: 3px dotted #eee;
   }
   
@@ -151,7 +151,7 @@
   
   .our-team .team-item .thumb .hover-effect {
     position: absolute;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(223, 218, 218, 0.6);
     width: 100%;
     text-align: center;
     top: 0;
@@ -217,8 +217,8 @@
   }
   
   .our-services {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     border-top: 3px dotted #eee;
     border-bottom: 3px dotted #eee;
   }
