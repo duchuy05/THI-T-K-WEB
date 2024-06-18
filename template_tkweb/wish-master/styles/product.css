@@ -1946,6 +1946,7 @@ a:hover .fa-cart-shopping {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.2; /* Điều chỉnh khoảng cách giữa các dòng */
+	font-weight: bold;
     max-width: 100%; /* Đảm bảo nội dung không bị tràn ra ngoài phần chứa */
 }
 
