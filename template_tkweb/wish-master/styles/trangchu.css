@@ -2091,7 +2091,7 @@ p.mb-4 {
 	display: none; /* Ẩn nút cuộn lên đầu trang mặc định */
     position: fixed;
     bottom: 2rem; /* Khoảng cách dưới của nút */
-    right: 2rem; /* Khoảng cách bên phải của nút */
+    left: 2rem; /* Khoảng cách bên phải của nút */
     color: #fff; /* Màu chữ */
     background-color: #8f8d8d; /* Màu nền */
     border: none; /* Không có viền */
@@ -2385,3 +2385,4 @@ p.mb-4 {
 	max-width:	400px;
 	max-height: 400px;
   }
+  
