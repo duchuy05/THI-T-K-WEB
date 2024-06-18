@@ -724,7 +724,7 @@ section
 .contact
 {
 	width: 100%;
-	background: #f9f5f5;
+	background: #efecec;
 	padding-top: 5%;
 	padding-bottom: 5%;
 }
@@ -734,7 +734,7 @@ section
 }
 .review_form_title
 {
-	font-family: 'Lucida', serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 30px;
 	color: #232323;
 	text-transform: uppercase;
@@ -861,7 +861,7 @@ section
 }
 .contact_title
 {
-	font-family: 'Lucida', serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 30px;
 	color: #232323;
 	text-transform: uppercase;
@@ -869,7 +869,7 @@ section
 }
 .contact_info_content
 {
-	margin-top: 99px;
+	margin-top: 10%;
 }
 .contact_info_content ul li
 {
@@ -893,12 +893,12 @@ section
 {
 	display: inline-block;
 	font-size: 16px;
-	font-weight: 600;
+	
 	color: #232323;
 }
 .contact_info_social
 {
-	margin-top: 73px;
+	margin-top: 10%;
 }
 .contact_info_social ul li
 {
@@ -938,7 +938,7 @@ section
 }
 .accordions
 {
-	margin-top: 80px;
+	margin-top: 8%;
 }
 .accordion_container
 {
@@ -948,7 +948,7 @@ section
 {
 	height: 57px;
 	width: 100%;
-	background: #937c6f;
+	background: #948f8d;
 	padding-left: 33px;
 	cursor: pointer;
 	color: #FFFFFF;

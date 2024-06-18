@@ -1345,7 +1345,7 @@ section
 }
 .review_form_title
 {
-	font-family: 'Lucida', serif;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 30px;
 	color: #232323;
 	text-transform: uppercase;
@@ -1429,7 +1429,7 @@ section
 	height: 46px;
 	border: none;
 	outline: none;
-	background: #937c6f;
+	background: #948f8d;
 	color: #FFFFFF;
 	font-size: 12px;
 	text-transform: uppercase;
@@ -1946,6 +1946,7 @@ a:hover .fa-cart-shopping {
     display: inline-block;
     vertical-align: middle;
     line-height: 1.2; /* Điều chỉnh khoảng cách giữa các dòng */
+	font-weight: bold;
     max-width: 100%; /* Đảm bảo nội dung không bị tràn ra ngoài phần chứa */
 }
 
