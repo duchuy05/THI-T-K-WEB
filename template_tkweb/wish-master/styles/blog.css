@@ -685,7 +685,7 @@ section
 }
 .home_title
 {
-	font-family: 'Lucida', serif;
+	font-family: 'Open Sans', serif;
 	font-size: 37px;
 	color: #000000;
 	line-height: 0.75;
@@ -700,14 +700,14 @@ section
 {
 	display: inline-block;
 	position: relative;
-	font-family: 'Lucida', serif;
+	font-family: 'Open Sans', serif;
 	font-size: 22px;
 	color: #000000; /* Thay đổi màu sắc thành màu đen */
-    margin: 0 5px; /* Khoảng cách giữa các phần tử */
+    margin: 0 3px; /* Khoảng cách giữa các phần tử */
 }
 .breadcrumbs ul li a
 {
-	font-family: 'Lucida', serif;
+	font-family: 'Open Sans', serif;
 	font-size: 22px;
 	color: #000000;
 	-webkit-transition: all 200ms ease;
@@ -720,7 +720,7 @@ section
 {
 	display: inline-block;
 	content: '/';
-	margin-left: 6px;
+	margin-left: 10px;
 	color: #000000;
 }
 .breadcrumbs ul li:last-child::after
@@ -736,11 +736,44 @@ section
 5. Menu
 *********************************/
 
+.search_input.menu_mm {
+    width: 13vw;
+    height: 5vh;
+    padding: 10px;
+    border: 1px solid #cccccc6b;
+    border-radius: 20px;
+	background: #6d66665d;
+}
+
+.search_button.menu_mm {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 2vw;
+    height: 2vw;
+}
+
+.menu-nav ul li {
+    margin-bottom: 11px;
+}
+
+.menu .search_button {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 2vw;
+    height: 2vw;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
 .menu {
     position: fixed;
     top: 0;
     right: -400px;
-    width: 400px;
+    width: 300px;
     height: 100vh;
     background: #FFFFFF;
     z-index: 101;
@@ -864,10 +897,15 @@ img {
     margin-top: 15px;
 }
 
+.blog__item__text h5 {
+	text-align: justify;
+}
+
 .blog__item__text h5 a {
     font-size: 16px;
     font-weight: bold;
-    color: black !important;}
+    color: black !important;
+}
 
 .date-time {
     color: #888;
@@ -880,6 +918,7 @@ img {
     color: #ffffff;
     padding: 5px 10px;
     display: inline-block;
+	border: 1px solid #000000;
     margin-bottom: 10px;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -929,8 +968,8 @@ img {
 }
 
 .td-post-category:hover {
-    background-color: #ff0000;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 /*---------------------
@@ -1256,7 +1295,7 @@ img {
   Blog Details
 -----------------------*/
 .container_blog{
-	max-width: 1250px;
+	max-width: 1170px;
 	margin: auto;
 }
 
@@ -1420,16 +1459,19 @@ img {
 }
 
 .main-title {
-	font-size: 3em;
+	font-size: 2em;
 	margin-bottom: 15px;
 	font-family:'Courier New', Courier, monospace;
 	font-weight: bold;
 }
 
+.main-title h2{
+	text-align: left !important;
+}
+
 .meta-info {
 	color: #7b7b7b;
-	font-size: 0.9em;
-	font: 17px;
+	font-size: 1.1em;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
