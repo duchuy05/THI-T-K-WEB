@@ -1401,8 +1401,8 @@ img {
 }
 
 .container-title {
-	padding: 40px 0px 20px 0px;
-	text-align: center;
+	padding: 40px 0px 20px 70px;
+	text-align: left;
     border-bottom: 1px solid #ddd;
 	width: 80%;
 	margin: auto;
@@ -1410,7 +1410,7 @@ img {
 }
 
 .main-title {
-	font-size: 2em;
+	font-size: 2.2em;
 	margin-bottom: 15px;
 	font-family:'Courier New', Courier, monospace;
 	font-weight: bold;
