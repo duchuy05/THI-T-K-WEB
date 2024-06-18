@@ -918,15 +918,39 @@ img {
     color: #ffffff;
     padding: 5px 10px;
     display: inline-block;
-	border: 1px solid #000000;
     margin-bottom: 10px;
 	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.td-post-category:hover {
+    background-color: #d2d2d2;
+    color: #000000;
 }
 
 .description p {
     font-size: 16px;
     line-height: 1.5;
 	text-align: justify;
+}
+
+.blog__item {
+    background-color: #fff; /* Màu nền ban đầu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.blog__item:hover {
+    transform: translateY(-5px); /* Dịch chuyển lên trên khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng khi hover */
+}
+
+.blog__item__pic img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi cho hình ảnh */
+}
+
+.blog__item__pic:hover img {
+    transform: scale(1.05); /* Phóng to hình ảnh khi hover */
 }
 
 /*********************************
@@ -967,10 +991,6 @@ img {
     margin-right: 5px; /* Khoảng cách giữa biểu tượng và văn bản */
 }
 
-.td-post-category:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
 
 /*---------------------
   Blog Sidebar
@@ -1301,16 +1321,8 @@ img {
 
 .blog-details {
 	padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
 	border-bottom: 1px solid #e1e1e1;
-}
-.related-blog {
-	padding-top: 70px;
-	padding-bottom: 10px;
-}
-
-.related-blog-title {
-	margin-bottom: 70px;
 }
 
 .blog__details__text {
@@ -1347,7 +1359,7 @@ img {
 	line-height: 30px;
 	margin-bottom: 15px;
 	color: #000000;
-	font-size: 20px;
+	font-size: 17px;
 	counter-increment: section;
 }
 
@@ -1358,7 +1370,7 @@ img {
 .blog__details__text h4 {
 	color: #000000;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 17px;
 	margin-bottom: 15px;
 }
 
@@ -1380,74 +1392,13 @@ img {
 	color: #000000;
 }
 
-.blog__details__author__pic {
-	float: left;
-	margin-right: 15px;
+.blog__details__text ul{
+	list-style-type: disc !important; 
+	font-size: 16px; 
+	padding-left: 20px; 
+	line-height: 3; 
+	color:black
 }
-
-.blog__details__author__pic img {
-	height: 92px;
-	width: 92px;
-	border-radius: 50%;
-}
-
-.blog__details__author__text {
-	overflow: hidden;
-	padding-top: 30px;
-}
-
-.blog__details__author__text h6 {
-	color: #1c1c1c;
-	font-weight: 700;
-}
-
-.blog__details__author__text span {
-	font-size: 16px;
-	color: #6f6f6f;
-}
-
-.blog__details__widget ul {
-	margin-bottom: 5px;
-}
-
-.blog__details__widget ul li {
-	font-size: 16px;
-	color: #6f6f6f;
-	list-style: none;
-	line-height: 30px;
-}
-
-.blog__details__widget ul li span {
-	color: #1c1c1c;
-	font-weight: 700;
-}
-
-.blog__details__widget .blog__details__social a {
-	display: inline-block;
-	font-size: 20px;
-	color: #6f6f6f;
-	margin-right: 24px;
-	-webkit-transition: all, 0.3s;
-	-moz-transition: all, 0.3s;
-	-ms-transition: all, 0.3s;
-	-o-transition: all, 0.3s;
-	transition: all, 0.3s;
-}
-
-.blog__details__widget .blog__details__social a:hover {
-	color: #7fad39;
-}
-
-.blog__details__widget .blog__details__social a:last-child {
-	margin-right: 0;
-}
-
-
-.blog__details__author {
-	overflow: hidden;
-	margin-bottom: 25px;
-}
-
 
 .container-title {
 	padding: 40px 0px 20px 0px;
@@ -1499,11 +1450,11 @@ img {
 	margin: 0 5px;
 	font-size: 22px;
 	text-decoration: none;
-	color: #727272;
 }
 
-.social-share a:hover {
-	color: #000;
+.social-share a i:hover
+{
+	color: #e0e3e4;
 }
 
 .comment-form {
@@ -1555,9 +1506,37 @@ img {
 }
 
 .comment-form button:hover {
-    background-color: #ff0000;
+    background-color: #c1c1c1;
+	color:#000
 }
 
+.favourite-blog {
+	padding-top: 40px;
+	padding-bottom: 10px;
+}
+
+.favourite-blog-title {
+	margin-bottom: 40px;
+}
+
+.section-title h3 {
+    color: #1c1c1c;
+    font-weight: 700;
+    position: relative;
+	text-align: center;
+}
+
+.section-title h3:after {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    right: 0;
+    height: 4px;
+    width: 80px;
+    background: #000000;
+    content: "";
+    margin: 0 auto;
+}
 
 /*********************************
 10. Footer
@@ -1750,7 +1729,7 @@ a, .text-link {
 	display: none; /* Ẩn nút cuộn lên đầu trang mặc định */
     position: fixed;
     bottom: 2rem; /* Khoảng cách dưới của nút */
-    right: 2rem; /* Khoảng cách bên phải của nút */
+    left: 2rem; /* Khoảng cách bên trái của nút */
     color: #fff; /* Màu chữ */
     background-color: #8f8d8d; /* Màu nền */
     border: none; /* Không có viền */
