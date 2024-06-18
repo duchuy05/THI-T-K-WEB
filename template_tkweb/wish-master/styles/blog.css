@@ -15,14 +15,18 @@
 	3.5 Header - Burger
 4. Home
 5. Menu
-6. Product
-	6.1 Current Page
-	6.2 Product Image
-	6.3 Product Content
-7. Reviews
-8. Review Form
-9. Newsletter
-10. Footer
+6. Main Blog
+	6.1. Blog Items
+	6.2. Blog Sidebar
+	6.3. Pagination
+7. Blog Details
+	7.1 Title
+	7.2 Blog Content
+	7.3 Information
+	7.4 Favourite Posts
+8. Footer
+9. Scroll To Top Button
+10. Social Button
 
 
 ******************************/
@@ -125,14 +129,7 @@ p a:hover::after
 {
 	opacity: 0.2;
 }
-::selection
-{
-	
-}
-p::selection
-{
-	
-}
+
 h1{font-size: 48px; font-size: 2.5rem;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -151,15 +148,7 @@ h1, h2, h3, h4, h5, h6
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
 }
-h1::selection, 
-h2::selection, 
-h3::selection, 
-h4::selection, 
-h5::selection, 
-h6::selection
-{
-	
-}
+
 .form-control
 {
 	color: #db5246;
@@ -253,10 +242,7 @@ section
 {
 	padding: 0px !important;
 }
-.section_title_container
-{
 
-}
 .section_subtitle
 {
 	font-size: 14px;
@@ -311,6 +297,7 @@ section
 /*********************************
 3. Header
 *********************************/
+
 .head {
     position: fixed;
     top: 0;
@@ -320,28 +307,12 @@ section
     background: #FFFFFF;
     z-index: 100;
     padding-left: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
     padding-right: 5%;
     transition: all 200ms ease;
 }
 
-
-.header
-{
-	position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background: #FFFFFF;
-    z-index: 100;
-    padding-left: 5%;
-    padding-right: 5%;
-    transition: all 200ms ease;
-}
-.header.scrolled
-{
-	height: 80px;
-}
 .head_inner {
     width: 100%;
     height: 100%;
@@ -354,28 +325,28 @@ section
     flex-grow: 0.2;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-right: -10%;
-    margin-right: -3%;
+    justify-content: space-between; /* Đẩy các phần tử con sang bên phải */
+    padding-right: -10%; /* Đảm bảo không có khoảng trắng thừa bên phải */
+	margin-right: -3%;
 }
 
 .Search.header_search {
     margin-right: 1rem;
 }
 
+.row.align-items-center
+{
+	width: 100%;
+	height: auto;
+}
+
 /*********************************
 3.1 Header - Logo
 *********************************/
-
 .logo
 {
 	text-align: left;
     padding: 10px;
-}
-.logo_container {
-    flex: 1;
-    display: flex;
-    align-items: center;
 }
 
 .logo img {
@@ -402,20 +373,20 @@ section
     width: max-content;
 }
   
-  .dropdown_content a {
+.dropdown_content a {
 	color: black;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
-  }
-  
-  .dropdown_content a:hover {background-color: #ddd;}
-  
-  .dropdown:hover .dropdown_content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+}
 
-  .main-nav {
+.dropdown_content a:hover {background-color: #ddd;}
+  
+.dropdown:hover .dropdown_content {display: block;}
+  
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.main-nav {
     flex: 1;
     padding-left: 7%;
     -webkit-transform: translateY(4%);
@@ -463,17 +434,6 @@ section
 3.3 Header - Search
 *********************************/
 
-.earch
-{
-	display: inline-block;
-	width: 250px;
-	-webkit-transform: translateY(2px);
-	-moz-transform: translateY(2px);
-	-ms-transform: translateY(2px);
-	-o-transform: translateY(2px);
-	transform: translateY(2px);
-	margin-right: 20px;
-}
 .Search-input {
     flex: 1;
     width: 13vw;
@@ -652,11 +612,11 @@ section
 /*********************************
 4. Home
 *********************************/
-
 .home
 {
 	width: 100%;
 	position: relative;
+	margin-top: 35px;
 }
 .home_background
 {
@@ -681,6 +641,7 @@ section
 }
 .home_content
 {
+	margin-top: 25px;
 	text-align: center;
 }
 .home_title
@@ -858,7 +819,6 @@ section
     margin-bottom: 67px;
 }
 
-
 .menu-nav ul li a {
     font-size: 12px;
     font-family: 'Montserrat', sans-serif;
@@ -875,22 +835,28 @@ section
 }
 
 /*********************************
-6. Blog
+6. Main Blog
 *********************************/
-img {
-	max-width: 100%; 
-	height: auto;
-}
-.container {
-    max-width: 1400px;
-}
+
 .blog-wrapper {
 	padding-top: 70px;
 	padding-bottom: 70px;
 }
+.container {
+    max-width: 1400px;
+}
+
+/*********************************
+6.1. Blog Items
+*********************************/
 .blog__item {
     margin-bottom: 20px;
     padding: 10px;
+}
+
+img {
+	max-width: 100%; 
+	height: auto;
 }
 
 .content {
@@ -907,10 +873,22 @@ img {
     color: black !important;
 }
 
+.categories-date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .date-time {
     color: #888;
     font-size: 14px;
     margin-bottom: 5px;
+	display: flex;
+    align-items: center;
+}
+
+.date-time i {
+    margin-right: 5px; /* Khoảng cách giữa biểu tượng và văn bản */
 }
 
 .td-post-category {
@@ -954,7 +932,7 @@ img {
 }
 
 /*********************************
-6.1 Current Page
+Button Xem thêm
 *********************************/
 
 .btn-xem-them {
@@ -973,63 +951,18 @@ img {
     background-color: #ffffff;
     color: #000000;
 }
-/*********************************
-6.2 Product Image
-*********************************/
-.categories-date {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.date-time {
-    display: flex;
-    align-items: center;
-}
-
-.date-time i {
-    margin-right: 5px; /* Khoảng cách giữa biểu tượng và văn bản */
-}
-
 
 /*---------------------
-  Blog Sidebar
+6.2. Blog Sidebar
 -----------------------*/
 
 .blog__sidebar {
 	padding-top: 10px;
 }
 
-.blog__sidebar__item {
-	margin-top: 30px;
-	margin-bottom: 30px;
-}
-
-.blog__sidebar__item h4 {
-	color: #1c1c1c;
-	font-weight: 700;
-	margin-bottom: 15px;
-	text-transform: uppercase;
-}
-
-.blog__sidebar__item ul li {
-	list-style: none;
-}
-
-.blog__sidebar__item ul li a {
-	font-size: 16px;
-	color: #666666;
-	line-height: 48px;
-	-webkit-transition: all, 0.3s;
-	-moz-transition: all, 0.3s;
-	-ms-transition: all, 0.3s;
-	-o-transition: all, 0.3s;
-	transition: all, 0.3s;
-}
-
-.blog__sidebar__item ul li a:hover {
-	color: #000000;
-}
+/*---------------------
+Blog Sidebar - Search
+-----------------------*/
 
 .blog__sidebar__search {
 	margin-bottom: 40px;
@@ -1065,11 +998,49 @@ img {
 	padding: 0px 18px;
 }
 
+/*---------------------
+Blog Sidebar - Item
+-----------------------*/
+
+.blog__sidebar__item {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.blog__sidebar__item h4 {
+	color: #1c1c1c;
+	font-weight: 700;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+}
+
+.blog__sidebar__item ul li {
+	list-style: none;
+}
+
+.blog__sidebar__item ul li a {
+	font-size: 16px;
+	color: #666666;
+	line-height: 48px;
+	-webkit-transition: all, 0.3s;
+	-moz-transition: all, 0.3s;
+	-ms-transition: all, 0.3s;
+	-o-transition: all, 0.3s;
+	transition: all, 0.3s;
+}
+
+.blog__sidebar__item ul li a:hover {
+	color: #000000;
+}
+
 .blog__sidebar__item a.current-page {
 	color: #000000;
     font-weight: bold;
-	pointer-events: none; /* Ngăn chặn sự kiện hover */
 }
+
+/*---------------------
+Blog Sidebar - News
+-----------------------*/
 
 .blog__sidebar__recent {
 	margin-top: 40px;
@@ -1121,7 +1092,7 @@ img {
 }
 
 /*********************************
-7. Pagination
+6.3. Pagination
 *********************************/
 .product__pagination,
 .blog__pagination {
@@ -1180,225 +1151,13 @@ img {
 	content: "";
 }
 
-
-/*********************************
-9. Newsletter
-*********************************/
-.newsletter_wrapper {
-    margin-bottom: 50px;
-}
-
-.newsletter
-{
-	width: 100%;
-	padding-left: 62px;
-	padding-right: 62px;
-}
-.newsletter_content
-{
-	width: 100%;
-	padding-top: 88px;
-	padding-bottom: 94px;
-}
-.newsletter_image
-{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-}
-.Section_subtitle {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: 600;
-    color: #805c5cd5;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-}
-
-.Section_title {
-    font-family: 'Railway', serif;
-    font-size: 60px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #291d1da9;
-    margin-top: -4px;
-    margin-bottom: -30px;
-}
-
-.newsletter_container
-{
-	margin-top: 75px;
-}
-.newsletter_input
-{
-	width: 100%;
-	height: 46px;
-	background: #FFFFFF;
-	padding-left: 25px;
-	border: none;
-	outline: none;
-}
-.newsletter_input::-webkit-input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #b3b3b3 !important;
-}
-.newsletter_input:-moz-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #b3b3b3 !important;
-}
-.newsletter_input::-moz-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #b3b3b3 !important;
-} 
-.newsletter_input:-ms-input-placeholder
-{ 
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #b3b3b3 !important;
-}
-.newsletter_input::input-placeholder
-{
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	font-style: italic;
-	color: #b3b3b3 !important;
-}
-.newsletter_btn {
-    position: absolute;
-    right: 0;
-    width: 142px;
-    height: 46px;
-    background: #38343296;
-    color: #FFFFFF;
-    font-size: 12px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    -webkit-transition: all 200ms ease;
-    -moz-transition: all 200ms ease;
-    -ms-transition: all 200ms ease;
-    -o-transition: all 200ms ease;
-    transition: all 200ms ease;
-}
-.newsletter_btn:hover
-{
-	background: #e0e3e4;
-	color: #232323;
-}
-.newsletter_text
-{
-	font-size: 14px;
-	font-style: italic;
-	color: #FFFFFF;
-	margin-top: 19px;
-}
-
+/*---------------------
+7. Blog Details
+-----------------------*/
 
 /*---------------------
-  Blog Details
+7.1 Title
 -----------------------*/
-.container_blog{
-	max-width: 1170px;
-	margin: auto;
-}
-
-.blog-details {
-	padding-top: 50px;
-    padding-bottom: 70px;
-	border-bottom: 1px solid #e1e1e1;
-}
-
-.blog__details__text {
-	margin-bottom: 45px;
-}
-
-.blog__details__text img {
-	padding-bottom: 25px;
-	display: block;
-    margin: auto;
-	max-width: 100%;
-}
-
-.blog__details__text p {
-	line-height: 30px;
-	text-align: justify;
-	margin-bottom: 15px;
-	color:#000000;
-	font-size: 16px;
-}
-
-.blog__details__text h2 {
-	line-height: 30px;
-	text-align: justify;
-	margin-bottom: 15px;
-	font-weight: bold;
-    font-style: italic;
-	color:#000000;
-	font-size: 16px;
-}
-
-.blog__details__text h3 {
-	font-weight: bold;
-	line-height: 30px;
-	margin-bottom: 15px;
-	color: #000000;
-	font-size: 17px;
-	counter-increment: section;
-}
-
-.blog__details__text h3::before {
-	content: counter(section) ". ";
-}
-
-.blog__details__text h4 {
-	color: #000000;
-	font-weight: bold;
-	font-size: 17px;
-	margin-bottom: 15px;
-}
-
-.blog__details__text h5 {
-	color: #000000;
-	font-weight: bold;
-	text-align: center;
-	font-size: 16px;
-	margin-bottom: 20px;
-}
-
-.blog__details__text h5 a {
-	color: #6e6e6e;
-	font-weight: bold;
-	font-size: 16px;
-}
-
-.blog__details__text h5 a:hover {
-	color: #000000;
-}
-
-.blog__details__text ul{
-	list-style-type: disc !important; 
-	font-size: 16px; 
-	padding-left: 20px; 
-	line-height: 3; 
-	color:black
-}
 
 .container-title {
 	padding: 40px 0px 20px 70px;
@@ -1457,6 +1216,100 @@ img {
 	color: #e0e3e4;
 }
 
+/*---------------------
+7.2 Blog Content
+-----------------------*/
+
+.blog-details {
+	padding-top: 50px;
+    padding-bottom: 70px;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.container_blog{
+	max-width: 1170px;
+	margin: auto;
+}
+
+.blog__details__text {
+	margin-bottom: 45px;
+}
+
+.blog__details__text h2 {
+	line-height: 30px;
+	text-align: justify;
+	margin-bottom: 15px;
+	font-weight: bold;
+    font-style: italic;
+	color:#000000;
+	font-size: 16px;
+}
+
+.blog__details__text h3 {
+	font-weight: bold;
+	line-height: 30px;
+	margin-bottom: 15px;
+	color: #000000;
+	font-size: 17px;
+	counter-increment: section;
+}
+
+.blog__details__text h3::before {
+	content: counter(section) ". ";
+}
+
+.blog__details__text h4 {
+	color: #000000;
+	font-weight: bold;
+	font-size: 17px;
+	margin-bottom: 15px;
+}
+
+.blog__details__text img {
+	padding-bottom: 25px;
+	display: block;
+    margin: auto;
+	max-width: 100%;
+}
+
+.blog__details__text p {
+	line-height: 30px;
+	text-align: justify;
+	margin-bottom: 15px;
+	color:#000000;
+	font-size: 16px;
+}
+
+.blog__details__text h5 {
+	color: #000000;
+	font-weight: bold;
+	text-align: center;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.blog__details__text h5 a {
+	color: #6e6e6e;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.blog__details__text h5 a:hover {
+	color: #000000;
+}
+
+.blog__details__text ul{
+	list-style-type: disc !important; 
+	font-size: 16px; 
+	padding-left: 20px; 
+	line-height: 3; 
+	color:black
+}
+
+/*---------------------
+7.3 Information
+-----------------------*/
+
 .comment-form {
     max-width: 100%;
     margin: auto;
@@ -1510,6 +1363,10 @@ img {
 	color:#000
 }
 
+/*---------------------
+7.4 Favourite Posts
+-----------------------*/
+
 .favourite-blog {
 	padding-top: 40px;
 	padding-bottom: 10px;
@@ -1539,8 +1396,9 @@ img {
 }
 
 /*********************************
-10. Footer
+8. Footer
 *********************************/
+
 .product-title {
     font-family: 'Roboto', serif;
 	color: black;
@@ -1723,7 +1581,9 @@ a, .text-link {
     background: transparent;
 }
 
-/** Scroll to top button*/
+/*********************************
+9. Scroll to top button
+*********************************/
 
 .scroll-to-top-btn {
 	display: none; /* Ẩn nút cuộn lên đầu trang mặc định */
@@ -1738,10 +1598,12 @@ a, .text-link {
     cursor: pointer; /* Con trỏ chỉ vào */
     z-index: 1000; /* Độ sâu z-index */
 }
-/* social button*/
+
+/*********************************
+10. social button
+*********************************/
 
 .sc-buttons {
-
 	position: fixed;
 	bottom: 25%;
 	right: 1.5%;
@@ -1750,29 +1612,29 @@ a, .text-link {
 	flex-direction: column;
 	align-items: flex-end;
 	margin: -20px;
-  
 	z-index: 1000;
-  }
+}
   
-  .sc-buttons a {
+.sc-buttons a {
 	display: block;
 	width: 40px;
 	height: 40px;
 	overflow: hidden;
 	border-radius: 50%;
 	margin-bottom: 10px;
-  }
+}
   
-  .sc-buttons a img {
+.sc-buttons a img {
 	width: 100%;
 	height: auto;
 	border-radius: 50%;
-  }
+}
   
-  .sc-buttons a:hover {
+.sc-buttons a:hover {
 	background-color: #f8f8f8;
-  }
-  .sc-buttons img:hover {
+}
+
+.sc-buttons img:hover {
 	transform: scale(1.2);
 	transition: transform 0.5s;
-  }
+}
