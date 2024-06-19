@@ -2252,4 +2252,8 @@ a:hover .fa-cart-shopping {
 	.product-image-flip:hover .second-image {
 		display: block;
 	}
+
+	.cartItemLink:hover {
+		color: #666565;
+	}
 	
