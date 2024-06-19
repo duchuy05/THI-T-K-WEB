@@ -21,6 +21,7 @@
 <body>
 
 <div class="super_container">
+
 	<button id="scrollToTopBtn" class="scroll-to-top-btn"><i class="fa-solid fa-circle-up"></i></button>
 
 		<!-- Header -->
@@ -38,7 +39,7 @@
 							<ul class="dropdown_content">
 								<li>
 									<a href="../nhan/nhan.html">Nhẫn</a>
-									<a href="#">Bông tai</a>
+									<a href="../bongtai/bongtai.html">Bông tai</a>
 									<a href="../daychuyen/daychuyen.html">Dây chuyền</a>
 									<a href="../lac/lac.html">Lắc</a>
 									<a href="../vong/vong.html">Vòng</a>
@@ -214,55 +215,73 @@ function sortProducts() {
 			gridContainer.appendChild(paginationContainer);
         }
 		</script>
-		  <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const filterMaterialCheckboxes = document.querySelectorAll('.filter-material');
-    const filterPriceCheckboxes = document.querySelectorAll('input[name="price"]');
-    const sortSelect = document.getElementById('sort');
-    const gridItems = document.querySelectorAll('.grid-item');
 
-    filterMaterialCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', filterAndSortProducts);
-    });
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		const filterMaterialCheckboxes = document.querySelectorAll('.filter-material');
+		const filterPriceCheckboxes = document.querySelectorAll('input[name="price"]');
+		const filterTypeCheckboxes = document.querySelectorAll('.filter-type');
+		const gridItems = document.querySelectorAll('.grid-item');
+	
+		filterMaterialCheckboxes.forEach(checkbox => {
+			checkbox.addEventListener('change', filterAndSortProducts);
+		});
+	
+		filterPriceCheckboxes.forEach(checkbox => {
+			checkbox.addEventListener('change', filterAndSortProducts);
+		});
+	
+		filterTypeCheckboxes.forEach(checkbox => {
+			checkbox.addEventListener('change', filterAndSortProducts);
+		});
+	
+		function filterAndSortProducts() {
+			filterProducts();
+			sortProducts();
+		}
+	
+		function filterProducts() {
+			const selectedMaterials = Array.from(filterMaterialCheckboxes)
+										.filter(checkbox => checkbox.checked)
+										.map(checkbox => checkbox.value);
+			
+			const selectedPrices = Array.from(filterPriceCheckboxes)
+										.filter(checkbox => checkbox.checked)
+										.map(checkbox => checkbox.value);
+	
+			const selectedTypes = Array.from(filterTypeCheckboxes)
+										.filter(checkbox => checkbox.checked)
+										.map(checkbox => checkbox.value);
+	
+			gridItems.forEach(item => {
+				const material = item.dataset.material;
+				const price = parseFloat(item.dataset.price);
+				const type = item.dataset.type;
+	
+				const materialMatch = selectedMaterials.length === 0 || selectedMaterials.includes(material);
+				const priceMatch = selectedPrices.length === 0 || selectedPrices.includes('all') || selectedPrices.some(range => {
+					if (range === 'all') return true;
+					const [min, max] = range.split('-').map(Number);
+					return price >= min && price <= max;
+				});
+	
+				const typeMatch = selectedTypes.length === 0 || selectedTypes.includes(type);
+	
+				if (materialMatch && priceMatch && typeMatch) {
+					item.style.display = 'block';
+				} else {
+					item.style.display = 'none';
+				}
+			});
+		}
+	
+		function sortProducts() {
+			// Cài đặt logic sắp xếp sản phẩm tại đây nếu cần
+		}
+	});
+	</script>
+	
 
-    filterPriceCheckboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', filterAndSortProducts);
-    });
-
-    function filterAndSortProducts() {
-        filterProducts();
-        sortProducts();
-    }
-
-    function filterProducts() {
-        const selectedMaterials = Array.from(filterMaterialCheckboxes)
-                                    .filter(checkbox => checkbox.checked)
-                                    .map(checkbox => checkbox.value);
-        
-        const selectedPrices = Array.from(filterPriceCheckboxes)
-                                    .filter(checkbox => checkbox.checked)
-                                    .map(checkbox => checkbox.value);
-
-        gridItems.forEach(item => {
-            const material = item.dataset.material;
-            const price = parseFloat(item.dataset.price);
-
-            const materialMatch = selectedMaterials.length === 0 || selectedMaterials.includes(material);
-            const priceMatch = selectedPrices.length === 0 || selectedPrices.includes('all') || selectedPrices.some(range => {
-                if (range === 'all') return true;
-                const [min, max] = range.split('-').map(Number);
-                return price >= min && price <= max;
-            });
-
-            if (materialMatch && priceMatch) {
-                item.style.display = 'block';
-            } else {
-                item.style.display = 'none';
-            }
-        });
-    }
-});
-	  </script>
 		  	<div class="filters">
 				<div class="filter-item">
 				  <label for="sort">Sắp xếp:</label>
@@ -285,6 +304,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="product-list-container">
 	
 	<div class="filter-container" style="height: 390px;">
+		<h3>Loại sản phẩm</h3>
+		<label><input type="checkbox" class="filter-type" value="nhan"> Nhẫn</label><br>
+		<label><input type="checkbox" class="filter-type" value="bongtai"> Bông tai</label><br>
+		<label><input type="checkbox" class="filter-type" value="daychuyen"> Dây chuyền</label><br>
+		<label><input type="checkbox" class="filter-type" value="lac"> Lắc</label><br>
+		<label><input type="checkbox" class="filter-type" value="vong"> Vòng</label><br>
+		<label><input type="checkbox" class="filter-type" value="charm"> Charm</label><br>
+
 		<h3>Chất liệu</h3>
 		<label><input type="checkbox" class="filter-material" value="metal"> Kim cương</label><br>
 		<label><input type="checkbox" class="filter-material" value="gold"> Vàng</label><br>
@@ -295,19 +322,20 @@ document.addEventListener('DOMContentLoaded', function() {
 		<div class="price-filter">
 		  <label><input type="checkbox" name="price" value="100000-300000">100,000 - 300,000</label><br>
 		  <label><input type="checkbox" name="price" value="300000-500000">300,000 - 500,000</label><br>
-		  <label><input type="checkbox" name="price" value="500000-1000000">500,000 - 1,000,000</label><br>
+		  <label><input type="checkbox" name="price" value="500000-1500000">500,000 - 1,500,000</label><br>
 		  <label><input type="checkbox" name="price" value="all">Tất cả</label><br>
 		</div>
 	</div>
 	
 	<div class="grid-container">
-		<div class="grid-item" data-material="metal" data-price="900000" data-date="2024-01-01" data-popularity="100">
+		<div class="grid-item" data-type="charm" data-material="metal" data-price="900000" data-date="2024-01-01" data-popularity="100">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Charm kim cương họa tiết">
-								<img src="images/compressed-donebi-2401-7-029-1.jpg"  alt="Charm kim cương họa tiết" class="img-responsive center-block">
-						</a>
+						<a class="db" href="../charm/chitietcharm.html" title="Charm kim cương họa tiết">
+								<img src="images/sp1.jpg"  alt="Charm kim cương họa tiết" class="img-responsive center-block anh1">
+								<img src="images/sp1(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+							</a>
 					</div>
 					<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
@@ -336,12 +364,13 @@ document.addEventListener('DOMContentLoaded', function() {
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="metal" data-price="750000" data-date="2023-06-01" data-popularity="30">
+		<div class="grid-item" data-type="vong" data-material="gold" data-price="750000" data-date="2023-06-01" data-popularity="30">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Vòng tay lá nhỏ">
-								<img src="images/compressed-croptd-2307-6-079-1.jpg"  alt="Vòng tay lá nhỏ" class="img-responsive center-block">
+						<a class="db" href="../vong/chitietvong.html" title="Vòng vàng trái tim">
+							<img src="images/sp2.jpg"  alt="Vòng vàng trái tim" class="img-responsive center-block anh1">
+							<img src="images/sp2(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
 						</a>
 					</div>
 					
@@ -355,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
 						<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
 						<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
 					</div>
-					<p class="product-name"><a href="#" title="Vòng tay lá nhỏ" class="line-clamp">Vòng tay lá nhỏ</a></p>
+					<p class="product-name"><a href="#" title="Vòng vàng trái tim" class="line-clamp">Vòng vàng trái tim</a></p>
 					<div class="home-product-item__price">
 						<span class="home-product-item__price-old">1.200.000đ</span>
 						<span class="home-product-item__price-current">750.000đ</span>
@@ -363,12 +392,13 @@ document.addEventListener('DOMContentLoaded', function() {
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="silver" data-price="200000" data-date="2023-06-01" data-popularity="100">
+		<div class="grid-item" data-type="nhan" data-material="silver" data-price="200000" data-date="2023-06-01" data-popularity="100">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Dây chuyền đá họa tiết">
-								<img src="images/compressed-donebi-2401-7-043-1-1.jpg"  alt="Dây chuyền đá họa tiết" class="img-responsive center-block">
+						<a class="db" href="../nhan/chitietnhan.html" title="Nhẫn midi heart">
+							<img src="../nhan/images/sp1.jpg"  alt="Nhẫn midi heart" class="img-responsive center-block anh1">
+							<img src="../nhan/images/sp1(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
 						</a>
 					</div>
 					
@@ -392,19 +422,20 @@ document.addEventListener('DOMContentLoaded', function() {
 						<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
 						<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
 					</div>
-					<p class="product-name"><a href="#" title="Dây chuyền đá họa tiết" class="line-clamp">Charm nơ họa tiết</a></p>
+					<p class="product-name"><a href="#" title="Nhẫn midi heart" class="line-clamp">Nhẫn midi heart</a></p>
 					<div class="home-product-item__price">
-						<span class="home-product-item__price-current">200.000đ</span>
+						<span class="home-product-item__price-current">900.000đ</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="silver" data-price="450000" data-date="2023-07-01" data-popularity="100">
+		<div class="grid-item" data-type="charm" data-material="silver" data-price="450000" data-date="2023-07-01" data-popularity="100">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Charm bạc họa tiết">
-								<img src="images/compressed-donebi-2401-7-045-1-1.jpg"  alt="Charm bạc họa tiết" class="img-responsive center-block">
+						<a class="db" href="../charm/chitietcharm.html" title="Charm bạc họa tiết">
+							<img src="images/sp3.jpg"  alt="Charm bạc họa tiết" class="img-responsive center-block anh1">
+							<img src="images/sp3(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
 						</a>
 					</div>
 					
@@ -430,12 +461,13 @@ document.addEventListener('DOMContentLoaded', function() {
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="gold" data-price="500000" data-date="2023-08-01" data-popularity="70">
+		<div class="grid-item" data-type="nhan" data-material="gold" data-price="500000" data-date="2023-08-01" data-popularity="70">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Nhẫn bạc họa tiết">
-								<img src="images/compressed-editted-cropvi-2311-4-042-1-1.jpg"  alt="Nhẫn vàng họa tiết" class="img-responsive center-block">
+						<a class="db" href="../nhan/chitietnhan.html" title="Nhẫn midi heart 2">
+							<img src="images/sp4.jpg"  alt="Nhẫn midi heart 2" class="img-responsive center-block anh1">
+							<img src="images/sp4(2).jpg" alt="Second Image" class="img-responsive center-block anh2">					
 						</a>
 					</div>
 					<!--<div class="home-product-item__favourite">
@@ -452,20 +484,21 @@ document.addEventListener('DOMContentLoaded', function() {
 						<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
 						<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
 					</div>
-					<p class="product-name"><a href="#" title="Nhẫn vàng họa tiết" class="line-clamp">Nhẫn vàng họa tiết</a></p>
+					<p class="product-name"><a href="#" title="Nhẫn midi heart 2" class="line-clamp">Nhẫn midi heart 2</a></p>
 					<div class="home-product-item__price">
-						<span class="home-product-item__price-old">1.200.000đ</span>
-						<span class="home-product-item__price-current">500.000đ</span>
+						<span class="home-product-item__price-old">1.300.000đ</span>
+						<span class="home-product-item__price-current">600.000đ</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="gold" data-price="600000" data-date="2023-06-20" data-popularity="80">
+		<div class="grid-item" data-type="charm" data-material="gold" data-price="600000" data-date="2023-06-20" data-popularity="80">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Charm vàng họa tiết">
-								<img src="images/compressed-donebi-2401-7-046-1-1.jpg"  alt="Charm vàng họa tiết" class="img-responsive center-block">
+						<a class="db" href="../charm/chitietcharm.html" title="Charm vàng họa tiết">
+							<img src="images/sp5.jpg"  alt="Charm vàng họa tiết" class="img-responsive center-block anh1">
+							<img src="images/sp5(2).jpg" alt="Second Image" class="img-responsive center-block anh2">					
 						</a>
 					</div>
 					<!--<div class="home-product-item__favourite">
@@ -495,12 +528,13 @@ document.addEventListener('DOMContentLoaded', function() {
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="gold" data-price="750000" data-date="2023-06-01" data-popularity="30">
+		<div class="grid-item" data-type="vong" data-material="gold" data-price="750000" data-date="2023-06-01" data-popularity="30">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
 						<a class="db" href="../vong/chitietvong.html" title="Vòng vàng họa tiết">
-								<img src="images/compressed-editted-cropbi-2311-1-008-1.jpg"  alt="Vòng vàng họa tiết" class="img-responsive center-block">
+							<img src="images/sp6.jpg"  alt="Vòng vàng họa tiết" class="img-responsive center-block anh1">
+							<img src="images/sp6(2).jpg" alt="Second Image" class="img-responsive center-block anh2">			
 						</a>
 					</div>
 					<div class="home-product-item__favourite">
@@ -530,12 +564,13 @@ document.addEventListener('DOMContentLoaded', function() {
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="silver" data-price="250000" data-date="2023-06-01" data-popularity="50">
+		<div class="grid-item" data-type="daychuyen" data-material="silver" data-price="250000" data-date="2023-06-01" data-popularity="50">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Charm bạc nhỏ cánh bướm">
-								<img src="images/compressed-donebi-2401-7-052-1-1.jpg"  alt="Charm bạc nhỏ cánh bướm" class="img-responsive center-block">
+						<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền cute bow">
+							<img src="../daychuyen/images/sp1.jpg"  alt="Dây chuyền cute bow" class="img-responsive center-block anh1">
+							<img src="../daychuyen/images/sp1(2).jpg" alt="Second Image" class="img-responsive center-block anh2">			
 						</a>
 					</div>
 					<!--<div class="home-product-item__favourite">
@@ -558,49 +593,47 @@ document.addEventListener('DOMContentLoaded', function() {
 						<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
 						<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
 					</div>
-					<p class="product-name"><a href="#" title="Charm bạc nhỏ cánh bướm" class="line-clamp">Charm bạc nhỏ cánh bướm</a></p>
+					<p class="product-name"><a href="#" title="Dây chuyền cute bow" class="line-clamp">Dây chuyền cute bow</a></p>
 					<div class="home-product-item__price">
-						<span class="home-product-item__price-current">250.000đ</span>
+						<span class="home-product-item__price-current">900.000đ</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="ruby" data-price="1200000" data-date="2023-06-01" data-popularity="100">
+		<div class="grid-item" data-type="bongtai" data-material="ruby" data-price="500000" data-date="2023-06-01" data-popularity="100">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Charm tai Ruby">
-								<img src="images/compressed-donebi-2401-7-057-1.jpg"  alt="Charm tai Ruby" class="img-responsive center-block">
+						<a class="db" href="../bongtai/chitietbongtai.html" title="Bông tai deep ocean">
+							<img src="../bongtai/images/sp7.png"  alt="Bông tai deep ocean" class="img-responsive center-block anh1">
+							<img src="../bongtai/images/sp7.2.png" alt="Second Image" class="img-responsive center-block anh2">			
 						</a>
 					</div>
 					<div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
 						<span>Best seller</span>
 					</div>
-					<div class="home-product-item__sale-off">
-						<span class="home-product-item__sale-off-percent">SALE</span>
-						<span class="home-product-item__sale-off-label">10%</span>
-					</div>
+					
 				</div>
 				<div class="product-info a-center">		
 					<div class="product-action">
 						<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
 						<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
 					</div>
-					<p class="product-name"><a href="#" title="Charm tai Ruby" class="line-clamp">Charm tai Ruby</a></p>
+					<p class="product-name"><a href="#" title="Bông tai deep ocean" class="line-clamp">Bông tai deep ocean</a></p>
 					<div class="home-product-item__price">
-						<span class="home-product-item__price-old">1.600.000đ</span>
-						<span class="home-product-item__price-current">1.200.000đ</span>
+						<span class="home-product-item__price-current">500.000đ</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="ruby" data-price="1500000" data-date="2023-06-01" data-popularity="100">
+		<div class="grid-item" data-type="lac" data-material="ruby" data-price="1500000" data-date="2023-06-01" data-popularity="100">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Charm ruby họa tiết">
-								<img src="images/compressed-donebi-2401-7-058-1.jpg"  alt="Charm ruby họa tiết" class="img-responsive center-block">
+						<a class="db" href="../lac/chitietlac.html" title="Lắc ruby trái tim">
+							<img src="../lac/images/Group 1000001456.png"  alt="Lắc ruby trái tim" class="img-responsive center-block anh1">
+							<img src="../lac/images/Group 1000001457.png" alt="Second Image" class="img-responsive center-block anh2">								
 						</a>
 					</div>
 					<!--<div class="home-product-item__favourite">
@@ -623,49 +656,50 @@ document.addEventListener('DOMContentLoaded', function() {
 						<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
 						<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
 					</div>
-					<p class="product-name"><a href="#" title="Charm ruby họa tiết" class="line-clamp">Charm ruby họa tiết</a></p>
+					<p class="product-name"><a href="#" title="Lắc ruby trái tim" class="line-clamp">Lắc ruby trái tim</a></p>
 					<div class="home-product-item__price">
 						<span class="home-product-item__price-current">1.500.000đ</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="metal" data-price="900000" data-date="2023-06-01" data-popularity="100">
+		<div class="grid-item" data-type="nhan" data-material="metal" data-price="900000" data-date="2023-06-01" data-popularity="100">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Charm kim cương">
-								<img src="images/compressed-donehd-2401-7-042-1-1.jpg"  alt="Charm kim cương" class="img-responsive center-block">
+						<a class="db" href="../nhan/chitietnhan.html" title="Nhẫn double star 2">
+							<img src="../nhan/images/sp4.jpg"  alt="Nhẫn double star 2" class="img-responsive center-block anh1">
+							<img src="../nhan/images/sp4(2).jpg" alt="Second Image" class="img-responsive center-block anh2">								
 						</a>
 					</div>
-					<div class="home-product-item__favourite">
+					<!-- <div class="home-product-item__favourite">
 						<i class="fas fa-heart"></i>
 						<span>Best seller</span>
 					</div>
 					<div class="home-product-item__sale-off">
 						<span class="home-product-item__sale-off-percent">SALE</span>
 						<span class="home-product-item__sale-off-label">10%</span>
-					</div>
+					</div> -->
 				</div>
 				<div class="product-info a-center">		
 					<div class="product-action">
 						<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
 						<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
 					</div>
-					<p class="product-name"><a href="#" title="Charm kim cương" class="line-clamp">Charm kim cương</a></p>
+					<p class="product-name"><a href="#" title="Nhẫn double star 2" class="line-clamp">Nhẫn double star 2</a></p>
 					<div class="home-product-item__price">
-						<span class="home-product-item__price-old">1.300.000đ</span>
-						<span class="home-product-item__price-current">900.000đ</span>
+						<span class="home-product-item__price-current">1.500.000đ</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="grid-item" data-material="metal" data-price="1000000" data-date="2023-06-01" data-popularity="100">
+		<div class="grid-item" data-type="daychuyen" data-material="metal" data-price="1000000" data-date="2023-06-01" data-popularity="100">
 			<div class="product-box">	
 				<div class="product-thumbnail relative">
 					<div class="product-image-flip">
-						<a class="db" href="../vong/chitietvong.html" title="Vòng kim cương nhỏ">
-								<img src="images/download.jpg"  alt="Vòng kim cương nhỏ" class="img-responsive center-block">
+						<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền laurel rabbit">
+							<img src="../daychuyen/images/sp9.jpg"  alt="Dây chuyền laurel rabbit" class="img-responsive center-block anh1">
+							<img src="../daychuyen/images/sp9(2).jpg" alt="Second Image" class="img-responsive center-block anh2">								
 						</a>
 					</div>
 					<!--<div class="home-product-item__favourite">
@@ -688,7 +722,7 @@ document.addEventListener('DOMContentLoaded', function() {
 						<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
 						<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
 					</div>
-					<p class="product-name"><a href="#" title="Vòng kim cương nhỏ" class="line-clamp">Vòng kim cương nhỏ</a></p>
+					<p class="product-name"><a href="#" title="Dây chuyền laurel rabbit" class="line-clamp">Dây chuyền laurel rabbit</a></p>
 					<div class="home-product-item__price">
 						<span class="home-product-item__price-current">1.000.000đ</span>
 					</div>
@@ -699,10 +733,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		<div class="pagination-container">
 			<div class="pagination">
 				<a href="trangsuc2.html">&laquo;</a>
-				<a href="trangsuc.html">1</a>
+				<a href="trangsuc.html" >1</a>
 				<a href="trangsuc2.html">2</a>
-				<a href="trangsuc3.html"  class="active">3</a>
-				<a href="#">&raquo;</a>
+				<a href="trangsuc3.html" class="active">3</a>
+				<a href="trangsuc3.html">&raquo;</a>
 			</div>
 		</div>
 	</div>
@@ -719,10 +753,10 @@ document.addEventListener('DOMContentLoaded', function() {
 					<div class="col-md-3 mb-4">
 						<a href="" class="card-link">
 							<div class="card">
-								<img src="../trangsuc/images/compressed-donebi-2401-7-029-1.jpg" class="card-img-top" alt="Charm kim cương họa tiết">
+								<img src="../charm/images/Group 1000001438.png" class="card-img-top" alt="Charm kim cương hình mèo">
 								<div class="card-body">
-									<h5 class="card-title">Charm kim cương nhỏ</h5>
-									<p class="card-text">Giá: 350,000đ</p>
+									<h5 class="card-title">Charm kim cương hình mèo</h5>
+									<p class="card-text">Giá: 900,000đ</p>
 									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
 								</div>
 							</div>
@@ -731,9 +765,21 @@ document.addEventListener('DOMContentLoaded', function() {
 					<div class="col-md-3 mb-4">
 						<a href="" class="card-link">
 							<div class="card">
-								<img src="../vong/images/compressed-donehd-2401-3-002-1-1-1.jpg" class="card-img-top" alt="Vòng vàng">
+								<img src="../vong/images/17.png" class="card-img-top" alt="Vòng nhỏ Ruby">
 								<div class="card-body">
-									<h5 class="card-title">Vòng vàng</h5>
+									<h5 class="card-title">Vòng nhỏ Ruby</h5>
+									<p class="card-text">Giá: 1,200,000đ</p>
+									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 mb-4">
+						<a href="" class="card-link">
+							<div class="card">
+								<img src="../nhan/images/noibat4.jpg" class="card-img-top" alt="Nhẫn Whale Blue Stone">
+								<div class="card-body">
+									<h5 class="card-title">Nhẫn Whale Blue Stone</h5>
 									<p class="card-text">Giá: 380,000đ</p>
 									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
 								</div>
@@ -743,21 +789,9 @@ document.addEventListener('DOMContentLoaded', function() {
 					<div class="col-md-3 mb-4">
 						<a href="" class="card-link">
 							<div class="card">
-								<img src="../vong/images/compressed-donehd-2401-3-050-1-1-1.jpg" class="card-img-top" alt="Vòng tay bạc">
+								<img src="../daychuyen/images/noibat4.jpg" class="card-img-top" alt="Dây chuyền Moon Inside Sun">
 								<div class="card-body">
-									<h5 class="card-title">Vòng tay bạc</h5>
-									<p class="card-text">Giá: 380,000đ</p>
-									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 mb-4">
-						<a href="" class="card-link">
-							<div class="card">
-								<img src="../vong/images/compressed-cropvi-2307-3-077-1.jpg" class="card-img-top" alt="Vòng tay nhỏ">
-								<div class="card-body">
-									<h5 class="card-title">Vòng tay nhỏ</h5>
+									<h5 class="card-title">Dây chuyền Moon Inside Sun</h5>
 									<p class="card-text">Giá: 380,000đ</p>
 									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
 								</div>
@@ -771,9 +805,21 @@ document.addEventListener('DOMContentLoaded', function() {
 					<div class="col-md-3 mb-4">
 						<a href="" class="card-link">
 							<div class="card">
-								<img src="../vong/images/compressed-resized-crop-bangles-yt-2101-3-003-2.jpg" class="card-img-top" alt="Vòng mạ vàng 14K">
+								<img src="../vong/images/24.png" class="card-img-top" alt="Vòng kim cương đính đá">
 								<div class="card-body">
-									<h5 class="card-title">Vòng mạ vàng 14K</h5>
+									<h5 class="card-title">Vòng kim cương đính đá</h5>
+									<p class="card-text">Giá: 1,000,000đ</p>
+									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md-3 mb-4">
+						<a href="" class="card-link">
+							<div class="card">
+								<img src="../nhan/images/noibat2.jpg" class="card-img-top" alt="Nhẫn Twisted Cat">
+								<div class="card-body">
+									<h5 class="card-title">Nhẫn Twisted Cat</h5>
 									<p class="card-text">Giá: 380,000đ</p>
 									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
 								</div>
@@ -783,10 +829,10 @@ document.addEventListener('DOMContentLoaded', function() {
 					<div class="col-md-3 mb-4">
 						<a href="" class="card-link">
 							<div class="card">
-								<img src="../vong/images/compressed-cropbi-2302-1-016-1.jpg" class="card-img-top" alt="Vòng bạc">
+								<img src="../vong/images/2.png" class="card-img-top" alt="Vòng kim cương họa tiết">
 								<div class="card-body">
-									<h5 class="card-title">Vòng bạc</h5>
-									<p class="card-text">Giá: 380,000đ</p>
+									<h5 class="card-title">Vòng kim cương họa tiết</h5>
+									<p class="card-text">Giá: 900,000đ</p>
 									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
 								</div>
 							</div>
@@ -795,21 +841,9 @@ document.addEventListener('DOMContentLoaded', function() {
 					<div class="col-md-3 mb-4">
 						<a href="" class="card-link">
 							<div class="card">
-								<img src="../vong/images/compressed-crop0202-1.jpg" class="card-img-top" alt="Vòng bạc đẹp">
+								<img src="../daychuyen/images/noibat6.jpg" class="card-img-top" alt="Dây chuyền Circle Leaf">
 								<div class="card-body">
-									<h5 class="card-title">Vòng bạc đẹp</h5>
-									<p class="card-text">Giá: 420,000đ</p>
-									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-md-3 mb-4">
-						<a href="" class="card-link">
-							<div class="card">
-								<img src="../vong/images/vong-bac-nu-3.jpg" class="card-img-top" alt="Vòng đeo tay">
-								<div class="card-body">
-									<h5 class="card-title">Vòng đeo tay</h5>
+									<h5 class="card-title">Dây chuyền Circle Leaf</h5>
 									<p class="card-text">Giá: 450,000đ</p>
 									<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
 								</div>
@@ -838,7 +872,7 @@ document.addEventListener('DOMContentLoaded', function() {
 						<div class="footer-social mt-auto">
 							<ul>
 								<li><a href="https://www.facebook.com/people/Seraphine/61553772548568/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+								<li><a href="https://www.instagram.com/seraphine_jew/?fbclid=IwZXh0bgNhZW0CMTAAAR39vLvIVYO4L0mZZLHYYw_zb_3JD-fG9sx8x29XjuNpgQoPe8qx415-UyM_aem_ZmFrZWR1bW15MTZieXRlcw"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
 								<li><a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
 								<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
 							</ul>
@@ -853,7 +887,7 @@ document.addEventListener('DOMContentLoaded', function() {
 											<p style="color: black;"><b>Sản phẩm</b></p>
 										</li>
 										<li><a href="../nhan/nhan.html">Nhẫn</a></li>
-										<li><a href="#">Bông tai</a></li>
+										<li><a href="../bongtai/bongtai.html">Bông tai</a></li>
 										<li><a href="../daychuyen/daychuyen.html">Dây chuyền</a></li>
 										<li><a href="../lac/lac.html">Lắc tay</a></li>
 										<li><a href="../vong/vong.html">Vòng tay</a></li>

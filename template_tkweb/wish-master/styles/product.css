@@ -1827,13 +1827,12 @@ p.mb-4 {
 }
 
 .filter-container {
-    padding: 30px;
-	margin-top: -20px;
+    padding: 20px;
+	margin-top: -10px;
     color: rgb(0, 0, 0);
 	font-weight: 500;
     border-radius: 0px;
 	margin-left: 50px;
-
 }
 
 .products-view-grid .product-box {
