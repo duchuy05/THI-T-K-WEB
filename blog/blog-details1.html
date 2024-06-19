@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BST NHẪN CẦU HÔN “CƯỚI ANH ĐI" - THÌ RA LÃNG MẠN KHÔNG HỀ ĐẮT</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.jpg">
+    <link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">z
+    <link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../styles/blog.css">
+    <link rel="stylesheet" type="text/css" href="../styles/blog_responsive.css">
+</head>
+
+<body>
+	<div class="super_container">
+		<button id="scrollToTopBtn" class="scroll-to-top-btn"><i class="fa-solid fa-circle-up"></i></button>
+		<!-- Header -->
+		<header class="head">
+			<div class="head_inner d-flex flex-row align-items-center justify-content-start">
+				<div class = "col-1">
+				<div class="logo"><img src="../images/logo.png" alt="Logo Thương Hiệu"></div></div>
+				<!-- Kết thúc phần chèn logo -->
+				<div class = "col-7">
+				<nav class="main-nav" class="collapse navbar-collapse" id="navbarNavDropdown">
+					<ul>
+						<li><a href="../index.html">trang chủ</a></li>
+						<li class="dropdown"><a href="../trangsuc/trangsuc.html">trang sức</a>
+							<ul class="dropdown_content">
+								<li>
+									<a href="../nhan/nhan.html">Nhẫn</a>
+									<a href="../bongtai/bongtai.html">Bông tai</a>
+									<a href="../daychuyen/daychuyen.html">Dây chuyền</a>
+									<a href="../lac/lac.html">Lắc</a>
+									<a href="../vong/vong.html">Vòng</a>
+									<a href="../charm/charm.html">Charm</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../gioithieu.html">giới thiệu</a></li>
+						<li><a href="../khuyenmai.html">khuyến mãi</a></li>
+						<li class="dropdown"><a class="nav-link" href="../blog/blogall_1.html">blog</a>
+							<ul class="dropdown_content">
+								<li class="dropdown_content">
+									<a href="../blog/tintuc.html">Tin tức</a>
+									<a href="../blog/tuvan.html">Góc tư vấn</a>
+									<a href="../blog/kienthuc.html">Kiến thức chung</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../lienhe.html">liên hệ</a></li>
+					</ul>
+				</nav></div>
+				<div class = "col-3">
+				<div class="header_content ml-auto">
+					<div class="Search header_search">
+						<form action="#">
+							<input type="search" class="Search-input" required="required">
+							<button type="submit" id="Search-button" class="Search-button"><img src="../images/magnifying-glass.svg" alt=""></button>
+						</form>
+					</div>
+					<div class="Shopping">
+						<!-- Cart -->
+						<a href="../giohang/giohang.html">
+							<div class="Cart">
+								<img src="../images/shopping-bag.svg" alt="">
+								<div class="cart-num_container">
+									<div class="cart-num_inner">
+										<div class="cart-num">2</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<!-- Star -->
+						<a href="#">
+							<div class="Star">
+								<img src="../images/star.svg" alt="">
+								<div class="star-num_container">
+									<div class="star-num_inner">
+										<div class="star-num">0</div>
+									</div>
+								</div>
+							</div>
+						</a>
+						<!-- Avatar -->
+						<a href="#">
+							<div class="Avatar">
+								<img src="../images/avatar.svg" alt="">
+							</div>
+						</a>
+					</div>
+				</div></div>
+				<div class = "col-1">
+				<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div></div>
+			</div>
+		</header>
+		<!-- Menu -->
+		<div class="menu d-flex flex-column justify-content-start align-items-center text-right menu_mm trans_400">
+			<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+			<div class="logo menu_mm text-center"><img src="../images/logo.png" alt="Logo Thương Hiệu"></div>
+			<div class="search menu_mm">
+				<form action="#">
+					<input type="search" class="search_input menu_mm" required="required">
+					<button type="submit" id="search_button_menu" class="search_button menu_mm">
+						<img class="menu_mm" src="../images/magnifying-glass.svg" alt="">
+					</button>
+				</form>
+			</div>
+			<nav class="menu-nav">
+				<ul class="menu_mm text-left">
+					<li class="menu_mm"><a href="../index.html">trang chủ</a></li>
+					<li class="menu_mm"><a href="../trangsuc/trangsuc.html">trang sức</a></li>
+					<li class="menu_mm"><a href="../gioithieu.html">giới thiệu</a></li>
+					<li class="menu_mm"><a href="../khuyenmai.html">khuyến mãi</a></li>
+					<li class="menu_mm"><a href="../blog/blogall_1.html">blog</a></li>
+					<li class="menu_mm"><a href="../lienhe.html">liên hệ</a></li>
+				</ul>
+			</nav>
+		</div>
+    </div>	
+
+    <!-- Home -->
+	<div class="pic_header">
+        <img src="images/imgblog_hearder.png" alt="" style="max-width: 100%; height: auto; padding-right: 35px;
+    padding-left: 35px; margin-top: 55px;">
+    </div>
+
+    <!-- Title -->
+    <section class="container-title">
+        <h2 class="main-title">BST NHẪN CẦU HÔN “CƯỚI ANH ĐI" - THÌ RA LÃNG MẠN KHÔNG HỀ ĐẮT</h2>
+        <div class="meta-info">
+            <span><a href="blogall_1.html">Blog</a> >  <a href="tuvan.html">Góc tư vấn</a></span>
+            <span> | </span>
+            <span>06/02/24 16:42:06</span>
+            <span> | </span>
+            <span>Thời gian đọc: 5 Phút</span>
+        </div>
+        <div class="social-share">
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/permalink.php?story_fbid=878360556934282&id=61553772548568&substory_index=878360556934282" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+			<a href="https://www.instagram.com/seraphine_jew/?fbclid=IwZXh0bgNhZW0CMTAAAR39vLvIVYO4L0mZZLHYYw_zb_3JD-fG9sx8x29XjuNpgQoPe8qx415-UyM_aem_ZmFrZWR1bW15MTZieXRlcw"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+			<a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
+			<a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+        </div>
+    </section>
+
+    <!-- Blog Details Section Begin -->
+    <section class="blog-details spad">
+        <div class="container_blog">
+            <div class="row">
+                <div class="col-lg-8 col-md-7">
+                    <div class="blog__details__text">
+                        <h2>Mùa cưới đầu năm 2024, Seraphine ra mắt  BST nhẫn cầu hôn "CƯỚI ANH ĐI". Với Seraphine, ai cũng có thể cầu hôn, dù bạn là ai, bạn làm gì, bạn ở đâu, bạn đều có quyền yêu và được yêu một cách trọn vẹn nhất! "Thì ra lãng mạn không hề đắt" 
+                            - BST "Cưới anh đi" ra đời với mức ngân sách dễ tiếp cận chỉ từ 3 triệu, bạn đã có thể sở hữu chiếc nhẫn cầu hôn cho riêng mình. </h2>
+                        <img src="images/imgblog1.png" alt="">  
+                        <p>BST mang đến sự đa dạng lựa chọn về ngân sách cũng như loại đá quý từ Cubic Zirconia, Moissanite, đến Kim cương Lab-grown - giúp bạn dễ dàng sở hữu chiếc nhẫn cầu hôn phù hợp với mình! Cùng nhìn ngắm toàn bộ thiết kế tại đây:</p> 
+                        <h3>Dòng nhẫn đính đá CZ (khoảng giá từ 3 triệu - 5 triệu)</h3>
+                            
+                        <h4>LOVE NOTE - Nơi lưu giữ dấu ấn tình yêu</h4>
+                        <p>Thiết kế nhẫn nổi bật với ổ đá cao kiêu hãnh, ngời sáng với sắc vàng hồng và vàng trắng đan xen, thu hút mọi ánh nhìn từ lần đầu trông thấy. Điểm nhấn đặc biệt của Love Note là những viên đá tấm nhỏ nhắn được đính tỉ mỉ xung quanh ổ đá tạo hiệu ứng lấp lánh ở mọi góc độ khác nhau. Đai nhẫn cách điệu thêm nút thắt giúp cho bàn tay của bạn nữ trở nên thanh thoát và nữ tính hơn.</p>
+                        <p>Giá tham khảo: 4.094.000 VNĐ</p>
+                        
+                        <img src="images/imgblog1_1.png" alt="">
+                        <h5>Nhẫn cầu hôn Love Note <a href = #>NDINO 282 - Đính đá CZ</a></h5> 
+
+                        <h4>CHERISH - Sự trân trọng dành cho em</h4>
+                        <p>Kiêu kỳ như một nữ hoàng, thiết kế của nhẫn lộng lẫy ở các góc độ. Nhìn từ trên xuống sẽ thấy những viên đá được sắp xếp cầu kỳ tạo nên bông hoa 3D đang e ấp khoe sắc nhẹ nhàng. Và khi nhìn ở góc ngang, một vẻ đẹp khác được tìm thấy là hình ảnh vai áo choàng nữ hoàng. Sự kết hợp đặc biệt chứa đựng 
+                            nhiều tầng ý nghĩa của <strong>nhẫn cầu hôn Cherish</strong> sẽ mang lại cho người đeo cảm giác được trân trọng, yêu thương và nâng niu “Em là nữ hoàng của anh". </p>
+                        <p>Giá tham khảo: 4.094.000 VNĐ</p>
+                        
+                        <img src="images/imgblog1_2.jpg" alt="">
+                        <h5>Nhẫn cầu hôn Cherish <a href = #>NDINO 284 - Đính đá CZ</a></h5> 
+                        
+                        <h4>MAGIC LOVE - Sự kỳ diệu của tình yêu</h4>
+                        <p>Lấy ý tưởng hình ảnh hoa mẫu đơn, loài hoa biểu tượng cho tình yêu thuỷ chung, son sắt, tình cảm cả hai đều hướng về nhau, <strong>nhẫn cầu hôn Magic Love</strong> được tạo ra với ý nghĩa tuyệt vời đó. 
+                            Thiết kế hoa 3D sống động nổi bật ngay chính giữa nhẫn với các cánh hoa bung nở đính đá tấm chìm, tạo hiệu ứng ổ đá to và cực kỳ lấp lánh. Đây sẽ là lựa chọn tinh tế dành tặng cho cô ấy - “Em là hoa, sự gặp gỡ của chúng ta chính là phép màu diệu kỳ của tình yêu”.</p>
+                        <p>Giá tham khảo: 3.796.000 VNĐ</p>
+                        
+                        <img src="images/imgblog1_3.png" alt="">
+                        <h5>Nhẫn cầu hôn Magic Love <a href = #>NDINO 285 - Đính đá CZ</a></h5> 
+                        
+                        <h4>ADORA YOU - Chỉ muốn nói yêu em</h4>
+                        <p><strong>Nhẫn cầu hôn Adora You</strong> thay cho câu nói “Anh yêu em”, xinh xắn với thiết kế hình nơ chính giữa nhẫn, ổ đá to nổi bật như hình bông hoa tạo vẻ nữ tính trên bàn tay của bạn gái khi đeo. Chiếc nơ đầy tinh tế và đặc biệt này với ngụ ý rằng cô ấy như một món quà mà thượng đế đã ban tặng cho bạn.</p>
+                        <p>Giá tham khảo: 3.893.000 VNĐ</p>
+                        
+                        <img src="images/imgblog1_4.png" alt="">
+                        <h5>Nhẫn cầu hôn Adore Love <a href = #>NDINO 252MO - Đính đá Moissanite</a></h5> 
+                        
+                        <h3>Dòng nhẫn đính đá Moissanite (khoảng giá từ 5 triệu - 7 triệu)</h3>
+                        
+                        <h4>TOGETHER - Bên nhau </h4>
+                        <p>Giống như tên gọi của nhẫn, <strong>nhẫn cầu hôn Together</strong> sang trọng và độc đáo với thiết kế đai nhẫn được ghép bởi 2 mảnh vàng hồng và vàng trắng mượt mà hoà quyện vào nhau như 2 tâm hồn cùng hướng về đích đến hạnh phúc. Tối giản nhưng không đơn giản, mọi vẻ đẹp tinh tế nằm ở viên đá Moissanite 5 li đặt chuẩn xác ngay chính giữa nhẫn.</p>
+                        <p>Giá tham khảo: 7.962.000 VNĐ</p>
+                        
+                        <img src="images/imgblog1_5.png" alt="">
+                        <h5>Nhẫn cầu hôn Passion <a href = #>NDINO 252MO - Đính đá Moissanite</a></h5> 
+
+                        <h4>DEAREST - Gửi đến em thân yêu</h4>
+                        <p>Dù cho một năm, hai ba năm hay thậm chí là 10 năm, 20 năm thì giây phút nói lời cầu hôn em, đeo nhẫn lên tay em luôn là thời khắc đẹp nhất đối với cả hai. Và điều tuyệt vời thiêng liêng ấy được khắc hoạ lên thiết kế <strong>nhẫn cầu hôn Dearest</strong> với ý nghĩa “gửi đến em thân yêu" tình cảm duy nhất. Ổ đá không quá cao được bao bọc xung quanh bởi 6 chấu ôm trọn viên đá chủ. Đai nhẫn mảnh đính đá tinh xảo càng tôn vinh thêm nét đẹp cho nhẫn.</p>
+                        <p>Giá tham khảo: 5.265.000 VNĐ</p>
+                        
+                        <img src="images/imgblog1_6.png" alt="">
+                        <h5>Nhẫn cầu hôn Dearest <a href = #>NDINO303MO  - Đính đá Moissanite</a></h5> 
+
+                        <h4>ROMANCE - Lãng Mạn</h4>
+                        <p><strong>Nhẫn cầu hôn Adora You</strong>  lấy cảm hứng từ hoa tulip đỏ, một loài hoa biểu trưng cho tình yêu hoàn hảo, mãnh liệt và quyến rũ ngọt ngào. Kết hợp 2 màu vàng trắng và vàng hồng nhẫn Romance trở nên cổ điển, thanh lịch hơn với ổ nhẫn cách điệu hình bông hoa tulip cực sáng của đá Moissanite. Điểm cộng cho thiết kế nhẫn là phần đai nhẫn được cách điệu viền bi tạo cảm giác thanh lịch, cổ điển .</p>
+                        <p>Giá tham khảo: 6.261.000 VNĐ</p>
+                        
+                        <img src="images/imgblog1_7.png" alt="">
+                        <h5>Nhẫn cầu hôn Romance <a href = #>NDINO304MO - Đính đá Moissanite</a></h5> 
+
+                        <h3>Dòng nhẫn đính Kim Cương Lab-grown (khoảng giá từ 9 triệu - 25 triệu)</h3>
+
+                        <h4>Starry Eyes - Ánh mắt ngời sáng</h4>
+                        <p>Vẻ đẹp của <strong>nhẫn cầu hôn Starry Eyes</strong> được thiết kế với đai xoắn 3D cực ấn tượng được đính kết tỉ mỉ liền kề nhau bằng những viên đá tấm dọc theo thân nhẫn. Nhờ vào kết cấu xoắn đặc biệt như dải ngân hà, viên Kim Cương Lab-Grown 5 li được nâng đỡ tựa như một vì sao đặc biệt.</p>
+                        <p>Giá tham khảo: 23.746.000  VNĐ</p>
+                        
+                        <img src="images/imgblog1_8.png" alt="">
+                        <h5>Nhẫn cầu hôn Starry Eyes <a href = #>NDINO283LDIA - Đính Kim Cương Lab-Grown</a></h5>
+
+                        <h4>My Queen - Nữ hoàng của anh</h4>
+                        <p>Độc lập, xinh đẹp và kiêu kì là khí chất tỏa ra từ một nữ hoàng, cũng giống như chiếc <strong>nhẫn cầu hôn My Queen</strong> toát lên vẻ đẹp sang trọng như thế. Thiết kế phần ổ đá cao vừa phải viên chủ 4.5 li với 6 chấu như hình vương miện, phần đai nhẫn được cách điệu như áo choàng của nữ hoàng với đường nét vô cùng sắc sảo bởi toàn bộ Kim cương Lab-Grown. Chiếc nhẫn sẽ phù hợp với những cô nàng có bàn tay thanh mảnh.</p>
+                        <p>Giá tham khảo: 14.895.000 VNĐ</p>
+                        
+                        <img src="images/imgblog1_9.png" alt="">
+                        <h5>Nhẫn cầu hôn My Queen <a href = #>DINO295LDIA - Đính Kim Cương Lab-Grown</a></h5>
+
+                        <h4>Wonder - Em là điều tuyệt vời</h4>
+                        <p><strong>Nhẫn cầu hôn Wonder</strong> nổi bật với viên chủ 5 li và toàn bộ phần đá đính kết trên nhẫn đều là Kim cương Lab-Grown. Sự xinh đẹp ấy được thể hiện thông qua thiết kế phần ổ cách điệu 2 tầng giống như một bông hoa, tầng dưới là đài hoa đang nâng nụ hoa vươn lên đầy kiêu hãnh. Đai nhẫn mảnh hơn, có nạm đá tấm cộng hưởng thêm sự lấp lánh, tạo cảm giác size nhẫn trở nên to hơn.</p>
+                        <p>Giá tham khảo: 23.266.000 VNĐ</p>
+                    
+                        <img src="images/imgblog1_10.png" alt="">
+                        <h5>Nhẫn cầu hôn Wonder <a href = #>NDINO291LDIA - Đính Kim Cương Lab-Grown</a></h5>
+                    </div>
+                    <div class="blog__details__content">
+                        <div class="col-lg-12">
+                            <div class="social-share" style="display:flex;">
+                                <p>SHARE:</p>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.facebook.com/permalink.php?story_fbid=878360556934282&id=61553772548568&substory_index=878360556934282" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                                <a href="https://www.instagram.com/seraphine_jew/?fbclid=IwZXh0bgNhZW0CMTAAAR39vLvIVYO4L0mZZLHYYw_zb_3JD-fG9sx8x29XjuNpgQoPe8qx415-UyM_aem_ZmFrZWR1bW15MTZieXRlcw"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                                <a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
+                                <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                            </div>
+                            <div class="comment-form">
+                                <h3>NHẬN TƯ VẤN TỪ SERAPHINE:</h3>
+                                <form id="commentForm">
+                                    <div class="form-group">
+                                        <label for="name">Họ tên*</label>
+                                        <input type="text" id="name" name="name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email*</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="content">Nội dung*</label>
+                                        <textarea id="content" name="content" required></textarea>
+                                    </div>
+                                    <button type="submit">Gửi thông tin</button>
+                                </form>
+                            </div>
+                            <script>
+                                document.getElementById('commentForm').addEventListener('submit', function(event) {
+                                event.preventDefault();
+                                const name = document.getElementById('name').value;
+                                const email = document.getElementById('email').value;
+                                const content = document.getElementById('content').value;
+                                
+                                if (name && email && content) {
+                                    alert('Thông tin của bạn đã được gửi thành công!');
+                                } else {
+                                    alert('Vui lòng điền đầy đủ thông tin.');
+                                }
+                            });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5">
+                    <div class="blog__sidebar">
+                        <div class="blog__sidebar__search">
+                            <form action="#">
+                                <input type="text" placeholder="Search...">
+                                <button type="submit"><span class="icon_search"></span></button>
+                            </form>
+                        </div>
+                        <div class="blog__sidebar__item">
+                            <h4>Categories</h4>
+                            <ul>
+                                <li><a href="blogall_1.html">All</a></li>
+                                <li><a href="tintuc.html">Tin tức về Seraphine</a></li>
+                                <li><a href="tuvan.html" class="current-page">Góc tư vấn</a></li>
+                                <li><a href="kienthuc.html">Kiến thức chung</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="advertise">
+                            <img src="images/imgblog_11.png" alt="" style="max-width: 100%; height: auto;">
+                        </div>
+						
+                        <div class="blog__sidebar__recent">
+							<h4>News</h4>
+							<div class="blog__sidebar__recent__item">
+								<a href="blog-details1.html" class="blog__sidebar__recent__item__link">
+									<div class="blog__sidebar__recent__item__pic">
+										<img src="images/imgblog_1.png" alt="" style="max-width: 100%; height: auto;">
+									</div>
+									<div class="blog__sidebar__recent__item__text">
+										<h6>BST NHẪN CẦU HÔN “CƯỚI ANH ĐI" - THÌ RA LÃNG MẠN KHÔNG HỀ ĐẮT</h6>
+									</div>
+								</a>
+							</div>
+							<div class="blog__sidebar__recent__item">
+								<a href="blog-details2.html" class="blog__sidebar__recent__item__link">
+									<div class="blog__sidebar__recent__item__pic">
+										<img src="images/imgblog2.png" alt="" style="max-width: 100%; height: auto;">
+									</div>
+									<div class="blog__sidebar__recent__item__text">
+										<h6>BE MY VALENTINE: Ý TƯỞNG QUÀ TẶNG CHO MÙA VALENTINE YÊU THƯƠNG</h6>
+									</div>
+								</a>
+							</div>
+							<div class="blog__sidebar__recent__item">
+								<a href="blog-details3.html" class="blog__sidebar__recent__item__link">
+									<div class="blog__sidebar__recent__item__pic">
+										<img src="images/imgblog3.png" alt="" style="max-width: 100%; height: auto;">
+									</div>
+									<div class="blog__sidebar__recent__item__text">
+										<h6>SERAPHINE JEWELRY ĐỒNG LOẠT KHAI TRƯƠNG 2 SHOWROOM TẠI HUẾ VÀ ĐÀ NẴNG</h6>
+									</div>
+								</a>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!--social button-->
+	<div class="BT">
+		<div class="sc-buttons">
+			<a href="https://www.facebook.com/people/Seraphine/61553772548568/" class="facebook" target="_blank">
+				<img src="../images/facebook.png" alt="Facebook"></a>
+			<a href="https://www.instagram.com/seraphine_jew/?fbclid=IwZXh0bgNhZW0CMTAAAR39vLvIVYO4L0mZZLHYYw_zb_3JD-fG9sx8x29XjuNpgQoPe8qx415-UyM_aem_ZmFrZWR1bW15MTZieXRlcw" class="instagram" target="_blank">
+				<img src="../images/ins.jpg" alt="Instagram"></a>
+		</div>
+	</div>
+	<!--social button-->
+
+    <!-- Blog Details Section End -->
+
+	<!-- Favourite Blog Section Begin -->
+	<section class="favourite-blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title favourite-blog-title">
+                        <h3>Bài viết có thể bạn thích</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="images/imgblog2.png" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <div class="date-time" style="padding: 15px 0px 10px">
+								<i class="fa fa-calendar" aria-hidden="true"></i>
+								01/02/24 12:32:56
+							</div>
+                            <h5><a href="#">BE MY VALENTINE: Ý TƯỞNG QUÀ TẶNG CHO MÙA VALENTINE YÊU THƯƠNG</a></h5>
+                            <p>Valentine năm nay, Seraphine ra mắt BST Be My Valentine với các hoạ tiết chủ đạo hình trái tim - biểu tượng...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="images/imgblog7.png" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <div class="date-time" style="padding: 15px 0px 10px">
+								<i class="fa fa-calendar" aria-hidden="true"></i>
+								11/01/24 07:32:29
+							</div>
+                            <h5><a href="#">INFOGRAPHIC: CẨM NANG CHỌN NHẪN CẦU HÔN KHIẾN NÀNG PHẢI THỐT LÊN “EM ĐỒNG Ý”</a></h5>
+                            <p>Chiếc nhẫn cầu hôn mà chàng trai dành tặng cho nửa kia của mình sẽ là món trang sức quý giá, đi theo phái đẹp đến...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="images/imgblog10.png" alt="">
+                        </div>
+                        <div class="blog__item__text">
+                            <div class="date-time" style="padding: 15px 0px 10px">
+								<i class="fa fa-calendar" aria-hidden="true"></i>
+								01/01/24 09:42:06
+							</div>
+                            <h5><a href="#">TO THE BEST WOMAN - NHỮNG MÓN QUÀ DÀNH TẶNG NỬA THẾ GIỚI YÊU THƯƠNG</a></h5>
+                            <p>Có rất nhiều lựa chọn quà tặng khác nhau cho dịp 8/3, nhưng chỉ có thứ này mới khiến phụ nữ “bật công tắc gật đầu...  </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	<!-- Favourite Blog Section End -->
+
+	<script type="text/javascript" src="https://ahachat.com/customer-chats/customer_chat_rZEsQyekb8667074d243b51.js"></script>
+     	
+    <!-- Footer -->
+	<footer class="footer">
+		<div class="container" style="max-width: 1560px;"> 
+			<div class="row links-wrap">
+				<div class="col text-center">
+					<div class="row g-4">
+						
+						<div class="col-lg-4 pl-0">
+							<p class="mb-4 text-justify">
+								Chúng tôi tự tin khẳng định rằng sản phẩm của Seraphine sẽ là nguồn cảm hứng lý tưởng cho quý khách hàng. Chất lượng không chỉ là cam kết mà còn là niềm tự hào của chúng tôi, đi kèm với chính sách bảo hành tận tâm. Với Seraphine, bạn không chỉ mua sản phẩm mà còn được trải nghiệm sự tinh tế và đẳng cấp tại một trong những cửa hàng có giá trị nhất trên thị trường.
+							</p>
+							<div class="footer-social mt-auto">
+								<ul>
+									<li><a href="https://www.facebook.com/people/Seraphine/61553772548568/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="https://www.instagram.com/seraphine_jew/?fbclid=IwZXh0bgNhZW0CMTAAAR39vLvIVYO4L0mZZLHYYw_zb_3JD-fG9sx8x29XjuNpgQoPe8qx415-UyM_aem_ZmFrZWR1bW15MTZieXRlcw"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="links-wrap justify-content-center text-left">
+								<div class="row g-4">
+									<div class="col-md-2">
+										<ul class="list-unstyled">
+											<li>
+												<p style="color: black;"><b>Sản phẩm</b></p>
+											</li>
+											<li><a href="../nhan/nhan.html">Nhẫn</a></li>
+											<li><a href="../bongtai/bongtai.html">Bông tai</a></li>
+											<li><a href="../daychuyen/daychuyen.html">Dây chuyền</a></li>
+											<li><a href="../lac/lac.html">Lắc tay</a></li>
+											<li><a href="../vong/vong.html">Vòng tay</a></li>
+											<li><a href="../charm/charm.html">Hạt Charm</a></li>
+										</ul>
+									</div>
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li>
+												<p style="color: black;"><b>Thông tin liên hệ</b></p>
+											</li>
+											<li>Hotline: 0366764577</a></li>
+											<li>Email: Seraphine@gmail.com</a></li>
+											<li>Địa chỉ: 127 Ô Chợ Dừa, Đống Đa, Hà Nội </a></li>
+										</ul>
+									</div>
+									<div class="col-md-3">
+										<ul class="list-unstyled">
+											<li>
+												<p style="color: black;"><b>Về chúng tôi</b></p>
+											</li>
+											<li><a href="../lienhe.html">Liên hệ</a></li>
+											<li><a href="../gioithieu.html">Giới thiệu</a></li>
+											<li><a href="#">Hệ thống cửa hàng</a></li>
+										</ul>
+									</div>
+									<div class="col-md-3">
+										<ul class="list-unstyled">
+											<li>
+												<p style="color: black;"><b>Phương thức thanh toán</b></p>
+											</li>
+											<li class="icon-payment">
+												<a href="#"><img src="../images/momo-2.svg" alt="Momo" class="payment-icon"></a>
+												<a href="#"><img src="../images/0oxhzjmxbksr1686814746087.png" alt="ZaloPay" class="payment-icon"></a>
+												<a href="#"><img src="../images/mastercard-icon-512x329-xpgofnyv.png" alt="MasterCard" class="payment-icon"></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="copyright">
+						Seraphine Jewelry &copy;<script>document.write(new Date().getFullYear());</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../styles/bootstrap4/popper.js"></script>
+<script src="../styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../plugins/easing/easing.js"></script>
+<script src="../plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>

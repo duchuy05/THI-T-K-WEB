@@ -1,0 +1,254 @@
+
+.cart-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+}
+
+.cart-right {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    position: -webkit-sticky;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    top: 93px;
+    height: -moz-fit-content;
+    height: fit-content;
+}
+
+.cart-details {
+    padding: 28px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.cart-details p {
+    font-weight: 500;
+    color: #000;
+}
+
+._3hqd0z5GqCRujcCeo5fIe1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+._2dR7H3C9u9oJe02PCMB66X:lang(vi) {
+    font-size: 19px;
+    font-weight: 700;
+    font-family: Arial, 'Helvetica Neue', HelveticaNeue, Helvetica, 'Noto Sans', Roboto, 'Hiragino Sans', 'Hiragino Kaku Gothic Pro', '\30D2\30E9\30AE\30CE\89D2\30B4 Pro W3', 'Noto Sans CJK JP', Osaka, Meiryo, '\30E1\30A4\30EA\30AA', 'MS PGothic', '\FF2D\FF33 \FF30\30B4\30B7\30C3\30AF', 'Hiragino Sans GB', 'Arial Unicode MS', sans-serif;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.col-lg-9 {
+    width: 100%;
+}
+
+.row-cart {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+.cartItemList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cartItemListNo {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.cartItem {
+    display: flex;
+    align-items: flex-start;
+}
+
+.cartImageModule {
+    width: 20%;
+    margin-right: 20px;
+}
+
+.imageModule {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.cartItemDetail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cartItemLink {
+    text-decoration: none;
+    color: #333;
+}
+
+.cartItemLink h2 {
+    margin: 0 0 10px 0;
+}
+
+.cartItemDetails-ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.cartItemDetails-ul li {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.cartTitle {
+    font-weight: bold;
+}
+
+.quantity-action-module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.quantity-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.quantity-btn:hover {
+    background-color: #ccc;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.action-module {
+    display: flex;
+    align-items: center;
+}
+
+.remove-btn {
+    background-color: rgb(63, 52, 52);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background-color: black;
+}
+
+.cart-total {
+    text-align: left;
+    padding-top: 20px;
+}
+
+.cart-total p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.cart-total span {
+    font-weight: bold;
+}
+
+.checkout-btn {
+    background-color: rgb(63, 52, 52);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+
+.continue-shopping-btn {
+    background-color: rgb(232, 20, 20);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.continue-shopping-btn:hover {
+    background-color: rgba(232, 22, 22, 0.858);
+}
+
+.checkout-btn:hover {
+    background-color: black;
+}
+
+.icon-payment {
+    width: 50px;
+    height: 50px;
+    display: flex; /* Use flexbox to align the images in a row */
+    gap: 20px; /* Add some space between the images */
+}
+
+.icon-payment a {
+    display: flex; /* Ensure the anchor tag and image are aligned */
+    align-items: center; /* Center the image vertically within the anchor */
+}
+
+.icon-payment img {
+    width: 50px; /* Set the desired width of the images */
+    height: auto; /* Maintain the aspect ratio of the images */
+    border-radius: 8px;
+}
+
+.styled-input {
+    padding: 10px; /* Add padding to create space inside the input field */
+    border: 1px solid #ccc; /* Optional: Style the border */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    font-size: 16px; /* Optional: Adjust font size */
+    box-sizing: border-box; /* Ensure padding doesn't affect the total width/height */
+}
