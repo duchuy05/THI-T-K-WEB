@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Seraphine</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Wish shop project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/trangchu.css">
+<!--<link rel="stylesheet" type="text/css" href="styles/main_styles.css">-->
+<link rel="stylesheet" type="text/css" href="styles/trangchuresponsive.css">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="images/favicon.jpg">
+<link rel="stylesheet" type="text/css" href="styles/product.css">
+
+</head>
+<body>
+
+<div class="super_container">
+	<button id="scrollToTopBtn" class="scroll-to-top-btn"><i class="fa-solid fa-circle-up"></i></button>
+
+	<!-- Header -->
+
+	
+	<header class="head">
+		<div class="head_inner d-flex flex-row align-items-center justify-content-start">
+			<div class = "col-1">
+			<div class="logo"><img src="images/logo.png" alt="Logo Thương Hiệu"></div></div>
+			<!-- Kết thúc phần chèn logo -->
+			<div class = "col-7">
+			<nav class="main-nav" class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul>
+					<li><a href="index.html">trang chủ</a></li>
+					<li class="dropdown"><a href="trangsuc/trangsuc.html">trang sức</a>
+						<ul class="dropdown_content">
+							<li>
+								<a href="nhan/nhan.html">Nhẫn</a>
+								<a href="bongtai/bongtai.html">Bông tai</a>
+								<a href="daychuyen/daychuyen.html">Dây chuyền</a>
+								<a href="lac/lac.html">Lắc</a>
+								<a href="vong/vong.html">Vòng</a>
+								<a href="charm/charm.html">Charm</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="gioithieu.html">giới thiệu</a></li>
+					<li><a href="khuyenmai.html">khuyến mãi</a></li>
+					<li class="dropdown"><a class="nav-link" href="blog/blogall_1.html">blog</a>
+						<ul class="dropdown_content">
+							<li class="dropdown_content">
+								<a href="blog/tintuc.html">Tin tức</a>
+								<a href="blog/tuvan.html">Góc tư vấn</a>
+								<a href="blog/kienthuc.html">Kiến thức chung</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="lienhe.html">liên hệ</a></li>
+				</ul>
+			</nav></div>
+			<div class = "col-3">
+			<div class="header_content ml-auto">
+				<div class="Search header_search">
+					<form action="#">
+						<input type="search" class="Search-input" required="required">
+						<button type="submit" id="Search-button" class="Search-button"><img src="images/magnifying-glass.svg" alt=""></button>
+					</form>
+				</div>
+				<div class="Shopping">
+					<!-- Cart -->
+					<a href="giohang/giohang.html">
+						<div class="Cart">
+							<img src="images/shopping-bag.svg" alt="">
+							<div class="cart-num_container">
+								<div class="cart-num_inner">
+									<div class="cart-num">2</div>
+								</div>
+							</div>
+						</div>
+					</a>
+					<!-- Star -->
+					<a href="#">
+						<div class="Star">
+							<img src="images/star.svg" alt="">
+							<div class="star-num_container">
+								<div class="star-num_inner">
+									<div class="star-num">0</div>
+								</div>
+							</div>
+						</div>
+					</a>
+					<!-- Avatar -->
+					<a href="#">
+						<div class="Avatar">
+							<img src="images/avatar.svg" alt="">
+						</div>
+					</a>
+				</div>
+			</div></div>
+			<div class = "col-1">
+			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div></div>
+		</div>
+	</header>
+		<!-- Menu -->
+		<div class="menu d-flex flex-column justify-content-start align-items-center text-right menu_mm trans_400">
+			<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+			<div class="logo menu_mm text-center"><img src="images/logo.png" alt="Logo Thương Hiệu"></div>
+			<div class="search menu_mm">
+				<form action="#">
+					<input type="search" class="search_input menu_mm" required="required">
+					<button type="submit" id="search_button_menu" class="search_button menu_mm">
+						<img class="menu_mm" src="images/magnifying-glass.svg" alt="">
+					</button>
+				</form>
+			</div>
+			<nav class="menu-nav">
+				<ul class="menu_mm text-left">
+					<li class="menu_mm"><a href="index.html">trang chủ</a></li>
+					<li class="menu_mm"><a href="trangsuc/trangsuc.html">trang sức</a></li>
+					<li class="menu_mm"><a href="gioithieu.html">giới thiệu</a></li>
+					<li class="menu_mm"><a href="khuyenmai.html">khuyến mãi</a></li>
+					<li class="menu_mm"><a href="blog/blogall_1.html">blog</a></li>
+					<li class="menu_mm"><a href="lienhe.html">liên hệ</a></li>
+				</ul>
+			</nav>
+		</div>
+		
+	<!-- Home -->
+
+	<div class="home">
+		
+		<!-- Home Slider -->
+
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Home Slider Item -->
+				<div class="owl-item">
+					<a href = "khuyenmai.html" target="_blank">
+					<div class="home_slider_background" style="background-image:url(images/slider10.jpg)"></div></a>
+					<div class="home_slider_content">
+						<div class="home_slider_content_inner">
+							<!--<div class="home_slider_subtitle">Seraphine</div>-->
+							<div class="home_slider_title">New Collection</div>
+						</div>	
+					</div>
+				</div>
+
+				<!-- Home Slider Item -->
+				<div class="owl-item">
+					<a href="khuyenmai.html" target="_blank">
+					<div class="home_slider_background" style="background-image:url(images/slider12.jpg)"></div></a>
+					<div class="home_slider_content">
+						<div class="home_slider_content_inner">
+							<!--<div class="home_slider_subtitle">Seraphine</div>-->
+							<div class="home_slider_title">New Collection</div>
+						</div>	
+					</div>
+				</div>
+
+				<!-- Home Slider Item -->
+				<div class="owl-item">
+					<a href="khuyenmai.html" target="_blank">
+					<div class="home_slider_background" style="background-image:url(images/slider11.jpg)"></div></a>
+					<div class="home_slider_content">
+						<div class="home_slider_content_inner">
+							<!--<div class="home_slider_subtitle">Seraphine</div>-->
+							<div class="home_slider_title">New Collection</div>
+						</div>	
+					</div>
+				</div>
+
+			</div>
+			
+			<!-- Home Slider Nav -->
+
+			<div class="home_slider_next d-flex flex-column align-items-center justify-content-center"><img src="images/arrow_r.png" alt=""></div>
+
+			<!-- Home Slider Dots -->
+
+			<div class="home_slider_dots_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="home_slider_dots">
+								<ul id="home_slider_custom_dots" class="home_slider_custom_dots">
+									<li class="home_slider_custom_dot active">01.<div></div></li>
+									<li class="home_slider_custom_dot">02.<div></div></li>
+									<li class="home_slider_custom_dot">03.<div></div></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+	<!--Phần popup-->
+	<div class="overlay" id="overlay">
+		<div class="popup">
+			<span class="close-btn" onclick="closePopup()">×</span>
+			<video src="images/trungthu (1).mp4" preload="auto" muted loop playsinline webkit-playsinline x5-playsinline autoplay="" loop="" playsinline="" webkit-playsinline="" x5-playsinline="" style="width: 100%; height: 100%;"></video>
+			<div class="countdown" id="countdown"></div>
+		</div>
+	</div>
+
+	<script>
+		window.onload = function () {
+			var endDate = new Date("June 30, 2024 00:00:00").getTime(); // Đặt ngày kết thúc khuyến mãi
+			function updateCountdown() {
+				var now = new Date().getTime();
+				var timeLeft = endDate - now;
+				if (timeLeft <= 0) {
+					closePopup();
+					return;
+				}
+				var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+				document.getElementById('countdown').innerHTML = "Kết thúc trong: " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây";
+			}
+			setInterval(updateCountdown, 1000); // Cập nhật thời gian còn lại mỗi giây
+			showPopup();
+		};
+
+		function showPopup() {
+			document.getElementById('overlay').style.display = 'flex';
+		}
+
+		function closePopup() {
+			document.getElementById('overlay').style.display = 'none';
+		}
+	</script>
+
+	<!--Cài chatbot-->	
+	<script type="text/javascript" src="https://ahachat.com/customer-chats/customer_chat_rZEsQyekb8667074d243b51.js"></script>
+    
+
+	<!-- Giới thiệu chung-->
+	<div class="section_about_2">
+		<div class="contain">
+			<div class="row">
+				<div class="col-md-9 col-sm-7 text-center">
+					<a href="gioithieu.html" class="ab-image-2">
+						<img src="images/SERAPHINE.png" alt="" class="main-img">
+						<video src="images/Welcome.mp4" preload="auto" muted loop playsinline webkit-playsinline x5-playsinline autoplay="" loop="" playsinline="" webkit-playsinline="" x5-playsinline="" style="width: 100%; height: 100%;" class="hover-video"></video>
+					</a>
+				</div>
+				<div class="col-md-3 col-sm-5">
+					<a href="https://katjewelry.vn/permanent-jewelry-vong-tay-vinh-vien-1">
+						<video src="images/trangchu1.mp4" preload="auto" muted loop playsinline webkit-playsinline x5-playsinline autoplay="" loop="" playsinline="" webkit-playsinline="" x5-playsinline="" style="width: 100%; height: 100%;"></video>
+					</a>
+					<div class="section_about_2_content hidden-sm hidden-xs">
+						<h2>"Seraphine - nơi tôn vinh vẻ đẹp vĩnh cửu qua từng món trang sức tinh xảo. Chúng tôi tự hào mang đến những tác phẩm nghệ thuật độc đáo kết hợp với sự tinh tế đến với từng vị khách."</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- SP ưu đãi -->
+
+	<div class="Promo">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="Section_subtitle">trong tháng 6</div>
+						<div class="Section_title">ưu đãi đặc biệt</div>
+					</div>
+				</div>
+			</div>
+			<div class="row Promo_container">
+
+				<!-- Promo Item -->
+				<div class="col-lg-4 Promo_col">
+					<div class="Product">
+						<div class="Product_image">
+							<a href="#" target="_blank">
+								<img src="images/uudai1.jpg" alt="">
+							</a>
+							<div class="home-product-item__favourite">
+								<span>-30% OFF</span>
+							</div>
+						</div>
+						<div class="Danhgia">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="Product_content clearfix">
+							<div class="Product_info">
+								<div class="Product_prices"><a href="product.html">BÔNG TAI ĐÍNH ĐÁ NHỎ</a></div>
+							</div>
+							<div class="Promo_options">
+								<div class="Product_buy Product_option"><img src="images/shopping-bag-white.svg" alt=""></div>
+								<div class="Product_fav Product_option">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Promo Item -->
+				<div class="col-lg-4 Promo_col">
+					<div class="Product">
+						<div class="Product_image">
+							<a href="vong/chitietvong.html" target="_blank">
+								<img src="images/uudai3.jpg" alt="">
+							</a>
+							<div class="home-product-item__favourite">
+								<span>-30% OFF</span>
+							</div>
+						</div>
+						<div class="Danhgia">
+							<i class="fa fa-star "></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="Product_content clearfix">
+							<div class="Product_info">
+								<div class="Product_prices"><a href="vong/chitietvong.html">VÒNG TAY ĐÍNH ĐÁ HOA</a></div>
+							</div>
+							<div class="Promo_options">
+								<div class="Product_buy Product_option"><img src="images/shopping-bag-white.svg" alt=""></div>
+								<div class="Product_fav Product_option">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 Promo_col">
+					<div class="Product">
+						<div class="Product_image">
+							<a href="#" target="_blank">
+								<img src="images/uudai2.jpg" alt="">
+							</a>
+							<div class="home-product-item__favourite">
+								<span>-30% OFF</span>
+							</div>
+						</div>
+						<div class="Danhgia">
+							<i class="fa fa-star "></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="Product_content clearfix">
+							<div class="Product_info">
+								<div class="Product_prices"><a href="product.html">BÔNG TAI NGỌC TRAI ĐEN</a></div>
+							</div>
+							<div class="Promo_options">
+								<div class="Product_buy Product_option"><img src="images/shopping-bag-white.svg" alt=""></div>
+								<div class="Product_fav Product_option">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- sản phẩm mới -->
+
+	<div class="arrivals">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="Section_subtitle">Seraphine ra mắt</div>
+						<div class="Section_title">sản phẩm mới</div>
+					</div>
+				</div>
+			</div>
+			<div class="row Products_container">
+
+				<!-- Product -->
+				<div class="col-lg-4 product_col">
+					<div class="Product">
+						<div class="Product_image">
+							<a href="daychuyen/chitietdaychuyen.html">
+							<img src="images/newproduct.jpg" alt=""> </a>
+						</div>
+						<div class="Rating Rating_4">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="Product_content clearfix">
+							<div class="Product_info">
+								<div class="Product_name"><a href="daychuyen/chitietdaychuyen.html" target="_blank">DÂY CHUYỀN SAPPHIRE</a></div>
+								<div class="Product_price">1.250.000đ</div>
+							</div>
+							<div class="Product_options">
+								<div class="Product_buy Product_option"><img src="images/shopping-bag-white.svg" alt=""></div>
+								<div class="Product_fav Product_option">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product -->
+				<div class="col-lg-4 product_col">
+					<div class="Product">
+						<div class="Product_image">
+							<a href="">
+							<img src="images/newproduct1.jpg" alt=""></a>
+						</div>
+						<div class="Rating Rating_4">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="Product_content clearfix">
+							<div class="Product_info">
+								<div class="Product_name"><a href="product.html">BÔNG TAI SAPPHIRE</a></div>
+								<div class="Product_price">1.500.000đ</div>
+							</div>
+							<div class="Product_options">
+								<div class="Product_buy Product_option"><img src="images/shopping-bag-white.svg" alt=""></div>
+								<div class="Product_fav Product_option">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product -->
+				<div class="col-lg-4 product_col">
+					<div class="Product">
+						<div class="Product_image">
+							<a href = "nhan/chitietnhan.html">
+							<img src="images/newproduct2.jpg" alt=""></a>
+						</div>
+						<div class="Rating Rating_4">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="Product_content clearfix">
+							<div class="Product_info">
+								<div class="Product_name"><a href="nhan/chitietnhan.html">NHẪN SAPPHIRE<a></div>
+								<div class="Product_price">1.400.000đ</div>
+							</div>
+							<div class="Product_options">
+								<div class="Product_buy Product_option"><img src="images/shopping-bag-white.svg" alt=""></div>
+								<div class="Product_fav Product_option">+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- GIẢM GIÁ -->
+
+	<div class="extra clearfix">
+		<div class="extra_promo extra_promo_1">
+			<div class="extra_promo_image" style="background-image:url(images/lactay.jpg)"></div>
+			<div class="extra_1_content d-flex flex-column align-items-center justify-content-center text-center">
+				<div class="extra_1_price">30%<span>off</span></div>
+				<div class="extra_1_title">Toàn bộ vòng tay</div>
+				<div class="button extra_1-button"><a href="vong/vong.html">xem thêm</a></div>
+			</div>
+		</div>
+		<div class="extra_promo extra_promo_2">
+			<div class="extra_promo_image" style="background-image:url(images/mix.jpg)"></div>
+			<div class="extra_2_content d-flex flex-column align-items-center justify-content-center text-center">
+				<div class="extra_2_title">
+					<div class="extra_2_center">&</div>
+					<div class="extra_2_top">Mix</div>
+					<div class="extra_2_bottom">Match</div>
+				</div>
+				<div class="extra_2_text ">Mix and Match cùng bộ sản phẩm bông tai và dây chuyền sẽ làm nổi bật nét đẹp thanh lịch của bạn</div>
+				<div class="button extra_2_button"><a href="daychuyen/daychuyen.html">xem ngay</a></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- BỘ SƯU TẬP -->
+
+	<div class="gallery">
+		<div class="gallery_image" style="background-image:url(images/bgproduct.jpg)"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="gallery_title text-center">
+						<ul>
+							<li><a href="trangsuc/trangsuc.html">BỘ SƯU TẬP</a></li>
+						</ul>
+					</div>
+					<div class="gallery_text text-center">TINH HOA CỦA SỰ TINH TẾ VÀ SÁNG TẠO</div>
+				</div>
+			</div>
+		</div>	
+		<div class="gallery_slider_container">
+			
+			<!-- Gallery Slider -->
+			<div class="owl-carousel owl-theme gallery_slider">
+				
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a href = "nhan/nhan.html">
+						<div class="image-wrapper">
+							<div class="overlay-text">Nhẫn</div>
+							<img src="images/nhan.jpg" alt="">
+						</div>
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a href = "bongtai/bongtai.html">
+						<div class="image-wrapper">
+							<div class="overlay-text">Bông tai</div>
+							<img src="images/bongtai.jpg" alt="">
+						</div>
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a href="daychuyen/daychuyen.html">
+						<div class="image-wrapper">
+							<div class="overlay1-text">Dây chuyền</div>
+							<img src="images/daychuyen.jpg" alt="">
+						</div>
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a href="lac/lac.html">
+						<div class="image-wrapper">
+							<div class="overlay1-text">Lắc tay</div>
+							<img src="images/lac.jpg" alt="">
+						</div>
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a href="charm/charm.html">
+						<div class="image-wrapper">
+							<div class="overlay1-text">Hạt Charm</div>
+							<img src="images/charm.jpg" alt="">
+						</div>
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a href="vong/vong.html">
+						<div class="image-wrapper">
+							<img src="images/vong.jpg" alt="Vòng tay">
+							<div class="overlay1-text">Vòng tay</div>
+						</div>
+					</a>
+				</div>
+
+			</div>
+		</div>	
+	</div>
+	<!--social button-->
+	<div class="BT">
+		<div class="sc-buttons">
+			<a href="https://www.facebook.com/people/Seraphine/61553772548568/" class="facebook" target="_blank">
+				<img src="images/facebook.png" alt="Facebook"></a>
+			<a href="https://www.instagram.com/seraphine_jew/?fbclid=IwZXh0bgNhZW0CMTAAAR39vLvIVYO4L0mZZLHYYw_zb_3JD-fG9sx8x29XjuNpgQoPe8qx415-UyM_aem_ZmFrZWR1bW15MTZieXRlcw" class="instagram" target="_blank">
+				<img src="images/ins.jpg" alt="Instagram"></a>
+		</div>
+	</div>
+	<!--social button-->
+
+	<!-- FEEDBACK -->
+
+	<div class="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="Section_subtitle">"Khách hàng là nguồn cảm hứng bất tận đối với seraphine"</div>
+						<div class="Section_title">feedback</div>
+					</div>
+				</div>
+			</div>
+			<div class="row test_slider_container">
+				<div class="col">
+
+					<!-- Testimonials Slider -->
+					<div class="owl-carousel owl-theme test_slider text-center">
+
+						<!-- Testimonial Item -->
+						<div class="owl-item">
+							<div class="test_text">“Trang sức của Seraphine thật sự mang lại sự tinh tế và đẳng cấp. Mỗi chi tiết đều được chế tác một cách tỉ mỉ, tạo nên sự hoàn hảo cho từng sản phẩm.”</div>
+							<div class="test_content">
+								<div class="test_image"><img src="images/feedback1.jpg" alt=""></div>
+								<div class="test_name">Anna</div>
+								<div class="test_title">Khách hàng</div>
+							</div>
+						</div>
+
+						<!-- Testimonial Item -->
+						<div class="owl-item">
+							<div class="test_text">“Đội ngũ nhân viên tận tâm và chuyên nghiệp của Seraphine đã giúp tôi tìm được những món trang sức phù hợp nhất. Rất đáng để trải nghiệm! Tôi hoàn toàn hài lòng với những món trang sức đã mua.”</div>
+							<div class="test_content">
+								<div class="test_image"><img src="images/feedback2.jpg" alt=""></div>
+								<div class="test_name">Mai Hoa</div>
+								<div class="test_title">Khách hàng</div>
+							</div>
+						</div>
+
+						<!-- Testimonial Item -->
+						<div class="owl-item">
+							<div class="test_text">“Tôi yêu cách Seraphine kết hợp giữa phong cách hiện đại và cổ điển. Mỗi món trang sức đều là một tác phẩm nghệ thuật thực sự. Tôi luôn nhận được nhiều lời khen ngợi mỗi khi đeo trang sức của họ.”</div>
+							<div class="test_content">
+								<div class="test_image"><img src="images/feedback3.jpg" alt=""></div>
+								<div class="test_name">Trang Anh</div>
+								<div class="test_title">Khách hàng</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<!--<div class="newsletter_wrapper">
+		<div class="newsletter">
+			<div class="newsletter_content">
+				<div class="newsletter_image" style="background-image:url(images/letter2.jpg)"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="section_title_container text-center">
+								<div class="Section_subtitle" style="color:white" >dành cho bạn</div>
+								<div class="Section_title" style ="color: white">đăng ký để nhận ưu đãi</div>
+							</div>
+						</div>
+					</div>
+					<div class="row newsletter_container">
+						<div class="col-lg-10 offset-lg-1">
+							<div class="newsletter_form_container">
+								<form action="#">
+									<input type="email" class="newsletter_input" required="required" placeholder="Nhập Email...">
+									<button type="submit" class="newsletter_btn">đăng ký</button>
+								</form>
+							</div>
+							<div class="newsletter_text text-center">Hãy trở thành hội viên của Seraphine để nhận voucher lên tới 30%</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+	<div class="newsletter">
+		<div class="newsletter_content">
+			<div class="newsletter_image" style="background-image:url(images/letter2.jpg)"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="section_title_container text-center">
+							<div class="section_subtitle">dành cho bạn</div>
+							<div class="section_title">đăng ký để nhận ưu đãi</div>
+						</div>
+					</div>
+				</div>
+				<div class="row newsletter_container">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="newsletter_form_container">
+							<form action="#">
+								<input type="email" class="newsletter_input" required="required" placeholder="Nhập Email...">
+								<button type="submit" class="newsletter_button">đăng ký</button>
+							</form>
+						</div>
+						<div class="newsletter_text">Hãy trở thành hội viên của Seraphine để nhận voucher lên tới 30%</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Đối tác-->
+	<div class="partners-section">
+		<h2>ĐỐI TÁC CỦA SERAPHINE</h2>
+		<div class="partner-slider">
+			<div class="partner-images">
+				<a href="https://www.eyewearstore.vn/gioi-thieu-eyewear-store.html" target="_blank"> 
+					<img src="images/Cartier-logo.png" alt="Cartier">
+				</a>
+				<a href="https://kinhmateyeplus.com/" target="_blank">
+					<img src="images/gabriel-and-co-logo-vector.png" alt="Gabriel&Co">
+				</a>
+				<a href="https://kinhmatlily.com/" target="_blank">
+					<img src="images/swar-logo.jpg" alt="Swaroski">
+				</a>
+				<a href="https://kinhmatanna.com/" target="_blank">
+					<img src="images/pandora-logo.png" alt="Pandora">
+				</a>
+				<a href="https://matkinhtamduc.com/">
+					<img src="images/tiff-logo.png" alt="Tiffany">
+				</a>
+			</div>
+		</div>
+	</div>
+	<!--Đối tác-->
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container" style="max-width: 1560px;"> 
+			<div class="row links-wrap">
+				<div class="col text-center">
+					<div class="row g-4">
+						
+						<div class="col-lg-4 pl-0">
+							<p class="mb-4 text-justify">
+								Chúng tôi tự tin khẳng định rằng sản phẩm của Seraphine sẽ là nguồn cảm hứng lý tưởng cho quý khách hàng. Chất lượng không chỉ là cam kết mà còn là niềm tự hào của chúng tôi, đi kèm với chính sách bảo hành tận tâm. Với Seraphine, bạn không chỉ mua sản phẩm mà còn được trải nghiệm sự tinh tế và đẳng cấp tại một trong những cửa hàng có giá trị nhất trên thị trường.
+							</p>
+							<div class="footer-social mt-auto">
+								<ul>
+									<li><a href="https://www.facebook.com/people/Seraphine/61553772548568/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="https://www.instagram.com/seraphine_jew/?fbclid=IwZXh0bgNhZW0CMTAAAR39vLvIVYO4L0mZZLHYYw_zb_3JD-fG9sx8x29XjuNpgQoPe8qx415-UyM_aem_ZmFrZWR1bW15MTZieXRlcw"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="links-wrap justify-content-center text-left">
+								<div class="row g-4">
+									<div class="col-md-2">
+										<ul class="list-unstyled">
+											<li>
+												<p style="color: black;"><b>Sản phẩm</b></p>
+											</li>
+											<li><a href="nhan/nhan.html">Nhẫn</a></li>
+											<li><a href="bongtai/bongtai.html">Bông tai</a></li>
+											<li><a href="daychuyen/daychuyen.html">Dây chuyền</a></li>
+											<li><a href="lac/lac.html">Lắc tay</a></li>
+											<li><a href="vong/vong.html">Vòng tay</a></li>
+											<li><a href="charm/charm.html">Hạt Charm</a></li>
+										</ul>
+									</div>
+									<div class="col-md-4">
+										<ul class="list-unstyled">
+											<li>
+												<p style="color: black;"><b>Thông tin liên hệ</b></p>
+											</li>
+											<li>Hotline: 0366764577</a></li>
+											<li>Email: Seraphine@gmail.com</a></li>
+											<li>Địa chỉ: 127 Ô Chợ Dừa, Đống Đa, Hà Nội </a></li>
+										</ul>
+									</div>
+									<div class="col-md-3">
+										<ul class="list-unstyled">
+											<li>
+												<p style="color: black;"><b>Về chúng tôi</b></p>
+											</li>
+											<li><a href="lienhe.html">Liên hệ</a></li>
+											<li><a href="gioithieu.html">Giới thiệu</a></li>
+											<li><a href="#">Hệ thống cửa hàng</a></li>
+										</ul>
+									</div>
+									<div class="col-md-3">
+										<ul class="list-unstyled">
+											<li>
+												<p style="color: black;"><b>Phương thức thanh toán</b></p>
+											</li>
+											<li class="icon-payment">
+												<a href="#"><img src="images/momo-2.svg" alt="Momo" class="payment-icon"></a>
+												<a href="#"><img src="images/0oxhzjmxbksr1686814746087.png" alt="ZaloPay" class="payment-icon"></a>
+												<a href="#"><img src="images/mastercard-icon-512x329-xpgofnyv.png" alt="MasterCard" class="payment-icon"></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="copyright">
+						Seraphine Jewelry &copy;<script>document.write(new Date().getFullYear());</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>

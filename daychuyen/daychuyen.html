@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dây chuyền</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Wish shop project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
+<link href="/template_tkweb/wish-master/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/animate.css">
+<link href="../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="../styles/product.css">
+<link rel="stylesheet" type="text/css" href="styledaychuyen.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link rel="icon" type="image/x-icon" href="../images/favicon.jpg">
+</head>
+<body>
+
+	<div class="super_container">
+		<button id="scrollToTopBtn" class="scroll-to-top-btn"><i class="fa-solid fa-circle-up"></i></button>
+	
+			<!-- Header -->
+	
+			<header class="head">
+				<div class="head_inner d-flex flex-row align-items-center justify-content-start">
+					<div class = "col-1">
+					<div class="logo"><img src="../images/logo.png" alt="Logo Thương Hiệu"></div></div>
+					<!-- Kết thúc phần chèn logo -->
+					<div class = "col-7">
+					<nav class="main-nav" class="collapse navbar-collapse" id="navbarNavDropdown">
+						<ul>
+							<li><a href="../index.html">trang chủ</a></li>
+							<li class="dropdown"><a href="../trangsuc/trangsuc.html">trang sức</a>
+								<ul class="dropdown_content">
+									<li>
+										<a href="nhan.html">Nhẫn</a>
+										<a href="../bongtai/bongtai.html">Bông tai</a>
+										<a href="daychuyen.html">Dây chuyền</a>
+										<a href="../lac/lac.html">Lắc</a>
+										<a href="../vong/vong.html">Vòng</a>
+										<a href="../charm/charm.html">Charm</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="../gioithieu.html">giới thiệu</a></li>
+							<li><a href="../khuyenmai.html">khuyến mãi</a></li>
+							<li class="dropdown"><a class="nav-link" href="../blog/blogall_1.html">blog</a>
+								<ul class="dropdown_content">
+									<li class="dropdown_content">
+										<a href="../blog/tintuc.html">Tin tức</a>
+										<a href="../blog/tuvan.html">Góc tư vấn</a>
+										<a href="../blog/kienthuc.html">Kiến thức chung</a>
+									</li>
+								</ul>
+							</li>
+							<li><a href="../lienhe.html">liên hệ</a></li>
+						</ul>
+					</nav></div>
+					<div class = "col-3">
+					<div class="header_content ml-auto">
+						<div class="Search header_search">
+							<form action="#">
+								<input type="search" class="Search-input" required="required">
+								<button type="submit" id="Search-button" class="Search-button"><img src="../images/magnifying-glass.svg" alt=""></button>
+							</form>
+						</div>
+						<div class="Shopping">
+							<!-- Cart -->
+							<a href="../giohang/giohang.html">
+								<div class="Cart">
+									<img src="../images/shopping-bag.svg" alt="">
+									<div class="cart-num_container">
+										<div class="cart-num_inner">
+											<div class="cart-num">2</div>
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- Star -->
+							<a href="#">
+								<div class="Star">
+									<img src="../images/star.svg" alt="">
+									<div class="star-num_container">
+										<div class="star-num_inner">
+											<div class="star-num">0</div>
+										</div>
+									</div>
+								</div>
+							</a>
+							<!-- Avatar -->
+							<a href="#">
+								<div class="Avatar">
+									<img src="../images/avatar.svg" alt="">
+								</div>
+							</a>
+						</div>
+					</div></div>
+					<div class = "col-1">
+					<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div></div>
+				</div>
+			</header>
+			<!-- Menu -->
+			<div class="menu d-flex flex-column justify-content-start text-right menu_mm trans_400">
+				<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+				<div class="logo menu_mm  text-center"><img src="../images/logo.png" alt="Logo Thương Hiệu"></div>
+				
+				<div class="search">
+					<form action="#">
+						<input type="search" class="search_input menu_mm" required="required">
+						<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="../images/magnifying-glass.svg" alt=""></button>
+					</form>
+				</div>
+				<nav class="menu-nav">
+					<ul class="menu_mm">
+						<li class="menu_mm"><a href="../index.html">trang chủ</a></li>
+						<li class="menu_mm"><a href="../trangsuc/trangsuc.html">trang sức</a></li>
+						<li class="menu_mm"><a href="../gioithieu.html">giới thiệu</a></li>
+						<li class="menu_mm"><a href="../khuyenmai.html">khuyến mãi</a></li>
+						<li class="menu_mm"><a href="../blog/blogall_1.html">blog</a></li>
+						<li class="menu_mm"><a href="../lienhe.html">liên hệ</a></li>
+					</ul>
+				</nav>
+			</div> 
+	
+			<div class="home_sp">
+		
+				<!-- Home Slider -->
+		
+				<div class="home_slider_container">
+					<div class="owl-carousel owl-theme home_slider">
+						
+						<!-- Home Slider Item -->
+						<div class="owl-item">
+							<div class="home_slider_background" style="background-image:url(images/banner.jpg)"></div>
+							<div class="home_slider_content">
+								<div class="home_slider_content_inner">
+									<!--<div class="home_slider_subtitle">Seraphine</div>-->
+									<div class="home_slider_title">DÂY CHUYỀN</div>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				function sortProducts() {
+							var sortValue = document.getElementById("sort").value;
+							var products = document.querySelectorAll('.grid-item');
+							var sortedProducts = Array.from(products);
+				
+							switch (sortValue) {
+								case 'name-desc':
+									sortedProducts.sort((a, b) => {
+										var nameA = a.querySelector('.product-name a').textContent.trim().toUpperCase();
+										var nameB = b.querySelector('.product-name a').textContent.trim().toUpperCase();
+										if (nameA < nameB) return -1;
+										if (nameA > nameB) return 1;
+										return 0;
+									});
+									break;
+								case 'name-asc':
+									sortedProducts.sort((a, b) => {
+										var nameA = a.querySelector('.product-name a').textContent.trim().toUpperCase();
+										var nameB = b.querySelector('.product-name a').textContent.trim().toUpperCase();
+										if (nameA > nameB) return -1;
+										if (nameA < nameB) return 1;
+										return 0;
+									});
+									break;
+								case 'price-high-low':
+									sortedProducts.sort((a, b) => {
+										var priceA = parseFloat(a.querySelector('.home-product-item__price-current').textContent.trim().replace(/\D/g, ''));
+										var priceB = parseFloat(b.querySelector('.home-product-item__price-current').textContent.trim().replace(/\D/g, ''));
+										return priceB - priceA;
+									});
+									break;
+								case 'price-low-high':
+									sortedProducts.sort((a, b) => {
+										var priceA = parseFloat(a.querySelector('.home-product-item__price-current').textContent.trim().replace(/\D/g, ''));
+										var priceB = parseFloat(b.querySelector('.home-product-item__price-current').textContent.trim().replace(/\D/g, ''));
+										return priceA - priceB;
+									});
+									break;
+								case 'newest':
+									sortedProducts.sort((a, b) => {
+										var datea = new Date(a.dataset.date).getTime();;
+										var dateb = new Date(b.dataset.date).getTime();;
+									return dateb - datea;
+									});
+									break;
+								case 'popularity':
+								sortedProducts.sort((a, b) => {
+										var popularityA = new Date(a.dataset.popularity, 10);
+										var popularityB = new Date(b.dataset.popularity, 10);
+									return popularityA - popularityB;
+									});
+									break;
+								default:
+									return 0;
+							}
+				
+							var gridContainer = document.querySelector('.grid-container');
+							const paginationContainer = document.querySelector('.pagination-container');
+							sortedProducts.forEach(item => gridContainer.appendChild(item));
+							gridContainer.appendChild(paginationContainer);
+						}
+						</script>
+						  <script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const filterMaterialCheckboxes = document.querySelectorAll('.filter-material');
+					const filterPriceCheckboxes = document.querySelectorAll('input[name="price"]');
+					const sortSelect = document.getElementById('sort');
+					const gridItems = document.querySelectorAll('.grid-item');
+				
+					filterMaterialCheckboxes.forEach(checkbox => {
+						checkbox.addEventListener('change', filterAndSortProducts);
+					});
+				
+					filterPriceCheckboxes.forEach(checkbox => {
+						checkbox.addEventListener('change', filterAndSortProducts);
+					});
+				
+					function filterAndSortProducts() {
+						filterProducts();
+						sortProducts();
+					}
+				
+					function filterProducts() {
+						const selectedMaterials = Array.from(filterMaterialCheckboxes)
+													.filter(checkbox => checkbox.checked)
+													.map(checkbox => checkbox.value);
+						
+						const selectedPrices = Array.from(filterPriceCheckboxes)
+													.filter(checkbox => checkbox.checked)
+													.map(checkbox => checkbox.value);
+				
+						gridItems.forEach(item => {
+							const material = item.dataset.material;
+							const price = parseFloat(item.dataset.price);
+				
+							const materialMatch = selectedMaterials.length === 0 || selectedMaterials.includes(material);
+							const priceMatch = selectedPrices.length === 0 || selectedPrices.includes('all') || selectedPrices.some(range => {
+								if (range === 'all') return true;
+								const [min, max] = range.split('-').map(Number);
+								return price >= min && price <= max;
+							});
+				
+							if (materialMatch && priceMatch) {
+								item.style.display = 'block';
+							} else {
+								item.style.display = 'none';
+							}
+						});
+					}
+				});
+					  </script>
+				  <div class="filters">
+					<div class="filter-item">
+					  <label for="sort">Sắp xếp:</label>
+					  <select id="sort" onchange="sortProducts()">
+						<option value="price-high-low" selected>Tùy chọn</option>
+						<option value="name-desc">A &rarr; Z</option>
+						<option value="name-asc">Z &rarr; A</option>
+						<option value="price-high-low">Giá cao đến thấp</option>
+						<option value="price-low-high">Giá thấp đến cao</option>
+						<option value="newest">Mới nhất</option>
+						<option value="popularity">Quan tâm nhiều</option>
+					  </select>
+					</div>
+				  </div>
+		
+	<!-- Product -->
+	<div class="product">
+
+	
+		<div class="product-list-container">
+			
+			<div class="filter-container" style="height: 390px;">
+				<h3>Chất liệu</h3>
+				<label><input type="checkbox" class="filter-material" value="metal"> Kim cương</label><br>
+				<label><input type="checkbox" class="filter-material" value="gold"> Vàng</label><br>
+				<label><input type="checkbox" class="filter-material" value="silver"> Bạc</label><br>
+				<label><input type="checkbox" class="filter-material" value="ruby"> Ruby</label><br>
+			
+				<h3>Giá</h3>
+				<div class="price-filter">
+				  <label><input type="checkbox" name="price" value="100000-300000">100,000 - 300,000</label><br>
+				  <label><input type="checkbox" name="price" value="300000-500000">300,000 - 500,000</label><br>
+				  <label><input type="checkbox" name="price" value="500000-1000000">500,000 - 2,000,000</label><br>
+				  <label><input type="checkbox" name="price" value="all">Tất cả</label><br>
+				</div>
+			</div>
+			
+			<div class="grid-container">
+				<div class="grid-item" data-material="metal" data-price="900000" data-date="2024-01-01" data-popularity="100">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền Cute Bow">
+									<img src="images/sp1.jpg"  alt="Dây chuyền Cute Bow" class="img-responsive center-block anh1">
+									<img src="images/sp1(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Best seller</span>
+							</div>
+							<!--<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Dây chuyền Cute Bow" class="line-clamp">Dây chuyền Cute Bow</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-current">900.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="metal" data-price="750000" data-date="2023-06-01" data-popularity="30">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền LockHeart">
+									<img src="images/sp2.jpg"  alt="Dây chuyền LockHeart" class="img-responsive center-block anh1">
+									<img src="images/sp2(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							
+							<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Dây chuyền LockHeart" class="line-clamp">Dây chuyền LockHeart</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-old">1.200.000đ</span>
+								<span class="home-product-item__price-current">750.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="silver" data-price="200000" data-date="2023-06-01" data-popularity="100">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền Square and Oval">
+									<img src="images/sp3.jpg"  alt="Dây chuyền Square and Oval" class="img-responsive center-block anh1">
+									<img src="images/sp3(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Best seller</span>
+							</div>
+							<!--<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Dây chuyền Square and Oval" class="line-clamp">Dây chuyền Square and Oval</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-current">200.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="silver" data-price="450000" data-date="2023-07-01" data-popularity="100">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền Big Planet">
+									<img src="images/sp4.jpg"  alt="Dây chuyền Big Planet" class="img-responsive center-block anh1">
+									<img src="images/sp4(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							
+							<!--<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+							<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Dây chuyền Big Planet" class="line-clamp">Dây chuyền Big Planet</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-old">1.200.000đ</span>
+								<span class="home-product-item__price-current">450.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="gold" data-price="500000" data-date="2023-08-01" data-popularity="70">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền Crescent Moon">
+									<img src="images/sp5.jpg"  alt="Dây chuyền Crescent Moon" class="img-responsive center-block anh1">
+									<img src="images/sp5(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							<!--<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+							<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Dây chuyền Crescent Moon" class="line-clamp">Dây chuyền Crescent Moon</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-old">1.200.000đ</span>
+								<span class="home-product-item__price-current">500.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="gold" data-price="600000" data-date="2023-06-20" data-popularity="80">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền Tiny Gem">
+									<img src="images/sp6.jpg"  alt="Dây chuyền Tiny Gem" class="img-responsive center-block anh1">
+									<img src="images/sp6(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							<!--<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+							<!--<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Dây chuyền Tiny Gem" class="line-clamp">Dây chuyền Tiny Gem</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-current">600.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="gold" data-price="750000" data-date="2023-06-01" data-popularity="30">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền SunFlower">
+									<img src="images/sp7.jpg"  alt="Dây chuyền SunFlower" class="img-responsive center-block anh1">
+									<img src="images/sp7(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Best seller</span>
+							</div>
+							<!--<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+							<div class="product-info a-center">		
+								<div class="product-action">
+									<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+									<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+								</div>
+								<p class="product-name"><a href="#" title="Dây chuyền SunFlower" class="line-clamp">Dây chuyền SunFlower</a></p>
+								<div class="home-product-item__price">
+									<span class="home-product-item__price-current">750.000đ</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="silver" data-price="250000" data-date="2023-06-01" data-popularity="50">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền Bubble Daisy">
+									<img src="images/sp8.jpg"  alt="Dây chuyền Bubble Daisy" class="img-responsive center-block anh1">
+									<img src="images/sp8(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							<!--<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+							<!--<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Dây chuyền Bubble Daisy" class="line-clamp">Dây chuyền Bubble Daisy</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-current">250.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="ruby" data-price="1200000" data-date="2023-06-01" data-popularity="100">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Nhẫn Midi Bubble Heart 2">
+									<img src="images/sp2.jpg"  alt="Nhẫn Midi Bubble Heart 2" class="img-responsive center-block anh1">
+									<img src="images/sp2(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Best seller</span>
+							</div>
+							<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Nhẫn Midi Bubble Heart 2" class="line-clamp">Nhẫn Midi Bubble Heart 2</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-old">1.600.000đ</span>
+								<span class="home-product-item__price-current">1.200.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="ruby" data-price="1500000" data-date="2023-06-01" data-popularity="100">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../nhan/chitietnhan.html" title="Nhẫn Double Star 2">
+									<img src="images/sp4.jpg"  alt="Nhẫn Double Star 2" class="img-responsive center-block anh1">
+									<img src="images/sp4(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							<!--<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+							<!--<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Nhẫn Double Star 2" class="line-clamp">Nhẫn Double Star 2</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-current">1.500.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="metal" data-price="900000" data-date="2023-06-01" data-popularity="100">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../nhan/chitietnhan.html" title="Nhẫn Midi Heart 2">
+									<img src="images/sp1.jpg"  alt="Nhẫn Midi Heart 2" class="img-responsive center-block anh1">
+									<img src="images/sp1(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Best seller</span>
+							</div>
+							<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Nhẫn Midi Heart 2" class="line-clamp">Nhẫn Midi Heart 2 	</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-old">1.300.000đ</span>
+								<span class="home-product-item__price-current">600.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid-item" data-material="metal" data-price="1000000" data-date="2023-06-01" data-popularity="100">
+					<div class="product-box">	
+						<div class="product-thumbnail relative">
+							<div class="product-image-flip">
+								<a class="db" href="../daychuyen/chitietdaychuyen.html" title="Dây chuyền LAUREL RABBIT">
+									<img src="images/sp9.jpg"  alt="Dây chuyền LAUREL RABBIT" class="img-responsive center-block anh1">
+									<img src="images/sp9(2).jpg" alt="Second Image" class="img-responsive center-block anh2">
+								</a>
+							</div>
+							<!--<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+							<!--<div class="home-product-item__sale-off">
+								<span class="home-product-item__sale-off-percent">SALE</span>
+								<span class="home-product-item__sale-off-label">10%</span>
+							</div>
+						</div>
+						<div class="product-info a-center">		
+							<div class="home-product-item__favourite">
+								<i class="fas fa-heart"></i>
+								<span>Yêu thích</span>
+							</div>-->
+						</div>
+						<div class="product-info a-center">		
+							<div class="product-action">
+								<a href="#" class="product-like"><i class="fa-solid fa-heart"></i> Yêu thích</a>
+								<a href="#" class="product-add-to-cart"><i class="fa-solid fa-cart-shopping"></i> Thêm vào giỏ hàng</a>
+							</div>
+							<p class="product-name"><a href="#" title="Dây chuyền LAUREL RABBIT" class="line-clamp">Dây chuyền LAUREL RABBIT</a></p>
+							<div class="home-product-item__price">
+								<span class="home-product-item__price-current">1.000.000đ</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="pagination-container">
+					<div class="pagination">
+						<a href="#">&laquo;</a>
+						<a href="daychuyen.html" class="active">1</a>
+						<a href="daychuyen2.html">2</a>
+						<a href="daychuyen3.html">3</a>
+						<a href="#">&raquo;</a>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		</div>
+	
+		<section class="container my-5">
+			<h3 style="text-align: center; text-transform: uppercase; font-weight: bold; color: rgba(58, 36, 13, 0.737); margin-bottom: 20px;" class="text-center mb-4">Sản Phẩm Nổi Bật</h3>
+			<div id="relatedProductsCarousel" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<div class="row">
+							<div class="col-md-3 mb-4">
+								<a href="../daychuyen/chitietdaychuyen.html" class="card-link">
+									<div class="card">
+										<img src="../daychuyen/images/noibat1.jpg" class="card-img-top" alt="Dây chuyền Rose Flower">
+										<div class="card-body">
+											<h5 class="card-title">Dây chuyền Rose Flower</h5>
+											<p class="card-text">Giá: 350,000đ</p>
+											<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 mb-4">
+								<a href="../daychuyen/chitietdaychuyen.html" class="card-link">
+									<div class="card">
+										<img src="../daychuyen/images/noibat2.jpg" class="card-img-top" alt="Dây chuyền FireWork Blue">
+										<div class="card-body">
+											<h5 class="card-title">Dây chuyền FireWork Blue</h5>
+											<p class="card-text">Giá: 380,000đ</p>
+											<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 mb-4">
+								<a href="../daychuyen/chitietdaychuyen.html" class="card-link">
+									<div class="card">
+										<img src="../daychuyen/images/noibat3.jpg" class="card-img-top" alt="Dây chuyền Moon Star">
+										<div class="card-body">
+											<h5 class="card-title">Dây chuyền Moon Star</h5>
+											<p class="card-text">Giá: 380,000đ</p>
+											<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 mb-4">
+								<a href="../daychuyen/chitietdaychuyen.html" class="card-link">
+									<div class="card">
+										<img src="../daychuyen/images/noibat4.jpg" class="card-img-top" alt="Dây chuyền Moon Inside Sun">
+										<div class="card-body">
+											<h5 class="card-title">Dây chuyền Moon Inside Sun</h5>
+											<p class="card-text">Giá: 380,000đ</p>
+											<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item">
+						<div class="row">
+							<div class="col-md-3 mb-4">
+								<a href="../daychuyen/chitietdaychuyen.html" class="card-link">
+									<div class="card">
+										<img src="../daychuyen/images/noibat5.jpg" class="card-img-top" alt="Dây chuyền Universe Crescent">
+										<div class="card-body">
+											<h5 class="card-title">Dây chuyền Universe Crescent</h5>
+											<p class="card-text">Giá: 380,000đ</p>
+											<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 mb-4">
+								<a href="../daychuyen/chitietdaychuyen.html" class="card-link">
+									<div class="card">
+										<img src="../daychuyen/images/noibat6.jpg" class="card-img-top" alt="Dây chuyền Circle Leaf">
+										<div class="card-body">
+											<h5 class="card-title">Dây chuyền Circle Leaf</h5>
+											<p class="card-text">Giá: 380,000đ</p>
+											<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 mb-4">
+								<a href="../daychuyen/chitietdaychuyen.html" class="card-link">
+									<div class="card">
+										<img src="../daychuyen/images/noibat7.jpg" class="card-img-top" alt="Dây chuyền Big Gem">
+										<div class="card-body">
+											<h5 class="card-title">Dây chuyền Big Gem</h5>
+											<p class="card-text">Giá: 420,000đ</p>
+											<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+										</div>
+									</div>
+								</a>
+							</div>
+							<div class="col-md-3 mb-4">
+								<a href="../daychuyen/chitietdaychuyen.html" class="card-link">
+									<div class="card">
+										<img src="../daychuyen/images/noibat8.jpg" class="card-img-top" alt="Dây chuyền Twist LaureL">
+										<div class="card-body">
+											<h5 class="card-title">Dây chuyền Twist LaureL</h5>
+											<p class="card-text">Giá: 450,000đ</p>
+											<span class="text-warning" style="font-size: 20px;">★ ★ ★ ★ ☆</span>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	<!-- Sản phẩm nổi bật -->
+			<!-- Footer -->
+		
+			<footer class="footer">
+				<div class="container" style="max-width: 1560px;"> <!-- Thay đổi kích thước container -->
+					<div class="row links-wrap">
+						<div class="col text-center">
+							<div class="row g-4">
+								<!-- Điều chỉnh kích thước các cột -->
+								<div class="col-lg-4 pl-0">
+									<p class="mb-4 text-justify">
+										Chúng tôi tự tin khẳng định rằng sản phẩm của Seraphine sẽ là nguồn cảm hứng lý tưởng cho quý khách hàng. Chất lượng không chỉ là cam kết mà còn là niềm tự hào của chúng tôi, đi kèm với chính sách bảo hành tận tâm. Với Seraphine, bạn không chỉ mua sản phẩm mà còn được trải nghiệm sự tinh tế và đẳng cấp tại một trong những cửa hàng có giá trị nhất trên thị trường.
+									</p>
+									<div class="footer-social mt-auto">
+										<ul>
+											<li><a href="https://www.facebook.com/people/Seraphine/61553772548568/" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+											<li><a href="https://www.instagram.com/seraphine_jew/?fbclid=IwZXh0bgNhZW0CMTAAAR39vLvIVYO4L0mZZLHYYw_zb_3JD-fG9sx8x29XjuNpgQoPe8qx415-UyM_aem_ZmFrZWR1bW15MTZieXRlcw"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
+											<li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="col-lg-8">
+									<div class="links-wrap  text-left">
+										<div class="row g-4">
+											<div class="col-md-2">
+												<ul class="list-unstyled">
+													<li>
+														<p style="color: black;"><b>Sản phẩm</b></p>
+													</li>
+													<li><a href="nhan.html">Nhẫn</a></li>
+													<li><a href="../bongtai/bongtai.html">Bông tai</a></li>
+													<li><a href="daychuyen.html">Dây chuyền</a></li>
+													<li><a href="../lac/lac.html">Lắc tay</a></li>
+													<li><a href="../vong/vong.html">Vòng tay</a></li>
+													<li><a href="../charm/charm.html">Hạt Charm</a></li>
+												</ul>
+											</div>
+											<div class="col-md-4">
+												<ul class="list-unstyled">
+													<li>
+														<p style="color: black;"><b>Thông tin liên hệ</b></p>
+													</li>
+													<li>Hotline: 0366764577</a></li>
+													<li>Email: Seraphine@gmail.com</a></li>
+													<li>Địa chỉ: 127 Ô Chợ Dừa, Đống Đa, Hà Nội </a></li>
+												</ul>
+											</div>
+											<div class="col-md-3">
+												<ul class="list-unstyled">
+													<li>
+														<p style="color: black;"><b>Về chúng tôi</b></p>
+													</li>
+													<li><a href="../lienhe.html">Liên hệ</a></li>
+													<li><a href="../gioithieu.html">Giới thiệu</a></li>
+													<li><a href="#">Hệ thống cửa hàng</a></li>
+												</ul>
+											</div>
+											<div class="col-md-3">
+												<ul class="list-unstyled">
+													<li>
+														<p style="color: black;"><b>Phương thức thanh toán</b></p>
+													</li>
+													<li class="icon-payment">
+														<a href="#"><img src="../images/momo-2.svg" alt="Momo" class="payment-icon"></a>
+														<a href="#"><img src="../images/0oxhzjmxbksr1686814746087.png" alt="ZaloPay" class="payment-icon"></a>
+														<a href="#"><img src="../images/mastercard-icon-512x329-xpgofnyv.png" alt="MasterCard" class="payment-icon"></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="copyright">
+								Seraphine Jewelry &copy;<script>document.write(new Date().getFullYear());</script>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+	</div>
+	
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../styles/bootstrap4/popper.js"></script>
+<script src="../styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../plugins/easing/easing.js"></script>
+<script src="../plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>

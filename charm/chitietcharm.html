@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Wish</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Wish shop project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="../styles/bootstrap4/bootstrap.min.css">
+<link href="../plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="../plugins/OwlCarousel2-2.2.1/animate.css">
+<link href="../plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="../styles/responsive.css">
+<link rel="stylesheet" type="text/css" href="../styles/product.css">
+<link rel="stylesheet" type="text/css" href="stylevong.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="super_container">
+	<button id="scrollToTopBtn" class="scroll-to-top-btn"><i class="fa-solid fa-circle-up"></i></button>
+
+	<!-- Header -->
+
+	<header class="header">
+		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
+			<div class="logo"><a href="../trangchu/index.html">Wish</a></div>
+			<nav class="main_nav" class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="menu_bar">
+					<li><a href="../trangchu/index.html">trang chủ</a></li>
+					<li class="dropdown"><a href="../trangsuc/trangsuc.html">trang sức</a>
+						<ul class="dropdown-content">
+							<li>
+								<a href="#">Nhẫn</a>
+								<a href="#">Bông tai</a>
+								<a href="#">Dây chuyền</a>
+								<a href="#">Lắc</a>
+								<a href="#">Vòng</a>
+								<a href="#">Charm</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="categories.html">giới thiệu</a>
+					<li><a href="categories.html">khuyến mãi</a></li>
+					<li class="dropdown"><a class="nav-link" href="#">blog</a>
+						<ul class="dropdown-content">
+							<li class="dropdown-content">
+								<a href="#">Tin tức</a>
+								<a href="#">Kiến thức chung</a>
+							</li>
+						</ul>
+					</li>
+					<li><a href="contact.html">liên hệ</a></li>
+				</ul>
+			</nav>
+			<div class="header_content ml-auto">
+				<div class="search header_search">
+					<form action="#">
+						<input type="search" class="search_input" required="required">
+						<button type="submit" id="search_button" class="search_button"><img src="../images/magnifying-glass.svg" alt=""></button>
+					</form>
+				</div>
+				<div class="shopping">
+					<!-- Cart -->
+					<a href="#">
+						<div class="cart">
+							<img src="../images/shopping-bag.svg" alt="">
+							<div class="cart_num_container">
+								<div class="cart_num_inner">
+									<div class="cart_num">1</div>
+								</div>
+							</div>
+						</div>
+					</a>
+					<!-- Star -->
+					<a href="#">
+						<div class="star">
+							<img src="../images/star.svg" alt="">
+							<div class="star_num_container">
+								<div class="star_num_inner">
+									<div class="star_num">0</div>
+								</div>
+							</div>
+						</div>
+					</a>
+					<!-- Avatar -->
+					<a href="#">
+						<div class="avatar">
+							<img src="../images/avatar.svg" alt="">
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
+		</div>
+	</header>
+
+	<!-- Menu -->
+
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<div class="logo menu_mm"><a href="#">Wish</a></div>
+		<div class="search">
+			<form action="#">
+				<input type="search" class="search_input menu_mm" required="required">
+				<button type="submit" id="search_button_menu" class="search_button menu_mm"><img class="menu_mm" src="../images/magnifying-glass.svg" alt=""></button>
+			</form>
+		</div>
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="#">trang chủ</a></li>
+				<li class="dropdown"><a href="../trangsuc/trangsuc.html">trang sức</a>
+					<ul class="dropdown-content">
+						<li>
+							<a href="#">Nhẫn</a>
+							<a href="#">Bông tai</a>
+							<a href="#">Dây chuyền</a>
+							<a href="#">Lắc</a>
+							<a href="#">Vòng</a>
+							<a href="#">Charm</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu_mm"><a href="#">giới thiệu</a></li>
+				<li class="menu_mm"><a href="#">khuyến mãi</a></li>
+				<li class="dropdown"><a class="nav-link" href="#">blog</a>
+					<ul class="dropdown-content">
+						<li class="dropdown-content">
+							<a href="#">Tin tức</a>
+							<a href="#">Kiến thức chung</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu_mm"><a href="#">liên hệ</a></li>
+			</ul>
+		</nav>
+	</div>
+
+
+
+<!-- Product Detail -->
+<div class="product">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <!-- Image Slider -->
+                <div id="product-slider" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <figure class="zoom" onmousemove="zoom(event)">
+                                <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" class="d-block w-100" alt="Black Glass" style="transform-origin: 21.8553% 0%;">
+                            </figure>
+                        </div>
+                        <div class="carousel-item">
+                            <figure class="zoom" onmousemove="zoom(event)">
+                                <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" class="d-block w-100" alt="Brown Glass" style="transform-origin: 24.0566% 21.2264%;">
+                            </figure>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#product-slider" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#product-slider" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 product-info-container">
+                <!-- Product Details -->
+                <h2>Vòng tay</h2>
+                <p><strong>Mô tả:</strong> 
+                    <br>Mã sản phẩm: Vòng tay
+                    <br>Chất liệu: Bạc
+                    <br>Giá sản phẩm: 250.000</p>
+                <p>
+                </p><p>
+                    <strong>Giá:</strong>
+                    <del class="text-muted">250.000đ</del>
+                    <span class="text-danger">200.000đ (Giảm giá)</span>
+                </p>
+                <!-- Rating Stars -->
+                <div class="mb-3">
+                    <span class="text-warning">★ ★ ★ ★ ☆</span>
+                    <!-- Add more stars based on the rating -->
+                </div>
+                <div class="quantity d-flex flex-column flex-sm-row align-items-sm-center">
+                    <span>Số lượng:</span>
+                    <div class="quantity_selector">
+                        <span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
+                        <span id="quantity_value">1</span>
+                        <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="red_button add_to_cart_button"><a href="#">thêm vào giỏ hàng</a></div>
+                    <div class="product_favorite d-flex flex-column align-items-center justify-content-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Related product -->
+
+<section class="container my-5">
+    <h3 class="text-center mb-4">Sản Phẩm Liên Quan</h3>
+    <div class="row">
+        <!-- GK02 -->
+        <div class="col-md-4 mb-4">
+            <a href="GK02.html" class="card-link">
+                <div class="card">
+                    <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" class="card-img-top" alt="GK02">
+                    <div class="card-body">
+                        <h5 class="card-title">Vòng hoa</h5>
+                        <p class="card-text">Giá: 350,000đ</p>
+                        <p class="card-text">★ ★ ★ ★ ☆</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- GK08 -->
+        <div class="col-md-4 mb-4">
+            <a href="GK08.html" class="card-link">
+                <div class="card">
+                    <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" class="card-img-top" alt="GK08">
+                    <div class="card-body">
+                        <h5 class="card-title">Vòng vàng</h5>
+                        <p class="card-text">Giá: 380,000đ</p>
+                        <p class="card-text">★ ★ ★ ☆ ☆</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- GK09 -->
+        <div class="col-md-4 mb-4">
+            <a href="GK09.html" class="card-link">
+                <div class="card">
+                    <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" class="card-img-top" alt="GK09">
+                    <div class="card-body">
+                        <h5 class="card-title">Vòng cổ bạc</h5>
+                        <p class="card-text">Giá: 380,000đ</p>
+                        <p class="card-text">★ ★ ★ ★ ☆</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- GK10 -->
+        <div class="col-md-4 mb-4">
+            <a href="GK10.html" class="card-link">
+                <div class="card">
+                    <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" class="card-img-top" alt="GK10">
+                    <div class="card-body">
+                        <h5 class="card-title">Vòng tay nhỏ</h5>
+                        <p class="card-text">Giá: 380,000đ</p>
+                        <p class="card-text">★ ★ ★ ★ ☆</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- GK11 -->
+        <div class="col-md-4 mb-4">
+            <a href="GK11.html" class="card-link">
+                <div class="card">
+                    <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" class="card-img-top" alt="GK11">
+                    <div class="card-body">
+                        <h5 class="card-title">Vòng mạ vàng 14K</h5>
+                        <p class="card-text">Giá: 380,000đ</p>
+                        <p class="card-text">★ ★ ★ ★ ☆</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <!-- GK15 -->
+        <div class="col-md-4 mb-4">
+            <a href="GK15.html" class="card-link">
+                <div class="card">
+                    <img src="../images/compressed-editted-cropna-2311-7-084-1-1.jpg" class="card-img-top" alt="GK15">
+                    <div class="card-body">
+                        <h5 class="card-title">Vòng bạc</h5>
+                        <p class="card-text">Giá: 380,000đ</p>
+                        <p class="card-text">★ ★ ☆ ☆ ☆</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="newsletter_content">
+			<div class="newsletter_image" style="background-image:url(../images/newsletter.jpg)"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="section_title_container text-center">
+							<div class="section_subtitle">only the best</div>
+							<div class="section_title">subscribe for a 20% discount</div>
+						</div>
+					</div>
+				</div>
+				<div class="row newsletter_container">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="newsletter_form_container">
+							<form action="#">
+								<input type="email" class="newsletter_input" required="required" placeholder="E-mail here">
+								<button type="submit" class="newsletter_button">subscribe</button>
+							</form>
+						</div>
+						<div class="newsletter_text">Integer ut imperdiet erat. Quisque ultricies lectus tellus, eu tristique magna pharetra nec. Fusce vel lorem libero. Integer ex mi, facilisis sed nisi ut, vestib ulum ultrices nulla. Aliquam egestas tempor leo.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="footer_logo"><a href="#">Wish</a></div>
+					<nav class="footer_nav">
+						<ul>
+							<li><a href="index.html">home</a></li>
+							<li><a href="categories.html">clothes</a></li>
+							<li><a href="categories.html">accessories</a></li>
+							<li><a href="categories.html">lingerie</a></li>
+							<li><a href="contact.html">contact</a></li>
+						</ul>
+					</nav>
+					<div class="footer_social">
+						<ul>
+							<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-reddit-alien" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
+					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+
+<script src="../js/jquery-3.2.1.min.js"></script>
+<script src="../styles/bootstrap4/popper.js"></script>
+<script src="../styles/bootstrap4/bootstrap.min.js"></script>
+<script src="../plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="../plugins/easing/easing.js"></script>
+<script src="../plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="../js/custom.js"></script>
+<script src="vong.js"></script>
+</body>
+</html>
