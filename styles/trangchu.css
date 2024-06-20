@@ -316,8 +316,6 @@ section
     background: #FFFFFF;
     z-index: 100;
     padding-left: 5%;
-	padding-top: 10px;
-	padding-bottom: 10px;
     padding-right: 5%;
     transition: all 200ms ease;
 }
