@@ -804,6 +804,7 @@ section
     padding-right: 60px;
     padding-top: 87px;
     padding-left: 50px;
+	z-index: 11111111112;
 }
 .menu.active
 {
