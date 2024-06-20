@@ -800,11 +800,10 @@ section
     width: 300px;
     height: 100vh;
     background: #FFFFFF;
-    z-index: 101;
     padding-right: 60px;
     padding-top: 87px;
     padding-left: 50px;
-	z-index: 11111111112;
+z-index: 11111111112;
 }
 .menu.active
 {
