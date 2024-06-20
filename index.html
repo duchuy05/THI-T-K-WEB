@@ -211,31 +211,35 @@
 
 	<script>
 		window.onload = function () {
-			var endDate = new Date("June 30, 2024 00:00:00").getTime(); // Đặt ngày kết thúc khuyến mãi
-			function updateCountdown() {
-				var now = new Date().getTime();
-				var timeLeft = endDate - now;
-				if (timeLeft <= 0) {
-					closePopup();
-					return;
-				}
-				var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-				var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-				var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-				document.getElementById('countdown').innerHTML = "Kết thúc trong: " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây";
-			}
-			setInterval(updateCountdown, 1000); // Cập nhật thời gian còn lại mỗi giây
-			showPopup();
-		};
+    var endDate = new Date("June 30, 2024 00:00:00").getTime(); // Đặt ngày kết thúc khuyến mãi
 
-		function showPopup() {
-			document.getElementById('overlay').style.display = 'flex';
-		}
+    function updateCountdown() {
+        var now = new Date().getTime();
+        var timeLeft = endDate - now;
+        if (timeLeft <= 0) {
+            closePopup();
+            return;
+        }
+        var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        document.getElementById('countdown').innerHTML = "Kết thúc trong: " + days + " ngày " + hours + " giờ " + minutes + " phút " + seconds + " giây";
+    }
 
-		function closePopup() {
-			document.getElementById('overlay').style.display = 'none';
-		}
+    setInterval(updateCountdown, 1000); // Cập nhật thời gian còn lại mỗi giây
+    showPopup();
+};
+
+function showPopup() {
+    document.getElementById('overlay').style.display = 'flex';
+    setTimeout(closePopup, 5000); // Tự động đóng popup sau 5 giây
+}
+
+function closePopup() {
+    document.getElementById('overlay').style.display = 'none';
+}
+
 	</script>
 
 	<!--Cài chatbot-->	
