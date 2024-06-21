@@ -299,7 +299,7 @@ section
 *********************************/
 
 .head {
-    position: fixed;
+	position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -307,8 +307,6 @@ section
     background: #FFFFFF;
     z-index: 100;
     padding-left: 5%;
-	padding-top: 10px;
-	padding-bottom: 10px;
     padding-right: 5%;
     transition: all 200ms ease;
 }
