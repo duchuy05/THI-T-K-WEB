@@ -1,30 +1,5 @@
 @charset "utf-8";
-/* CSS Document */
 
-/******************************
-
-[Table of Contents]
-
-1. Fonts
-2. Body and some general stuff
-3. Header
-	3.1 Header - Logo
-	3.2 Header - Main Navigation
-	3.3 Header - Search
-	3.4 Header - Shopping
-	3.5 Header - Burger
-4. Home
-5. Menu
-6. Contact
-8. Newsletter
-9. Footer
-
-
-******************************/
-
-/***********
-1. Fonts
-***********/
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
 @font-face
