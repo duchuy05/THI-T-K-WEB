@@ -299,7 +299,7 @@ section
 *********************************/
 
 .head {
-    position: fixed;
+	position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -307,8 +307,6 @@ section
     background: #FFFFFF;
     z-index: 100;
     padding-left: 5%;
-	padding-top: 10px;
-	padding-bottom: 10px;
     padding-right: 5%;
     transition: all 200ms ease;
 }
@@ -325,8 +323,8 @@ section
     flex-grow: 0.2;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Đẩy các phần tử con sang bên phải */
-    padding-right: -10%; /* Đảm bảo không có khoảng trắng thừa bên phải */
+    justify-content: space-between; 
+    padding-right: -10%; 
 	margin-right: -3%;
 }
 
@@ -625,7 +623,7 @@ section
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: cover; /* Hoặc sử dụng contain tùy theo nhu cầu */
+    background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
 	
@@ -647,8 +645,9 @@ section
 .home_title
 {
 	font-family: 'Open Sans', serif;
-	font-size: 37px;
-	color: #000000;
+	font-size: 40px;
+	font-weight: bold;
+	color: #000000e4;
 	line-height: 0.75;
 	margin-bottom: 10px;
 }
@@ -663,8 +662,8 @@ section
 	position: relative;
 	font-family: 'Open Sans', serif;
 	font-size: 22px;
-	color: #000000; /* Thay đổi màu sắc thành màu đen */
-    margin: 0 3px; /* Khoảng cách giữa các phần tử */
+	color: #000000; 
+    margin: 0 3px;
 }
 .breadcrumbs ul li a
 {
@@ -888,7 +887,7 @@ img {
 }
 
 .date-time i {
-    margin-right: 5px; /* Khoảng cách giữa biểu tượng và văn bản */
+    margin-right: 5px; /
 }
 
 .td-post-category {
@@ -912,19 +911,19 @@ img {
 }
 
 .blog__item {
-    background-color: #fff; /* Màu nền ban đầu */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng chuyển đổi */
+    background-color: #fff; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .blog__item:hover {
-    transform: translateY(-5px); /* Dịch chuyển lên trên khi hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng khi hover */
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .blog__item__pic img {
-    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
-    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỷ lệ */
-    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi cho hình ảnh */
+    width: 100%; 
+    height: auto; 
+    transition: transform 0.3s ease; 
 }
 
 .blog__item__pic:hover img {
@@ -1135,9 +1134,9 @@ Blog Sidebar - News
 
 .product__pagination .current-page,
 .blog__pagination .current-page {
-    background-color: #000000; /* Màu nền đen */
-    color: #ffffff; /* Màu chữ trắng */
-    pointer-events: none; /* Ngăn chặn sự kiện hover */
+    background-color: #000000; 
+    color: #ffffff; 
+    pointer-events: none; 
 }
 
 .blog__pagination:before {
